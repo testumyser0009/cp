@@ -1,0 +1,90 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('Index/index')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li><a href="{:Url('User/user')}">用户统计</a></li>
+			<li class="active">下注明细</li>
+		</ol>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+				<!--- 搜索位置 -->
+                            <form action="{:Url('User/xiang')}" method="get" style="width:55%;float:left;margin:10px  0 0 300px">
+                                <span>时间查询 : </span><input type="text" style="width:130px;height:30px;" name="times" class="laydate-icon" id="demo" value="{$Think.get.times}" />
+                           - - - <input type="text" style="width:130px;height:30px;" class="laydate-icon" name="timed" id="demo1" value="{$Think.get.timed}" />
+                                        <input type="hidden" name="id" value="{$uid}">
+                            <button type="submit"  class="btn btn-danger">搜索</button>
+                           </form>
+                            <form class="form-horizontal bucket-form" method="get" action="{:Url('User/xiang')}" style="width:15%;float:left">
+                                        <select name="se"  style="width:60px;height:30px;margin:10px 0"   >
+                                        		 <option  > - - - -</option>
+                                                <option value="6" {if condition="$Think.get.se eq 6"}selected{else /}{/if}>今天</option>   
+                                                <option  value="1" {if condition="$Think.get.se eq 1"}selected{else /}{/if}>昨天</option>
+                                                <option value="2" {if condition="$Think.get.se eq 2"}selected{else /}{/if}>本周</option>
+                                                <option value="3" {if condition="$Think.get.se eq 3"}selected{else /}{/if}>上周</option>
+                                                <option value="4" {if condition="$Think.get.se eq 4"}selected{else /}{/if}>本月</option>
+                                                <option  value="5" {if condition="$Think.get.se eq 5"}selected{else /}{/if}>上月</option>
+
+                                        </select>
+                                        <input type="hidden" name="id" value="{$uid}">
+                                                <button type="submit"  class="btn btn-danger">搜索</button>
+                        </form>
+                        <script>
+                                    ;!function(){
+                                    laydate({
+                                       elem: '#demo',
+                                       format: 'YYYY-MM-DD',
+                                      min: '2010-01-01 00:00:00', //设定最小日期为当前日期
+                                      max: laydate.now(), //最大日期
+                                    })
+                                    laydate({
+                                      elem: '#demo1',
+                                      format: 'YYYY-MM-DD',
+                                      min: '2010-01-01 00:00:00', //设定最小日期为当前日期
+                                      max: laydate.now(), //最大日期
+                                    })
+
+
+                                    }();
+                                </script>
+				<div>
+					<table class="table" >
+						<thead>
+							<tr>
+								<th data-breakpoints="xs"><font>编号</font></th>
+								<th><font>下注总金额</font></th>
+								<th data-breakpoints="xs"><font>下注时间</font></th>
+								<th data-breakpoints="xs sm md" data-title="DOB"><font>订单状态</font></th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							{empty name='list'}
+							<tr>
+								<td colspan='5' style="text-align: center">暂无记录<br>
+									<br> <a href="{:Url('User/user')}"><button type="button"
+											class="btn btn-danger">
+											<font>返回</font>
+										</button></a></td>
+							</tr>
+							{/empty}
+							{volist name="list" id="vo"}
+							<tr data-expanded="true">
+								<td><font>{$vo.id}</font></td>
+								<td>{$vo.money}</td>
+								<td>{$vo.add_time|date="Y-m-d H:i:s",###}</td>
+								<td>{if condition="$vo.is_winning eq 1"}已中奖{else /}未中奖{/if}</td>
+								
+									
+							</tr>
+
+							{/volist}
+						</tbody>
+					</table>
+					{$list->render()}
+				</div>
+			</div>
+		</div>
+
+	</section>

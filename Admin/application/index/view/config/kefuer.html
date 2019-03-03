@@ -1,0 +1,49 @@
+
+
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li class="active"><i class="fa fa-comment-o"
+				style="font-size: 20px"></i> &nbsp;提现客服</li>
+		</ol>
+		<div class="form-w3layouts">
+			<div class="container">
+
+            <div id="forms" class="mt10">
+                <div class="box">
+                    <div class="box_border">
+                        <div class="box_center">
+                            <form action="" method="post" class="jqtransform" enctype="multipart/form-data">
+                                <table class="form_table pt15 pb15" width="100%"  border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                           
+                                        <tr>
+                                            <td class="" width='55%'>
+                                            	<!-- 需要百度编辑器 加上 id="content" -->
+                                            	回车换行！！！！
+                                                <textarea name="text"  style="width:55%;" class="form-control" rows="20" >{$info.text}</textarea>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="">
+                                                <input type="submit" name="button" class="btn btn82 btn_save2" value="保存"> 
+                                                 
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <script type="text/javascript">
+            //实例化编辑器
+            //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+            var ue = UE.getEditor('content');
+        </script>
+		</div>
+	</section>
+	

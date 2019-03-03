@@ -1,0 +1,200 @@
+<?php
+$gametype=$this->getRows("select * from {$this->prename}type order by sort asc");
+$games=array();
+$gametype2=$gametype22='';
+foreach($gametype as $key => $var){
+	$games['id']=$var['id'];
+	$games['name']=$var['title'];
+	$games['mode']=1;
+	$games['sort'] = $var['sort'] ;
+	$games['cate'] = $var['type'];
+	$games['maxReward'] = 0;
+	$games['open'] = abs($var['enable']-1); //彩种开启关闭
+	$games['iconUrl'] = '';
+	$games['pageUrl'] = "/game/".$var['name']."/index.html";
+	$games['restStartDate'] = null;
+	$games['restEndDate'] = null;
+	
+	$games['turnFormat'] = 'yyyyMMdd'; //备用参数
+	$games['curTurnNum'] = ''; //备用参数
+	
+	$games['amount'] = $var['num'];
+	$games['isBan'] = abs($var['enable']-1); //玩法禁用
+
+if(max(array_keys($gametype)) != $key){
+$gametype2=$gametype2.json_encode($games).',';
+$gametype22=$gametype22.'"'.$var['id'].'":'.json_encode($games).',';
+
+}else{
+$gametype2=$gametype2.json_encode($games);
+$gametype22=$gametype22.'"'.$var['id'].'":'.json_encode($games);
+
+}
+
+}
+
+echo 'var games = ['.$gametype2.'];';
+echo 'var gameMap = {'.$gametype22.'};';
+/*var games = [{
+		"id": 1,
+		"name": "重庆时时彩",
+		"mode": 0,
+		"sort": 2,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": "",
+		"pageUrl": "/game/cqssc/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "yyyyMMdd",
+		"curTurnNum": "",
+		"amount": 120,
+		"isBan": 0
+	}, {
+		"id": 50,
+		"name": "北京赛车(PK10)",
+		"mode": 0,
+		"sort": 1,
+		"cate": 4,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": "",
+		"pageUrl": "/game/pk10/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": null,
+		"curTurnNum": "591402",
+		"amount": 179,
+		"isBan": 0
+	}, {
+		"id": 60,
+		"name": "广东快乐十分",
+		"mode": 1,
+		"sort": 3,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": null,
+		"pageUrl": "/game/gdkl10/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "yyyyMMdd",
+		"curTurnNum": "",
+		"amount": 84,
+		"isBan": 0
+	}, {
+		"id": 61,
+		"name": "重庆幸运农场",
+		"mode": 1,
+		"sort": 4,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": null,
+		"pageUrl": "/game/xync/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "yyMMdd",
+		"curTurnNum": "",
+		"amount": 97,
+		"isBan": 0
+	}, {
+		"id": 66,
+		"name": "PC蛋蛋",
+		"mode": 1,
+		"sort": 4,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": "icon-new",
+		"pageUrl": "/game/pcdd/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": null,
+		"curTurnNum": "796830",
+		"amount": 179,
+		"isBan": 0
+	}, {
+		"id": 65,
+		"name": "北京快乐8",
+		"mode": 1,
+		"sort": 5,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": null,
+		"pageUrl": "/game/bjkl8/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "",
+		"curTurnNum": "796830",
+		"amount": 179,
+		"isBan": 0
+	}, {
+		"id": 21,
+		"name": "广东11选5",
+		"mode": 1,
+		"sort": 6,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": null,
+		"pageUrl": "/game/gd11x5/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "yyMMdd",
+		"curTurnNum": "",
+		"amount": 84,
+		"isBan": 0
+	}, {
+		"id": 10,
+		"name": "江苏骰宝(快3)",
+		"mode": 0,
+		"sort": 7,
+		"cate": 5,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": "",
+		"pageUrl": "/game/jsk3/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "yyMMdd",
+		"curTurnNum": "",
+		"amount": 82,
+		"isBan": 0
+	}, {
+		"id": 55,
+		"name": "幸运飞艇",
+		"mode": 1,
+		"sort": 8,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": "",
+		"pageUrl": "/game/xyft/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "yyyyMMdd",
+		"curTurnNum": " ",
+		"amount": 180,
+		"isBan": 0
+	}, {
+		"id": 70,
+		"name": "香港六合彩",
+		"mode": 1,
+		"sort": 9,
+		"cate": 1,
+		"maxReward": 0,
+		"open": 0,
+		"iconUrl": null,
+		"pageUrl": "/game/lhc/index.html",
+		"restStartDate": null,
+		"restEndDate": null,
+		"turnFormat": "",
+		"curTurnNum": "2016060",
+		"amount": 1,
+		"isBan": 0
+	}
+];
+*/?>

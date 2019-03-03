@@ -1,0 +1,429 @@
+<ion-content class="bet-view" scroll="false">
+	<div class="sub-Navs" item-class="col-31">
+		<ion-scroll id="sub-navs" direction="x" scrollbar-x="false" delegate-handle="sub-navs" ng-init="selectFirstSub();">
+			<div class="row" ng-init="shareData.subIndex=1">
+				<div class="col sub-col col-31" ng-class="{navActive:shareData.subIndex==1}">
+					<a class="item nav-item" ng-click="selectSubnav(1, $event);" data-id="0" play-type="LXLW" min-size="2" max-size="12">二连肖</a>
+				</div>
+				
+				<div class="col sub-col col-31" ng-class="{navActive:shareData.subIndex==2}">
+					<a class="item nav-item" ng-click="selectSubnav(2, $event);" data-id="0" play-type="LXLW" min-size="3" max-size="12">三连肖</a>
+				</div>
+				
+				<div class="col sub-col col-31" ng-class="{navActive:shareData.subIndex==3}">
+					<a class="item nav-item" ng-click="selectSubnav(3, $event);" data-id="0" play-type="LXLW" min-size="4" max-size="12">四连肖</a>
+				</div>
+				
+				<div class="col sub-col col-31" ng-class="{navActive:shareData.subIndex==4}">
+					<a class="item nav-item" ng-click="selectSubnav(4, $event);" data-id="0" play-type="LXLW" min-size="5" max-size="12">五连肖</a>
+				</div>
+			</div>
+		</ion-scroll>
+	
+		<div class="nav-content">
+			<ion-content class="tp40">
+				<div ng-if="shareData.subIndex==1">
+					<div class="row text-center"><div class="col title-no">二连肖</div></div>
+			
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809901">
+							<div class="bet-content left pd3">鼠</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鼠'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809902">
+							<div class="bet-content left pd3">牛</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='牛'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809903">
+							<div class="bet-content left pd3">虎</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='虎'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809904">
+							<div class="bet-content left pd3">兔</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='兔'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809905">
+							<div class="bet-content left pd3">龙</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='龙'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809906">
+							<div class="bet-content left pd3">蛇</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='蛇'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809907">
+							<div class="bet-content left pd3">马</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='马'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809908">
+							<div class="bet-content left pd3">羊</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='羊'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809909">
+							<div class="bet-content left pd3">猴</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猴'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809910">
+							<div class="bet-content left pd3">鸡</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鸡'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809911">
+							<div class="bet-content left pd3">狗</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='狗'></div>
+						</div>
+					</div>
+					
+					<div class="row end">
+						<div class="col sub-bet ok" data-id="809912">
+							<div class="bet-content left pd3">猪</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猪'></div>
+						</div>
+					</div>
+				</div>
+				
+				<div ng-if="shareData.subIndex==2">
+					<div class="row text-center"><div class="col title-no">三连肖</div></div>
+			
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809913">
+							<div class="bet-content left pd3">鼠</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鼠'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809914">
+							<div class="bet-content left pd3">牛</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='牛'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809915">
+							<div class="bet-content left pd3">虎</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='虎'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809916">
+							<div class="bet-content left pd3">兔</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='兔'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809917">
+							<div class="bet-content left pd3">龙</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='龙'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809918">
+							<div class="bet-content left pd3">蛇</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='蛇'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809919">
+							<div class="bet-content left pd3">马</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='马'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809920">
+							<div class="bet-content left pd3">羊</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='羊'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809921">
+							<div class="bet-content left pd3">猴</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猴'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809922">
+							<div class="bet-content left pd3">鸡</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鸡'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809923">
+							<div class="bet-content left pd3">狗</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='狗'></div>
+						</div>
+					</div>
+					
+					<div class="row end">
+						<div class="col sub-bet ok" data-id="809924">
+							<div class="bet-content left pd3">猪</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猪'></div>
+						</div>
+					</div>
+				</div>
+				
+				<div ng-if="shareData.subIndex==3">
+					<div class="row text-center"><div class="col title-no">四连肖</div></div>
+			
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809925">
+							<div class="bet-content left pd3">鼠</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鼠'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809926">
+							<div class="bet-content left pd3">牛</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='牛'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809927">
+							<div class="bet-content left pd3">虎</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='虎'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809928">
+							<div class="bet-content left pd3">兔</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='兔'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809929">
+							<div class="bet-content left pd3">龙</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='龙'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809930">
+							<div class="bet-content left pd3">蛇</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='蛇'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809931">
+							<div class="bet-content left pd3">马</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='马'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809932">
+							<div class="bet-content left pd3">羊</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='羊'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809933">
+							<div class="bet-content left pd3">猴</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猴'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809934">
+							<div class="bet-content left pd3">鸡</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鸡'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809935">
+							<div class="bet-content left pd3">狗</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='狗'></div>
+						</div>
+					</div>
+					
+					<div class="row end">
+						<div class="col sub-bet ok" data-id="809936">
+							<div class="bet-content left pd3">猪</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猪'></div>
+						</div>
+					</div>
+				</div>
+				
+				<div ng-if="shareData.subIndex==4">
+					<div class="row text-center"><div class="col title-no">五连肖</div></div>
+			
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809937">
+							<div class="bet-content left pd3">鼠</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鼠'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809938">
+							<div class="bet-content left pd3">牛</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='牛'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809939">
+							<div class="bet-content left pd3">虎</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='虎'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809940">
+							<div class="bet-content left pd3">兔</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='兔'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809941">
+							<div class="bet-content left pd3">龙</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='龙'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809942">
+							<div class="bet-content left pd3">蛇</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='蛇'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809943">
+							<div class="bet-content left pd3">马</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='马'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809944">
+							<div class="bet-content left pd3">羊</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='羊'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809945">
+							<div class="bet-content left pd3">猴</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猴'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809946">
+							<div class="bet-content left pd3">鸡</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='鸡'></div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col sub-bet ok" data-id="809947">
+							<div class="bet-content left pd3">狗</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='狗'></div>
+						</div>
+					</div>
+					
+					<div class="row end">
+						<div class="col sub-bet ok" data-id="809948">
+							<div class="bet-content left pd3">猪</div>
+							<div class="bet-item left lh14">2.09</div>
+							<div class="right mr10 bet-round" zodiac='猪'></div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</ion-content>
+		</div>
+	</div>
+</ion-content>

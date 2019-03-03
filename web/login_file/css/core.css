@@ -1,0 +1,1290 @@
+a,
+abbr,
+acronym,
+address,
+b,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+i,
+img,
+input,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+small,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+    padding: 0;
+    margin: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption {
+    text-align: left
+}
+
+input,
+select {
+    vertical-align: middle;
+    font-size: 12px;
+    color: #fff;
+    outline: 0;
+    border: none
+}
+
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal
+}
+
+li,
+ol,
+ul {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%
+}
+
+q:after,
+q:before {
+    content: ""
+}
+
+legend {
+    display: none
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: 0
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clear {
+    clear: both
+}
+
+body,
+html {
+    min-width: 1046px;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', Arial, 'Times New Roman', SimHei, Helvetica, sans-serif
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.f12 {
+    font-size: 12px
+}
+
+.f14 {
+    font-size: 14px
+}
+
+.f16 {
+    font-size: 16px
+}
+
+.f18 {
+    font-size: 18px
+}
+
+.f20 {
+    font-size: 20px
+}
+
+.f21 {
+    font-size: 21px
+}
+
+.f24 {
+    font-size: 24px
+}
+
+.f28 {
+    font-size: 28px
+}
+
+.f26 {
+    font-size: 26px
+}
+
+.f30 {
+    font-size: 30px
+}
+
+.f40 {
+    font-size: 40px
+}
+
+.f50 {
+    font-size: 50px
+}
+
+.f60 {
+    font-size: 60px
+}
+
+.fwb {
+    font-weight: 700
+}
+
+.fwn {
+    font-weight: 400
+}
+
+.nomg {
+    margin: 0
+}
+
+.mgr5 {
+    margin-right: 5px
+}
+
+.mgb10 {
+    margin-bottom: 10px
+}
+
+.hide {
+    display: none
+}
+
+.show {
+    display: block
+}
+
+.cyl {
+    color: #ffc000
+}
+
+.cyl2 {
+    color: #ff0
+}
+
+.cyl3 {
+    color: #f0e091
+}
+
+.cf {
+    color: #fff
+}
+
+.cf7 {
+    color: #f7f76f
+}
+
+.cred {
+    color: red
+}
+
+.container {
+    position: relative;
+    width: 1024px;
+    margin: 0 auto
+}
+
+.header {
+    height: 120px;
+    background: url(../img/header/bg_header.jpg) repeat-x
+}
+
+.header .logo {
+    width: 269px;
+    height: 103px;
+    margin-top: 10px
+}
+.header .logo img {display: block;height: 100%;}
+
+.header .nav {
+    position: absolute;
+    right: 0;
+    top: 60px
+}
+
+.header .nav li {
+    float: left;
+    padding-top: 8px;
+    margin-left: 5px
+}
+
+.header .nav a {
+    color: #fff;
+    line-height: 31px;
+    text-align: center;
+    padding: 0 15px
+}
+
+.header .nav .hot {
+    position: relative
+}
+
+.header .nav .hot i {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 21px;
+    height: 12px;
+    background: url(../img/header/icon_header.png) no-repeat -302px 0
+}
+
+.header .nav .hot a {
+    color: #fcff0a
+}
+
+.header .nav .active a {
+    color: #000;
+    background: url(../img/header/active_nav.png) repeat-x;
+    box-shadow: 2px 2px 3px #000
+}
+
+.header .tool-bar {
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+    top: 8px
+}
+
+.header .tool-bar li {
+    color: #fff;
+    float: left;
+    margin-left: 10px
+}
+
+.header .tool-bar a:hover {
+    text-decoration: underline;
+    color: #fc0
+}
+
+.header .tool-bar .lan a {
+    float: left;
+    width: 27px;
+    height: 19px;
+    background: url(../img/header/icon_header.png) no-repeat;
+    margin-left: 3px
+}
+
+.header .tool-bar .lan span {float:left;display: inline-block;line-height: 19px;}
+
+.header .tool-bar .lan .cn {
+    background-position: -303px -50px
+}
+
+.header .tool-bar .lan .hk {
+    background-position: -334px -50px
+}
+
+.header .tool-bar .lan .us {
+    background-position: -365px -50px
+}
+
+.lgbox {
+    height: 46px;
+    background: #3700c2;
+    text-align: center;
+    overflow: hidden
+}
+
+.lgbox .container {
+    background: url(../img/header/bg_lgbar.png) no-repeat center;
+    height: 100%
+}
+
+.lgbox li {
+    float: left;
+    line-height: 46px;
+    position: relative;
+
+    margin-right: 10px;
+}
+
+.lgbox ul {
+    width: 810px;
+    margin: 0 auto
+}
+
+.lgbox .tit {
+    font-size: 15px;
+    line-height: 48px;
+    color: #fff
+}
+
+.lgbox input[type=password],
+.lgbox input[type=text] {
+    width: 150px;
+    height: 21px;
+    padding: 3px 15px;
+    background: url(../img/header/icon_header.png) no-repeat;
+    margin-right: 5px;
+    color: #000
+}
+
+.lgbox label {
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    cursor: text
+}
+
+.lgbox .btn-lg {
+    width: 93px;
+    height: 38px;
+    background: url(../img/header/icon_header.png) no-repeat 0 -49px;
+    cursor: pointer;
+    margin-top: 1px
+}
+
+.lgbox .btn-lg:hover {
+    background-position-y: -100px
+}
+
+.lgbox .btn-reg {
+    width: 117px;
+    height: 38px;
+    background: url(../img/header/icon_header.png) no-repeat -150px -49px;
+    margin: 7px 0 0 -4px
+}
+
+.lgbox .btn-reg:hover {
+    background-position-y: -100px
+}
+.lgbox .btn-guest {display: inline-block;height: 38px;font-size: 16px;line-height: 38px;font-weight: bolder;padding: 0 10px;border-radius: 3px;margin-top: 6px;color: #000;background: url('../img/header/bg_guest.png') repeat-x;background-size: auto 100%;}
+.lgbox .btn-guest:hover {color: #5c594b;background-image: url('../img/header/bg_guest_hover.png');}
+
+.lgbox .forget {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 10px
+}
+
+.lgbox .forget:hover {
+    color: #fc0
+}
+
+.lgbox font {
+    position: absolute;
+    right: 20px;
+    top: 2px;
+    cursor: pointer;
+    letter-spacing: 1px
+}
+
+.banner-index {
+    z-index: 2;
+    min-width: 1000px;
+    width: 100%;
+    position: relative;
+    background: #040120
+}
+
+.banner-index .lb-wrap {
+    height: 502px;
+    overflow: hidden;
+    position: relative
+}
+
+.banner-index .lb-index {
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+    width: 1920px
+}
+
+.banner-index .lb-index ul li {
+    float: left;
+    height: 502px
+}
+
+.banner-index .lb-index .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+    z-index: 4;
+    text-align: center
+}
+
+.banner-index .lb-index .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #999;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    box-shadow: 0 1px 2px #555 inset
+}
+
+.banner-index .lb-index .dot {
+    *display: inline
+}
+
+.banner-index .lb-index .dots li.active {
+    background: #fff
+}
+
+.banner {
+    position: relative;
+    height: 261px;
+    background: url(../img/banner.jpg) no-repeat center #000
+}
+
+.radio {
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    width: 100%
+}
+
+.radio .wrap {
+    margin: 0 auto;
+    width: 1046px;
+    height: 64px;
+    background: url(../img/bg_radio.png) no-repeat 0 0;
+    position: relative
+}
+
+.radio .tit {
+    position: absolute;
+    left: 110px;
+    top: 15px;
+    font-size: 14px;
+    color: #f9f287
+}
+
+.radio .tit i {
+    display: inline-block;
+    width: 17px;
+    height: 15px;
+    background: url(../img/bg_radio.png) no-repeat -1101px 0;
+    vertical-align: middle
+}
+
+.radio .tit i {
+    *display: inline
+}
+
+.radio .tit span {
+    line-height: 17px;
+    vertical-align: middle
+}
+
+.radio .marquee {
+    position: absolute;
+    left: 210px;
+    top: 16px;
+    width: 740px;
+    color: #fff
+}
+
+.main-index {
+    height: 442px;
+    background: url(../img/bg_main.jpg) repeat-x
+}
+
+.main-index .wrap {
+    width: 1033px;
+    height: 442px;
+    margin: 0 auto;
+    position: relative;
+    background: url(../img/gamelist/bg_list.png) no-repeat center bottom
+}
+
+.main-index ul {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    margin-left: -506px;
+    width: 1012px
+}
+
+.main-index li {
+    float: left;
+    text-align: center;
+    margin: 0 4px
+}
+.main-index a {
+    height: 352px;
+    width: 194px;
+    position: relative
+}
+
+.main-index a img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -112px;
+    top: 0
+}
+
+.main-index span {
+    position: absolute;
+    font-size: 13px;
+    left: 50%;
+    margin-left: -48px;
+    bottom: 20px;
+    color: #fff;
+    width: 94px;
+    height: 26px;
+    display: inline-block;
+    line-height: 26px;
+    border: 1px solid #fff
+}
+
+.main-index span:hover {
+    color: #fc0;
+    border-color: #fc0
+}
+
+.main-index span {
+    *display: inline
+}
+
+.main {
+    background: url(../img/bg_main.jpg) repeat-x #02002a;
+    padding-bottom: 70px
+}
+
+.main .leftmenu {
+    width: 237px;
+    background: #1d1663;
+    margin-top: 35px;
+    padding-bottom: 24px
+}
+
+.main .leftmenu .tit {
+    height: 42px;
+    color: #040120;
+    background: url(../img/icon_leftbar.png) no-repeat 0 0;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center
+}
+
+.main .leftmenu ul {
+    margin-top: 11px
+}
+
+.main .leftmenu li {
+    margin: 0 auto 14px;
+    width: 180px;
+    height: 62px;
+    position: relative
+}
+
+.main .leftmenu li a {
+    height: 52px;
+    width: 100%;
+    background: url(../img/icon_leftbar.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 5px
+}
+
+.main .leftmenu li a:hover {
+    top: 0
+}
+
+.main .leftmenu .about {
+    background-position: 0 -60px
+}
+
+.main .leftmenu .question1 {
+    background-position: 0 -133px
+}
+
+.main .leftmenu .question2 {
+    background-position: 0 -209px
+}
+
+.main .leftmenu .question3 {
+    background-position: 0 -285px
+}
+
+.main .leftmenu .activity {
+    background-position: 0 -362px
+}
+
+.main .leftmenu .contact {
+    background-position: 0 -437px
+}
+
+.main .leftmenu .agentplan {
+    background-position: -180px -60px
+}
+
+.main .leftmenu .agentrules {
+    background-position: -180px -133px
+}
+
+.main .leftmenu .agenturl {
+    background-position: -180px -209px
+}
+
+.main .leftmenu .agentreg {
+    background-position: -180px -285px
+}
+
+.main .leftmenu .agentlg {
+    background-position: -180px -362px
+}
+
+.main .text {
+    margin: 35px 0 0 6px;
+    min-height: 533px;
+    overflow: hidden;
+    width: 770px;
+    background: url(../img/bg_reg.png) center top #070232;
+    color: #fff;
+    box-shadow: 0 3px 2px #000;
+    font-size: 12px
+}
+
+.main .text .wrap {
+    padding: 25px 30px 18px
+}
+
+.main .text p {
+    line-height: 30px
+}
+
+.main .text .activity {
+    text-align: center
+}
+
+.main .text .activity th {
+    height: 38px
+}
+
+.main .text .activity td {
+    color: red;
+    height: 38px
+}
+
+.main .text-reg {
+    background: #fff;
+    color: #333
+}
+
+.main .text-reg .regbox .tit {
+    background: #fff
+}
+
+.main .rules a {
+    margin-top: 15px
+}
+
+.main .rules img {
+    display: block
+}
+
+.main .rules .drop {
+    padding: 10px
+}
+
+.main .agenturl input {
+    padding: 3px 15px;
+    width: 310px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #5799f2;
+    box-shadow: 2px 2px 4px #072a65 inset;
+    color: #000
+}
+
+.main .regbox {
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 20px
+}
+
+.main .regbox .tbwrap {
+    border: 1px solid #074391;
+    position: relative;
+    padding: 20px 100px
+}
+
+.main .regbox .tit {
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 6px;
+    background: #070232;
+    z-index: 2
+}
+
+.main .regbox table strong {
+    color: red;
+    margin-right: 5px;
+    font-size: 14px
+}
+
+.main .regbox table input {
+    height: 18px;
+    line-height: 18px;
+    padding: 4px 8px;
+    width: 248px;
+    color: #000;
+    border: 2px solid #5799f2
+}
+
+.main .regbox table td {
+    line-height: 36px
+}
+
+.main .regbox table select {
+    width: 48px;
+    height: 22px;
+    margin-right: 8px;
+    color: #000;
+    border: 1px solid #5799f2
+}
+
+.main .regbox table .authimgcode {
+    width: 58px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    letter-spacing: 1px;
+    vertical-align: bottom
+}
+
+.main .regbox table .imgCode {
+    width: 78px;
+    height: 26px;
+    vertical-align: bottom;
+    margin-left: 10px;
+    cursor: pointer
+}
+
+.main .regbox .check {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 14px
+}
+
+.main .regbox .check strong {
+    color: #fff100
+}
+
+.main .regbox .check span {
+    vertical-align: middle
+}
+
+.main .regbox .check input {
+    margin: 0 3px;
+    vertical-align: middle
+}
+
+.main .regbox .btns {
+    text-align: center
+}
+
+.main .regbox .btns input {
+    border: 1px solid #707070;
+    color: #707070;
+    cursor: pointer;
+    height: 28px;
+    width: 90px;
+    margin: 0 3px
+}
+
+.main .appdownload {
+    text-align: center
+}
+
+.main .appdownload .down h3 {
+    font-size: 16px;
+    line-height: 40px
+}
+
+.main .appdownload .down p {
+    font-size: 14px;
+    margin-top: 10px
+}
+
+.main .appdownload .down img {
+    margin-top: 20px;
+    width: 130px
+}
+
+.main .appdownload .teach {
+    overflow-x: hidden;
+    height: 500px;
+    margin-top: 30px;
+    padding: 30px 0
+}
+
+.main .appdownload .teach img {
+    width: 400px
+}
+
+.main .appdownload .teach::-webkit-scrollbar {
+    width: 10px
+}
+
+.main .appdownload .teach::-webkit-scrollbar-thumb {
+    background-color: #00179a;
+    border: 2px solid #051037;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em
+}
+
+.main .appdownload .teach::-webkit-scrollbar-track {
+    background-color: #051037;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em
+}
+
+.footer {
+    background: #040120;
+    padding-bottom: 40px
+}
+
+.footer .wrap {
+    width: 1000px;
+    margin: 0 auto
+}
+
+.footer .paylist {
+    height: 150px;
+    background: url(../img/footer/payicon.png) no-repeat center bottom
+}
+
+.footer li {
+    float: left
+}
+
+.footer .servicelist {
+    height: 50px
+}
+
+.footer .servicelist li {
+    margin-right: 33px
+}
+
+.footer .servicelist .last {
+    margin: 0
+}
+
+.footer .servicelist a {
+    line-height: 36px;
+    padding-left: 42px;
+    color: #fff2f2;
+    font-size: 15px;
+    background: url(../img/footer/contacticon.png) no-repeat
+}
+
+.footer .servicelist a span {
+    color: red
+}
+
+.footer .servicelist .phone {
+    background-position: 0 0
+}
+
+.footer .servicelist .qq {
+    background-position: 0 -40px
+}
+
+.footer .servicelist .email {
+    background-position: 0 -80px
+}
+
+.footer .servicelist .online {
+    background-position: 0 -120px
+}
+
+.footer .line {
+    height: 3px;
+    background: url(../img/footer/line.png) repeat-x
+}
+
+.footer .links {
+    text-align: center;
+    color: #848484;
+    line-height: 45px;
+    font-size: 12px
+}
+
+.footer .links a {
+    color: #848484;
+    display: inline;
+    margin: 0 30px
+}
+
+.footer .links a:hover {
+    color: #fc0;
+    text-decoration: underline
+}
+
+.footer .cominfo {
+    color: #848484;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 12px
+}
+
+.footer .detaillist {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.footer .detaillist li {
+    width: 305px;
+    margin: 0 35px 0 3px;
+    color: #fff
+}
+
+.footer .detaillist .last {
+    margin-right: 0
+}
+
+.footer .detaillist .titimg {
+    background: url(../img/footer/icon_list.png) no-repeat;
+    width: 140px;
+    height: 43px;
+    margin-bottom: 30px
+}
+
+.footer .detaillist .service {
+    background-position: 0 0
+}
+
+.footer .detaillist .product {
+    background-position: 0 -55px
+}
+
+.footer .detaillist .help {
+    background-position: 0 -119px
+}
+
+.footer .detaillist .bankshow .textbox {
+    width: 258px
+}
+
+.footer .detaillist .bankshow .leftbox .t1 {
+    font-size: 18px;
+    margin-bottom: 2px
+}
+
+.footer .detaillist .bankshow .rightbox {
+    font-size: 24px
+}
+
+.footer .detaillist .bankshow .rightbox .num {
+    font-size: 34px;
+    margin-right: 2px
+}
+
+.footer .detaillist .bankshow .rightbox span {
+    vertical-align: middle
+}
+
+.footer .detaillist .bankshow .lineshow {
+    margin: 10px 0 20px 0;
+    background: url(../img/footer/icon_list.png) no-repeat -5px -481px;
+    width: 259px;
+    height: 14px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px
+}
+
+.footer .detaillist .bankshow .floatling {
+    display: block;
+    position: absolute;
+    left: -153px;
+    top: 0;
+    width: 153px;
+    height: 13px;
+    background: url(../img/footer/icon_list.png) no-repeat -5px -447px
+}
+
+.footer .detaillist .bankshow .imgshow {
+    width: 252px;
+    height: 50px;
+    margin-top: 12px;
+    background: url(../img/footer/icon_list.png) no-repeat 0 -212px
+}
+
+.footer .detaillist .textshow .tit {
+    font-size: 19px;
+    margin-bottom: 6px
+}
+
+.footer .detaillist .textshow .tit span {
+    font-size: 14px
+}
+
+.footer .detaillist .textshow .text {
+    margin-bottom: 40px
+}
+
+.footer .detaillist .textshow .text2 {
+    margin-bottom: 12px
+}
+
+.footer .detaillist .textshow .partnerimg {
+    width: 306px;
+    height: 90px;
+    background: url(../img/footer/icon_list.png) no-repeat 0 -309px
+}
+
+.footer .detaillist .textshow .links {
+    line-height: inherit;
+    text-align: left;
+    margin-top: 2px
+}
+
+.footer .detaillist .textshow .links a {
+    line-height: 20px;
+    margin: 0 40px 0 0;
+    padding-left: 20px;
+    display: inline-block;
+    background: url(../img/footer/icon_list.png) no-repeat 0 -398px
+}
+
+.footer .detaillist .textshow .links a:hover {
+    background-position: 0 -419px
+}
+
+.footer .detaillist .textshow .links a {
+    *display: inline
+}
+
+.footer .detaillist .textshow .links .last {
+    margin-right: 0
+}
+
+.float {
+    width: 149px;
+    height: 575px;
+    position: absolute;
+    top: 150px;
+    background: url(../img/float/bg_float.png) no-repeat;
+    text-align: center;
+    z-index: 99;
+}
+
+.float ul {
+    position: absolute;
+    left: 18px;
+    top: 183px;
+    width: 112px
+}
+
+.float li {
+    width: 100%
+}
+
+.float img {
+    margin: 0 auto;
+    display: block
+}
+
+.float .service a {
+    height: 58px;
+    background: url(../img/float/bg_float.png) no-repeat -377px 0
+}
+
+.float .service a:hover {
+    background-position: -377px -113px
+}
+
+.float .register {
+    margin-top: 22px
+}
+
+.float .register a {
+    height: 35px;
+    background: url(../img/float/bg_float.png) no-repeat -378px -195px
+}
+
+.float .register a:hover {
+    background-position: -377px -258px
+}
+
+.float .try {
+    margin-top: 5px
+}
+
+.float .try a {
+    height: 35px;
+    background: url(../img/float/bg_float.png) no-repeat -377px -325px
+}
+
+.float .try a:hover {
+    background-position: -377px -380px
+}
+
+.float .qq {
+    margin-top: 3px
+}
+
+.float .qq a {
+    position: relative;
+    height: 74px;
+    background: url(../img/float/bg_float.png) no-repeat -224px 0
+}
+
+.float .qq a:hover {
+    background-position: -224px -98px
+}
+
+.float .qq a span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5px;
+    left: 0;
+    color: #1c1c1c;
+    font-weight: 700;
+    font-size: 18px
+}
+
+.float .ewm {
+    margin-top: 4px
+}
+
+.float .ewm a {
+    color: #fff
+}
+
+.float .close {
+    margin-top: 3px;
+    position: relative;
+    height: 25px
+}
+
+.float .close a {
+    width: 25px;
+    height: 25px;
+    background: url(../img/float/bg_float.png) no-repeat -231px -196px;
+    position: absolute;
+    left: 43px;
+    top: 3px
+}
+
+.float .close a:hover {
+    background-position: -231px -263px
+}
+.taninx{
+    padding:22px 30px;
+    display:none;
+
+}
+.hong{
+    color:#e40000;
+}
+.tanbtale{
+    width:100%;
+}
+.tanbtale td,
+.tanbtale th{
+    height: 32px;
+    border:1px solid #9a9a9a;
+    color:#242424;
+    text-align:center;
+
+}
+.tanbtale th{
+    color:#e40000;
+}

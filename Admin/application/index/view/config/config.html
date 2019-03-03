@@ -1,0 +1,82 @@
+<section id="main-content">
+		<section class="wrapper">
+			<ol class="breadcrumb">
+				<li><a href="{:Url('Index/index')}"><span class="glyphicon glyphicon-home" aria-hidden="true" style="color:#f00"></span></a></li>
+				<li class="active"><font><font>系统配置</font></font></li>
+			</ol>
+			<div class="typo-agile">
+
+				<div class="bs-docs-example">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th data-breakpoints="xs"><font>ID</font></th>
+								<th><font>配置名称(<b style="color:red;">庄,闲,和 三者概率 相加 务必 等于100%</b>)</font></th>
+								<th data-breakpoints="xs"><font>操作</font></th>
+							</tr>
+						</thead>
+						{volist name="url" id="vo"}
+						<tr data-expanded="true">
+							<td>{$vo.id}</td>
+							<td>{$vo['name']}</td>
+							<td>{$vo['values']}
+								 <span	style="color: #ccc; font-size: 20px">/</span>
+									 <a href="{:Url('Config/add',array('id'=>$vo['id']))}">
+									<span class="label label-info">修改</span></a>
+							</td>
+						</tr>
+						{/volist}
+						{volist name="order" id="vo"}
+						<tr data-expanded="true">
+							<td>{$vo.id}</td>
+							<td>{$vo['name']}</td>
+							<td>{$vo['values']}
+								 <span	style="color: #ccc; font-size: 20px">/</span>
+									 <a href="{:Url('Config/add',array('id'=>$vo['id']))}">
+									<span class="label label-info">修改</span></a>
+							</td>
+						</tr>
+						{/volist}
+						{volist name="system" id="vo"}
+						<tr data-expanded="true">
+							<td>{$vo.id}</td>
+							<td>{$vo['name']}</td>
+							<td>
+								{if condition="$vo['values'] eq 1"}
+									<span class="label label-success">开启中</span>
+								{else/}
+									<span class="label label-danger">关闭中</span>
+								{/if}
+								 <span	style="color: #ccc; font-size: 20px">/</span>
+									 <a href="{:Url('Config/run1',array('id'=>$vo['id']))}">
+									<span class="label label-info">修改</span></a>
+							</td>
+						</tr>
+						{/volist}
+						{volist name="ststem" id="vo"}
+						<tr data-expanded="true">
+							<td>{$vo.id}</td>
+							<td>{$vo['name']}</td>
+							<td>{$vo['values']}%
+								
+								 <span	style="color: #ccc; font-size: 20px">/</span>
+									 <a href="{:Url('Config/add',array('id'=>$vo['id']))}">
+									<span class="label label-info">修改</span></a>
+							</td>
+						</tr>
+						{/volist}
+						{volist name="rebate" id="vo"}
+						<tr data-expanded="true">
+							<td>{$vo.id}</td>
+							<td>{$vo['name']}</td>
+							<td>{$vo['values']}%
+								 <span	style="color: #ccc; font-size: 20px">/</span>
+									 <a href="{:Url('Config/add',array('id'=>$vo['id']))}">
+									<span class="label label-info">修改</span></a>
+							</td>
+						</tr>
+						{/volist}
+					</table>
+				</div>
+			</div>
+		</section>

@@ -1,0 +1,40 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('user/robot')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li class="active"><font><font></font></font></li>
+		</ol>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+				
+				<div>
+					<table class="table" >			
+  					<form action="" method="post">
+    			        {volist name="list" id="vo"}
+							<tr>
+								<th>
+								{if condition="$vo.id eq 25"}
+									url地址请填写格式正确，务必加上<b style="color:red;">&nbsp;&nbsp;http://&nbsp;&nbsp;</b>(例如：<i class="bg-danger">http://www.baidu.com</i>)	
+								{elseif condition="$vo.id eq 26"/}
+									url地址请填写格式正确，务必加上<b style="color:red;">&nbsp;&nbsp;http://&nbsp;&nbsp;</b>(例如：<i class="bg-danger">http://www.baidu.com</i>)
+								{/if}
+								</th>
+							</tr>
+							<tr>
+								<td>
+								<input type="hidden" value="{$vo.id}" name="id"/>
+								{$vo.name}	：<input type="text" style="width: 250px; height: 30px;" value="{$vo.values}" name="values" />	
+								<button type="submit" class="btn btn-danger">保存</button>
+								</td>
+							</tr>
+						{/volist}
+					</form>	
+					</table>
+				
+				</div>
+			</div>
+		</div>
+
+	</section>

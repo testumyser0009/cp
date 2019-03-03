@@ -1,0 +1,773 @@
+<?php
+$game3=$this->getRows("select * from {$this->prename}played_group where enable=1 order by id asc");
+$playCates=array();
+$playCates3='';
+foreach($game3 as $key => $var){
+	$playCates['id']=$var['id'];
+	$playCates['name']=$var['name'];
+
+	$playCates['gameId'] = $var['type'];
+	$playCates['code'] = $var['code'];
+	$playCates['isShow'] = $var['isShow'];
+	$playCates['isBan'] = $var['isBan'];//玩法禁用开关
+
+if(max(array_keys($game3)) != $key){
+$playCates3=$playCates3.'"'.$var['id'].'":'.json_encode($playCates).',';
+
+}else{
+$playCates3=$playCates3.'"'.$var['id'].'":'.json_encode($playCates);
+
+}
+
+}
+echo 'var playCates = {'.$playCates3.'};';
+
+
+/*var playCates = {
+	"1": {
+		"id": 1,
+		"name": "总和-龙虎和",
+		"gameId": 1,
+		"code": "ZHLHH",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"2": {
+		"id": 2,
+		"name": "第一球",
+		"gameId": 1,
+		"code": "QIU1",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"3": {
+		"id": 3,
+		"name": "第二球",
+		"gameId": 1,
+		"code": "QIU2",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"4": {
+		"id": 4,
+		"name": "第三球",
+		"gameId": 1,
+		"code": "QIU3",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"5": {
+		"id": 5,
+		"name": "第四球",
+		"gameId": 1,
+		"code": "QIU4",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"6": {
+		"id": 6,
+		"name": "第五球",
+		"gameId": 1,
+		"code": "QIU5",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"7": {
+		"id": 7,
+		"name": "前三",
+		"gameId": 1,
+		"code": "QIAN3",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"8": {
+		"id": 8,
+		"name": "中三",
+		"gameId": 1,
+		"code": "ZHONG3",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"9": {
+		"id": 9,
+		"name": "后三",
+		"gameId": 1,
+		"code": "HOU3",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"10": {
+		"id": 10,
+		"name": "冠、亚军和",
+		"gameId": 50,
+		"code": "GYJH",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"11": {
+		"id": 11,
+		"name": "冠军",
+		"gameId": 50,
+		"code": "GJ",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"12": {
+		"id": 12,
+		"name": "亚军",
+		"gameId": 50,
+		"code": "YJ",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"13": {
+		"id": 13,
+		"name": "第三名",
+		"gameId": 50,
+		"code": "TSM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"14": {
+		"id": 14,
+		"name": "第四名",
+		"gameId": 50,
+		"code": "TSIM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"15": {
+		"id": 15,
+		"name": "第五名",
+		"gameId": 50,
+		"code": "TWM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"16": {
+		"id": 16,
+		"name": "第六名",
+		"gameId": 50,
+		"code": "DLM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"17": {
+		"id": 17,
+		"name": "第七名",
+		"gameId": 50,
+		"code": "DQM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"18": {
+		"id": 18,
+		"name": "第八名",
+		"gameId": 50,
+		"code": "DBM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"19": {
+		"id": 19,
+		"name": "第九名",
+		"gameId": 50,
+		"code": "DJM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"20": {
+		"id": 20,
+		"name": "第十名",
+		"gameId": 50,
+		"code": "DSHIM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"21": {
+		"id": 21,
+		"name": "总和、总和过关",
+		"gameId": 65,
+		"code": "ZH",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"23": {
+		"id": 23,
+		"name": "前后和",
+		"gameId": 65,
+		"code": "QHH",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"24": {
+		"id": 24,
+		"name": "单双和",
+		"gameId": 65,
+		"code": "DSH",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"25": {
+		"id": 25,
+		"name": "五行",
+		"gameId": 65,
+		"code": "WX",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"26": {
+		"id": 26,
+		"name": "正码",
+		"gameId": 65,
+		"code": "ZM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"27": {
+		"id": 27,
+		"name": "总和",
+		"gameId": 21,
+		"code": "ZH",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"30": {
+		"id": 30,
+		"name": "第一球",
+		"gameId": 21,
+		"code": "QIU1",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"31": {
+		"id": 31,
+		"name": "第二球",
+		"gameId": 21,
+		"code": "QIU2",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"32": {
+		"id": 32,
+		"name": "第三球",
+		"gameId": 21,
+		"code": "QIU3",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"33": {
+		"id": 33,
+		"name": "第四球",
+		"gameId": 21,
+		"code": "QIU4",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"34": {
+		"id": 34,
+		"name": "第五球",
+		"gameId": 21,
+		"code": "QIU5",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"35": {
+		"id": 35,
+		"name": "一中一",
+		"gameId": 21,
+		"code": "YZY",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"36": {
+		"id": 36,
+		"name": "连码",
+		"gameId": 21,
+		"code": "LIANMA",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"37": {
+		"id": 37,
+		"name": "直选",
+		"gameId": 21,
+		"code": "ZHIXUAN",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"56": {
+		"id": 56,
+		"name": "三军",
+		"gameId": 10,
+		"code": "SJDX",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"57": {
+		"id": 57,
+		"name": "围骰",
+		"gameId": 10,
+		"code": "WSQS",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"58": {
+		"id": 58,
+		"name": "点数",
+		"gameId": 10,
+		"code": "DS",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"59": {
+		"id": 59,
+		"name": "长牌",
+		"gameId": 10,
+		"code": "CP",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"60": {
+		"id": 60,
+		"name": "短牌",
+		"gameId": 10,
+		"code": "DP",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"61": {
+		"id": 61,
+		"name": "大小",
+		"gameId": 10,
+		"code": "DX",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"62": {
+		"id": 62,
+		"name": "全骰",
+		"gameId": 10,
+		"code": "QX",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"63": {
+		"id": 63,
+		"name": "总和",
+		"gameId": 61,
+		"code": "ZH",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"64": {
+		"id": 64,
+		"name": "第一球",
+		"gameId": 61,
+		"code": "QIU1",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"65": {
+		"id": 65,
+		"name": "第二球",
+		"gameId": 61,
+		"code": "QIU2",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"66": {
+		"id": 66,
+		"name": "第三球",
+		"gameId": 61,
+		"code": "QIU3",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"67": {
+		"id": 67,
+		"name": "第四球",
+		"gameId": 61,
+		"code": "QIU4",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"68": {
+		"id": 68,
+		"name": "第五球",
+		"gameId": 61,
+		"code": "QIU5",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"69": {
+		"id": 69,
+		"name": "第六球",
+		"gameId": 61,
+		"code": "QIU6",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"70": {
+		"id": 70,
+		"name": "第七球",
+		"gameId": 61,
+		"code": "QIU7",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"71": {
+		"id": 71,
+		"name": "第八球",
+		"gameId": 61,
+		"code": "QIU8",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"72": {
+		"id": 72,
+		"name": "正码",
+		"gameId": 61,
+		"code": "ZM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"73": {
+		"id": 73,
+		"name": "连码",
+		"gameId": 61,
+		"code": "LM",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"74": {
+		"id": 74,
+		"name": "总和",
+		"gameId": 60,
+		"code": "ZH",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"75": {
+		"id": 75,
+		"name": "第一球",
+		"gameId": 60,
+		"code": "QIU1",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"76": {
+		"id": 76,
+		"name": "第二球",
+		"gameId": 60,
+		"code": "QIU2",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"77": {
+		"id": 77,
+		"name": "第三球",
+		"gameId": 60,
+		"code": "QIU3",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"78": {
+		"id": 78,
+		"name": "第四球",
+		"gameId": 60,
+		"code": "QIU4",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"79": {
+		"id": 79,
+		"name": "第五球",
+		"gameId": 60,
+		"code": "QIU5",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"80": {
+		"id": 80,
+		"name": "第六球",
+		"gameId": 60,
+		"code": "QIU6",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"81": {
+		"id": 81,
+		"name": "第七球",
+		"gameId": 60,
+		"code": "QIU7",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"82": {
+		"id": 82,
+		"name": "第八球",
+		"gameId": 60,
+		"code": "QIU8",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"83": {
+		"id": 83,
+		"name": "正码",
+		"gameId": 60,
+		"code": "ZM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"84": {
+		"id": 84,
+		"name": "连码",
+		"gameId": 60,
+		"code": "LM",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"85": {
+		"id": 85,
+		"name": "特码",
+		"gameId": 70,
+		"code": "TM",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"86": {
+		"id": 86,
+		"name": "两面",
+		"gameId": 70,
+		"code": "LM",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"87": {
+		"id": 87,
+		"name": "色波",
+		"gameId": 70,
+		"code": "SB",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"88": {
+		"id": 88,
+		"name": "特肖",
+		"gameId": 70,
+		"code": "TX",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"89": {
+		"id": 89,
+		"name": "合肖",
+		"gameId": 70,
+		"code": "HX",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"90": {
+		"id": 90,
+		"name": "头尾数",
+		"gameId": 70,
+		"code": "TWS",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"91": {
+		"id": 91,
+		"name": "正码",
+		"gameId": 70,
+		"code": "ZM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"92": {
+		"id": 92,
+		"name": "正码特",
+		"gameId": 70,
+		"code": "ZMT",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"93": {
+		"id": 93,
+		"name": "五行",
+		"gameId": 70,
+		"code": "WX",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"94": {
+		"id": 94,
+		"name": "平特一肖尾数",
+		"gameId": 70,
+		"code": "PTGXWS",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"95": {
+		"id": 95,
+		"name": "正肖",
+		"gameId": 70,
+		"code": "ZX",
+		"isShow": 0,
+
+		"isBan": 0
+	},
+	"96": {
+		"id": 96,
+		"name": "7色波",
+		"gameId": 70,
+		"code": "QSB",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"97": {
+		"id": 97,
+		"name": "总肖",
+		"gameId": 70,
+		"code": "ZX",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"98": {
+		"id": 98,
+		"name": "自选不中",
+		"gameId": 70,
+		"code": "ZXBZ",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"99": {
+		"id": 99,
+		"name": "连肖连尾",
+		"gameId": 70,
+		"code": "LXLW",
+		"isShow": 1,
+		"isBan": 0
+	},
+	"100": {
+		"id": 100,
+		"name": "连码",
+		"gameId": 70,
+		"code": "LM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"101": {
+		"id": 101,
+		"name": "冠、亚军和",
+		"gameId": 55,
+		"code": "GYJH",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"102": {
+		"id": 102,
+		"name": "冠军",
+		"gameId": 55,
+		"code": "GJ",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"103": {
+		"id": 103,
+		"name": "亚军",
+		"gameId": 55,
+		"code": "YJ",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"104": {
+		"id": 104,
+		"name": "第三名",
+		"gameId": 55,
+		"code": "TSM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"105": {
+		"id": 105,
+		"name": "第四名",
+		"gameId": 55,
+		"code": "TSIM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"106": {
+		"id": 106,
+		"name": "第五名",
+		"gameId": 55,
+		"code": "TWM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"107": {
+		"id": 107,
+		"name": "第六名",
+		"gameId": 55,
+		"code": "DLM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"108": {
+		"id": 108,
+		"name": "第七名",
+		"gameId": 55,
+		"code": "DQM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"109": {
+		"id": 109,
+		"name": "第八名",
+		"gameId": 55,
+		"code": "DBM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"110": {
+		"id": 110,
+		"name": "第九名",
+		"gameId": 55,
+		"code": "DJM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"111": {
+		"id": 111,
+		"name": "第十名",
+		"gameId": 55,
+		"code": "DSHIM",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"112": {
+		"id": 112,
+		"name": "混合",
+		"gameId": 66,
+		"code": "HH",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"113": {
+		"id": 113,
+		"name": "波色",
+		"gameId": 66,
+		"code": "BS",
+		"isShow": 0,
+		"isBan": 0
+	},
+	"114": {
+		"id": 114,
+		"name": "特码",
+		"gameId": 66,
+		"code": "TM",
+		"isShow": 0,
+		"isBan": 0
+	}
+};*/
+?>

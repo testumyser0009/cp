@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0038)http://www.dy9905.com/main/route.winer -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title><?=$this->iff($args[0], $args[0] . '－'). $this->settings['webName']?></title>
+<link type="text/css" rel="stylesheet" href="/files/welcome.css">
+	<script src="/files/jquery-1.8.3.min.js"></script>
+<script src="/files/layer.js"></script><link rel="stylesheet" href="/files/layer.css" id="layui_layer_skinlayercss">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+<script type="text/javascript" src="/static/data/messages.js?v=1610251718" ></script>
+<script language="javascript" type="text/javascript" src="//js.users.51.la/19184116.js"></script>
+<script type="text/javascript" src="/files/libs.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //公告
+        var noticeList = MESSAGES.type_1; //公告列表
+        console.log(JSON.stringify(noticeList));
+        if(noticeList){
+            var html = "<ul>";
+            $.each(noticeList, function(index,item){
+                html += '<li>'+ item.title + '</li>'
+            });
+            html +="</ul>";
+        
+            $('#notice').html(html);
+        }
+        
+        // console.log(html);
+    })
+     
+</script>
+</head>
+<body class="skin_blue">
+
+<div id="notice" class="morenews" style="display:none">
+<ul>
+
+</li></ul>
+</div>
+
+<script type="text/javascript">
+    
+    function agree(){
+        layer.open({
+          type: 1,
+          area: ['500px', 'auto'],
+          shade: [0.3, '#000'],
+          btn: ['知道了'],
+          title: '重要公告', 
+          content: $('.morenews'),
+          yes: function(index, layero){
+            window.location.href = '/member/index';
+            layer.close(index); 
+          }
+        });
+    }
+        
+
+	</script>
+
+<div class="user_win">
+	<div class="agree_win"> 
+        <div class="user_logo"></div>
+        <ul>
+        	<li class="user_wintitle">用户协议</li>
+            <li class="user_winmain">
+            	<div class="win_info">
+                	<ul>
+                          					<p>01. 为避免争议，请客户务必于进入网站前详阅我司所定之各项规则，客户一经“同意”进入本网站进行投注时，即被视为已接受我司的所有协议与规则。</p>
+                 
+                        <p>02. 所有投注项目，公布赔率时出现的任何打字错误或非故意人为失误，我司保留改正错误和按正确赔率结算投注的权力。</p>
+                      
+                        <p>03. 我司将保持服务器稳定，但若因服务器、网络通信故障或者未知因素造成的一系列下注问题或者损失问题我司不承担任何责任。</p>
+
+                        <p>04. 开奖后接受的投注以及使用系统漏洞、违规作弊的投注，一律视为投机漏洞，一律按照我司处理结果为准，不做任何解释。</p>
+						<p>05.我司规定赛车系列单道定位同一期最多只能压7码，如违规投注将出现风控提示，需按我司处理结果为准。</p>
+                        <p>06. 若发现客户以任何不正当或者违规的手法投注或投注注单不正常，本公司拥有一切判决及注消任何涉嫌以非正常方式下注之权利，在进行更深入调查期间将停止发放与其有关之任何彩金，客户不得有任何异议。</p>
+
+                        <p>07. 为避免纠纷，客户在投注之后，务必进入下注明细检查及打印资料。若发现任何异常，请立即与我司联系查证，一切投注将以我司资料库的资料为准，不得异议。如出现特殊网络情况或线路不稳定导致不能下注或下注失败、失误。我司概不负责，任何投诉必须在开奖之前，我司不接受任何开奖之后的投诉。</p>
+
+                        <p>08. 若发生遭黑客入侵破坏行为或不可抗拒之灾害导致网站故障或资料损坏、资料丢失等情况，将以我司之后备资料为最后处理依据。</p>
+                        <p>09. 客户有责任确保自己的账户及密码保密，如果因客户的账户、密码简单，或因泄露导致被盗用，造成的损失由客户本人承担我司不承担任何责任。</p>
+                        <p>10. 若彩票官方开奖错误导致本系统采集数据同时出错情况下当期错误的所有注单以彩票官方网站更改后的数据为标准重新结算若未开奖将注销注单！在此特别声明，客户不得有任何异议。</p>
+                        <li>以上协议最终解释权归<?=$this->iff($args[0], $args[0] . '－'). $this->settings['webName']?>所有 2017年修订版</li>
+                        <li class="user_winbu"><div><span><a class="no" href="/user/login">不同意</a> <a class="yes" href="javascript:void(0)" onclick="agree()" style="color:#fff"><font color="ffff00">同意</font></a></span></div></li>
+                	</ul>
+            	</div>
+            </li>
+            <li class="user_winfooter"></li>        
+        </ul>
+    </div>
+</div>
+
+
+</body></html>

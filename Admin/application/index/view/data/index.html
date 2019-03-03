@@ -1,0 +1,356 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('Index/index')}">
+			<span class="glyphicon glyphicon-home" aria-hidden="true" style="color: #f00"></span></a></li>
+			<li class="active">下注统计</li>
+		</ol>
+		<div>
+		<div class="col-sm-3" style="width:1000px;margin:10px 0 10px 200px">
+						 <form action="" method="get" style="width:500px;float:left;">
+                                <span>时间查询 : </span><input type="text" style="width:130px;height:33px;" name="times" class="laydate-icon" id="demo" value="{$Think.get.times}" />
+                           - - - <input type="text" style="width:130px;height:33px;" class="laydate-icon" name="timed" id="demo1" value="{$Think.get.timed}" />
+                            <button type="submit"  class="btn btn-danger">搜索</button>
+                           </form>
+                           
+                            <script>
+                                    ;!function(){
+                                    laydate({
+                                       elem: '#demo',
+                                       format: 'YYYY-MM-DD',
+                                      min: '2010-01-01 00:00:00', //设定最小日期为当前日期
+                                      max: laydate.now(), //最大日期
+                                    })
+                                    laydate({
+                                      elem: '#demo1',
+                                      format: 'YYYY-MM-DD',
+                                      min: '2010-01-01 00:00:00', //设定最小日期为当前日期
+                                      max: laydate.now(), //最大日期
+                                    })
+                                    }();
+                                </script>
+                     
+						  <form  action='{:Url('Data/index')}' method='get'  >
+							<input style="width: 185px;height:33px" type="text" 
+								 value='{$Think.get.keyword}' name="keyword"/> <span style="width:40px" >
+								<button class="btn btn-sm btn-default"  type="submit">
+									期数
+								</button>
+							</span>
+							</form>
+						
+		</div>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+				<div>
+					<table class="table" ui-jq="footable"
+						ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+						<thead>
+							<tr>
+
+								<th>期数</th>
+								<th>大</th>
+								<th>小</th>
+								<th>单</th>
+								<th>双</th>
+
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+								<th>4</th>
+								<th>5</th>
+								<th>6</th>
+
+								<th>豹子</th>
+								<th>豹子1</th>
+								<th>豹子2</th>
+								<th>豹子3</th>
+								<th>豹子4</th>
+								<th>豹子5</th>
+								<th>豹子6</th>
+								<th style="color:red">总金额</th>
+							</tr>
+						</thead>
+						<tbody>
+							<empty name='list'>
+							<tr>
+								<td colspan='18' style="text-align: center">暂无记录<br>
+								</td>
+							</tr>
+							</empty>
+							<volist name="list" id="vo">
+							<tr data-expanded="true">
+
+								<td>{$vo.id}</td>
+								<td>
+									<!-- 大小 --> <?php 
+								$money=0;
+									foreach($list8 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money=$val['dian8'];	
+										}	
+									}
+									if($money!=0){
+										echo "<a style='color:red'>".intval($money)."</a>";
+									}else{echo $money;}
+							
+								?>
+								</td>
+								<td>
+									<?php 
+								$money1=0;
+									foreach($list7 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money1=$val['dian7'];	
+										}	
+									}
+									if($money1!=0){
+										echo "<a style='color:red'>".intval($money1)."</a>";
+									}else{echo intval($money1);}			
+							
+								?>
+								</td>
+
+								<!-- 单双 -->
+
+								<td>
+									<?php 
+								$money2=0;
+									foreach($list9 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money2=$val['dian9'];	
+										}	
+									}
+									if($money2!=0){
+										echo "<a style='color:red'>".intval($money2)."</a>";
+									}
+								else{echo intval($money2);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$money3=0;
+									foreach($list10 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money3=$val['dian10'];	
+										}	
+									}
+								if($money3!=0){
+										echo "<a style='color:red'>".intval($money3)."</a>";
+									}
+								else{echo intval($money3);}
+								?>
+								</td>
+
+								<!--------1-6------- -->
+								<td>
+									<?php 
+								$moneym1=0;
+									foreach($list1 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$moneym1=$val['dian1'];	
+										}	
+									}
+									if($moneym1!=0){
+										echo "<a style='color:red'>".intval($moneym1)."</a>";
+									}
+								else{echo intval($moneym1);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$moneym2=0;
+									foreach($list2 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$moneym2=$val['dian2'];	
+										}	
+									}
+							if($moneym2!=0){
+										echo "<a style='color:red'>".intval($moneym2)."</a>";
+									}
+								else{echo intval($moneym2);}
+								?>
+								</td>
+
+								<td>
+									<?php 
+								$moneym3=0;
+									foreach($list3 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$moneym3=$val['dian3'];	
+										}	
+									}
+							if($moneym3!=0){
+										echo "<a style='color:red'>".intval($moneym3)."</a>";
+									}
+								else{echo intval($moneym3);}
+								?>
+								</td>
+
+								<td>
+									<?php 
+								$moneym4=0;
+									foreach($list4 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$moneym4=$val['dian4'];	
+										}	
+									}
+									if($moneym4!=0){
+										echo "<a style='color:red'>".intval($moneym4)."</a>";
+									}
+								else{echo intval($moneym4);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$moneym5=0;
+									foreach($list5 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$moneym5=$val['dian5'];	
+										}	
+									}
+								if($moneym5!=0){
+										echo "<a style='color:red'>".intval($moneym5)."</a>";
+									}
+								else{echo intval($moneym5);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$moneym6=0;
+									foreach($list6 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$moneym6=$val['dian6'];	
+										}	
+									}
+									if($moneym6!=0){
+										echo "<a style='color:red'>".intval($moneym6)."</a>";
+									}
+								else{echo intval($moneym6);}
+								?>
+								</td>
+								<!------- 豹子0-6 -->
+								<td>
+									<?php 
+								$money4=0;
+									foreach($list11 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money4=$val['dian11'];	
+										}	
+									}
+								if($money4!=0){
+										echo "<a style='color:red'>".intval($money4)."</a>";
+									}
+								else{echo intval($money4);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$money5=0;
+									foreach($list12 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money5=$val['dian12'];	
+										}	
+									}
+								if($money5!=0){
+										echo "<a style='color:red'>".intval($money5)."</a>";
+									}
+								else{echo intval($money5);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$money6=0;
+									foreach($list13 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money6=$val['dian13'];	
+										}	
+									}
+									if($money6!=0){
+										echo "<a style='color:red'>".intval($money6)."</a>";
+									}
+								else{echo intval($money6);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$money7=0;
+									foreach($list14 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money7=$val['dian14'];	
+										}	
+									}
+								if($money7!=0){
+										echo "<a style='color:red'>".intval($money7)."</a>";
+									}
+								else{echo intval($money7);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$money8=0;
+									foreach($list15 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money8=$val['dian15'];	
+										}	
+									}
+									if($money8!=0){
+										echo "<a style='color:red'>".intval($money8)."</a>";
+									}
+								else{echo intval($money8);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$money9=0;
+									foreach($list16 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money9=$val['dian16'];	
+										}	
+									}
+								if($money9!=0){
+										echo "<a style='color:red'>".intval($money9)."</a>";
+									}
+								else{echo intval($money9);}
+								?>
+								</td>
+								<td>
+									<?php 
+								$money10=0;
+									foreach($list17 as $key=> $val){
+										if($vo['id']==$val['id']){
+											$money10=$val['dian17'];	
+										}	
+									}
+								if($money10!=0){
+										echo "<a style='color:red'>".intval($money10)."</a>";
+									}
+								else{echo intval($money10);}
+								?>
+								</td>
+								<td>
+									<?php
+									 if($vo['moneyz']!=0){
+									echo "<a style='color:red'>".intval($vo['moneyz'])."</a>"; 
+								}else{echo 0;}?>
+								</td>
+							</tr>
+
+							</volist>
+						</tbody>
+					</table>
+					{$page}
+				</div>
+			</div>
+		</div>
+
+	</section>

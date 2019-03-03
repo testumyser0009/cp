@@ -1,0 +1,2 @@
+var nextIssueData = {"issue":"20161214079","endtime":"2016-12-14 19:38:00","nums":null,"lotteryTime":"2016-12-14 19:39:00","preIssue":"20161214078","preLotteryTime":"2016-12-14 19:34:00","preNum":"09,04,02,06,10,05,03,01,07,08","preIsOpen":true,"serverTime":"2016-12-14 19:37:30","gameId":55};
+jsonpNextIssueCallback(nextIssueData);

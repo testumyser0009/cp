@@ -1,0 +1,9 @@
+INSERT INTO `ssc_played` (`id`, `name`, `alias`, `code`, `type`, `played_groupid`, `odds`, `oddsDouble`, `rebate`, `rebateDouble`, `minMoney`, `maxMoney`, `maxTurnMoney`, `ruleFun`, `betCountFun`, `enable`, `android`, `sort`, `info`, `simpleInfo`, `example`, `selectNum`, `zjMax`, `playedTpl`, `isBan`)
+SELECT `id`-1000000, `name`, `alias`, `code`, 73, `played_groupid`, `odds`, `oddsDouble`, `rebate`, `rebateDouble`, `minMoney`, `maxMoney`, `maxTurnMoney`, `ruleFun`, `betCountFun`, `enable`, `android`, `sort`, `info`, `simpleInfo`, `example`, `selectNum`, `zjMax`, `playedTpl`, `isBan` FROM ssc_played where type=55
+
+INSERT INTO `ssc_played_group` (`name`,type,`code`,`isShow`,`sort`,`enable`,`android`,`info`,`isBan`)
+SELECT `name`,71,`code`,`isShow`,`sort`,`enable`,`android`,`info`,`isBan` FROM ssc_played_group where type=1
+
+UPDATE ssc_played SET played_groupid=played_groupid+123 where type=71
+
+后台控制开奖期号需要添加规则 修改 admin/wjinc/add-modal.php admin/wjinc/update-modal.php index.php

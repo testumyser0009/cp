@@ -1,0 +1,91 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:U('Index/index')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li><a href="{:U('User/user')}">用户统计</a></li>
+			<li class="active">分用列表</li>
+		</ol>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+				<!-- --search- -->
+				<form action="" method="get"
+					style="width: 55%; float: left; margin: 10px 0 0 300px">
+					<span>时间查询 : </span><input type="text"
+						style="width: 130px; height: 30px;" name="times"
+						class="laydate-icon" id="demo" value="{$Think.get.times}" /> - -
+					- <input type="text" style="width: 130px; height: 30px;"
+						class="laydate-icon" name="timed" id="demo1"
+						value="{$Think.get.timed}" />
+					<button type="submit" class="btn btn-danger">搜索</button>
+				</form>
+
+				<script>
+					;
+					!function() {
+						laydate({
+							elem : '#demo',
+							format : 'YYYY-MM-DD',
+							min : '2010-01-01 00:00:00', //设定最小日期为当前日期
+							max : laydate.now(), //最大日期
+						})
+						laydate({
+							elem : '#demo1',
+							format : 'YYYY-MM-DD',
+							min : '2010-01-01 00:00:00', //设定最小日期为当前日期
+							max : laydate.now(), //最大日期
+						})
+
+					}();
+				</script>
+				<div>
+					<table class="table" ui-jq="footable"
+						ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+						<thead>
+							<tr>
+								<th data-breakpoints="xs">ID</th>
+								<th>金额</th>
+								<th>获佣时间</th>
+								<th>是否获佣</th>
+								<th>获佣方式</th>
+								<th>下注人id</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<empty name='list'>
+							<tr>
+								<td colspan='6' style="text-align: center">暂无记录<br> <br>
+									<a href="{:U('User/user')}"><button type="button"
+											class="btn btn-danger">返回</button></a></td>
+							</tr>
+							</empty>
+							<volist name="list" id="vo">
+							<tr data-expanded="true">
+								<td>{$vo.id}</td>
+								<td>{$vo.money}</td>
+								<td>{$vo.add_time|date="Y-m-d H:i:s",###}</td>
+								<td><if condition="$vo.status eq 0">否<else />已获得</if></td>
+								<td><if condition="$vo.log_type eq 1">分享获佣<else />下注获佣</if></td>
+								<td>{$vo.buy_id}</td>
+							</tr>
+
+							</volist>
+						</tbody>
+					</table>
+					{$page}
+				</div>
+			</div>
+		</div>
+
+	</section>

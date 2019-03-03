@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(common.css);
+.bannerbg{
+width:100%;
+float:left;
+height:440px;
+background:url(../images/index/bg.jpg) top center no-repeat;
+text-align:center;}
+
+
+.mainbg{
+width:100%;
+float:left;
+background:url(../images/homebg.png);
+}
+
+.yxyx1{
+width:100%;
+background:url(../images/foot1.png) center top no-repeat;;
+height:77px;
+float:left;}
+
+
+.gonggao{width:100%; float:left; background:url(../images/gonggao.png) top center repeat-x; height:50px; position:absolute; top:610px; left:0px;}

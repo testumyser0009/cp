@@ -1,0 +1,16 @@
+
+安装说明：
+
+1.恢复sqlData文件夹内数据；
+
+2.配置SQL数据库路径：
+admin\config.admin.php
+BOEKJ\config.js（开奖器）
+wap\config.php
+web\config.php
+
+3.前台测试账号：a123123 密码：a123123
+
+4.后台管理账号：admin 密码：123456 安全码：667788
+
+5.本源码提供学习研究借鉴美工之用，请勿用于商业，无任何技术支持！

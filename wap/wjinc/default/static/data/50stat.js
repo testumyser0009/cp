@@ -1,0 +1,2 @@
+var curStatList=[{"playId":501301,"playName":"大","gameId":50,"playCateId":13,"playCateName":"第三名","count":6},{"playId":502003,"playName":"单","gameId":50,"playCateId":20,"playCateName":"第十名","count":5},{"playId":501902,"playName":"小","gameId":50,"playCateId":19,"playCateName":"第九名","count":4},{"playId":501304,"playName":"双","gameId":50,"playCateId":13,"playCateName":"第三名","count":3},{"playId":501403,"playName":"单","gameId":50,"playCateId":14,"playCateName":"第四名","count":3}];
+jsonpStatCallback(curStatList)

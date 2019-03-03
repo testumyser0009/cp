@@ -1,0 +1,318 @@
+.menu3 #skinPanel{position:relative;float:left;width:69px;height:62px;margin-left:10px;}.menu3 span{width:100px;height:62px;}
+.menu3 #skinPanel li a{border-radius:3px;}
+.skin_nblue .spritearrow {
+    background: url('/images/blue/arrowsprite.png') no-repeat top left;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+	background-position: 0 -38px;
+   /* position: absolute;
+    top: 0;
+    left: 0;*/
+	float:left;
+}
+.menu1 a div span{
+	    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, .15);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    float: left;
+    text-align: center;
+    padding: 2px 0 4px;
+    width: 33px;
+    margin-left: 4px;
+    font-size: 11px;
+    line-height: 11px;
+}
+.skin_nred .spritearrow {
+    background: url('/images/red/arrowsprite.png') no-repeat top left;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+	background-position: 0 -38px;
+   /* position: absolute;
+    top: 0;
+    left: 0;*/
+	float:left;
+}
+.skin_yellow .spritearrow {
+    background: url('/images/gold/arrowsprite.png') no-repeat top left;
+	background-position: 0 -38px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+   /* position: absolute;
+    top: 0;
+    left: 0;*/
+	float:left;
+}
+.logout{
+	background-color:#2f97f7;
+	padding-left:25px;
+}
+.logout{
+    margin-top: 4px;
+    height: 20px;
+    float: left;
+    color: #fff;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    border: none;
+    background: url(/static/images/admin/logout.png) no-repeat;
+    background-position: 7px 2px;
+}}
+.arrowup {
+    background-position: 0 -38px!important;
+}
+.menumoregame {
+    height: 38px;
+    width: auto;
+    color: #fff;
+    /*position: absolute;
+    top: 0;
+    right: 21px;*/
+	float:left;
+    z-index: 9;
+}
+#moregames {
+  text-align:center;
+   line-height:38px;
+   width:77px;
+}
+.menumoregame div {
+    float: left;
+    cursor: pointer;
+}
+#moregameicon {
+    padding-left:5px;
+   padding-right:10px;
+   line-height:38px;
+    color: #f9f9f9;
+	margin-left:5px;
+	font-weight: bold;
+}
+.menumoregame:hover #moregameicon {color:blue;}
+.menumoregame div {
+    float: left;
+    cursor: pointer;
+}
+.skin_nblue .gamecontainer {
+    background-color: #e7e7e7;
+    border: 1px solid #2161b3;
+}
+.gamecontainer {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 806px;
+    width: 480px;
+    height: auto;
+    padding: 0 15px 10px 15px;
+}
+.gamebox {
+    padding: 25px 35px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    //font-size: 13px;
+    display: none;
+    height: auto;
+    margin-top: 5px;
+    border-top: none;
+}
+.gamesmltxt {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #333;
+    float: left;
+}
+.skin_nblue .gamebtn1 {
+    background-color: #2161b3;
+    border: 1px solid #2161b3;
+}
+.gamebtn1, .gamebtn2 {
+    float: right;
+    margin-right: 5px;
+    padding: 8px;
+    text-align: center;
+    width: 90px;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.skin_blue .gamebtn2 {
+    background-color: #cccccc;
+    border: 1px solid #999;
+}
+.gamebtn1, .gamebtn2 {
+    float: right;
+    margin-right: 5px;
+    padding: 8px;
+    text-align: center;
+    width: 90px;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.skin_blue .gamebtn1 {
+    background-color: #2161b3;
+    border: 1px solid #2161b3;
+}
+.itemmg {
+    width: 130px;
+    height: 38px;
+    float: left;
+    margin: 1px;
+}
+.item, .itemmg {
+    position: relative;
+}
+.skin_nblue  .lotterys .gamecontainer .itemmg a {
+    background-color: #2161b3;
+}
+.skin_nblue  .lotterys .gamecontainer .itemmg a:hover {
+	background: #2161b3;
+	color: #f9f9f9;
+}
+.addbtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 38px;
+    background-image: url(../images/btnadd.png);
+    background-repeat: no-repeat;
+    background-position: 115px 13px;
+    cursor: pointer;
+    display: none;
+}
+.main-body .header .lotterys{
+	position:relative;
+	
+}
+.header{border-bottom: 1px solid #ccc;}
+.skin_nblue .header .lotterys a:hover{
+	    background: linear-gradient(to bottom, rgba(254,254,254,1) 0%,rgba(230,230,230,1) 100%);
+		color: #1e579f;
+}
+.menumoregame:hover{
+	    background: linear-gradient(to bottom, rgba(254,254,254,1) 0%,rgba(230,230,230,1) 100%);
+		color:#1e579f;
+}/*
+.menumoregame:hover .gamecontainer{
+	display:block;
+}*/
+.skin_nblue .cont-col3-box2 a {
+    background: #5b8ac7;
+   
+}
+.cont-col3-box2 a {
+    background: #5b8ac7;
+    background: -moz-linear-gradient(top, #5b8ac7 0%, #2765b5 100%);
+    background: -webkit-linear-gradient(top, #5b8ac7 0%,#2765b5 100%);
+    background: linear-gradient(to bottom, #5b8ac7 0%,#2765b5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b8ac7', endColorstr='#2765b5',GradientType=0 );
+    border: 1px solid #1e57a0;
+    font-size: 13px;
+    color: #FFFFFF;
+    height: 20px;
+    line-height: 16px;
+    width: 60px;
+    margin: 0 0 0 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.skin_blue .cont-col3-box2 {
+    color: #38539a;
+}
+
+#page_game_name{
+	color:#fff;
+}
+
+.topSelected {background: none repeat 0 0 #ffc80a;}
+
+.supportbtn {
+    clear: both;
+    padding: 4px 0 3px 0;
+    width: 190px;
+    margin-left: 5px;
+    margin-top: 2px;
+    border: 1px solid #29904f;
+    background: rgb(93,210,136);
+    background: -moz-linear-gradient(top, rgba(93,210,136,1) 0%, rgba(57,197,109,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(93,210,136,1) 0%,rgba(57,197,109,1) 100%);
+    background: linear-gradient(to bottom, rgba(93,210,136,1) 0%,rgba(57,197,109,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dd288', endColorstr='#39c56d',GradientType=0 );
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.skin_nblue .lpheader2 {
+
+    border: 1px solid #2866b5;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5e8cc8+1,2866b5+100 */
+    background: rgb(94,140,200); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(94,140,200,1) 1%, rgba(40,102,181,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(94,140,200,1) 1%,rgba(40,102,181,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(94,140,200,1) 1%,rgba(40,102,181,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e8cc8', endColorstr='#2866b5',GradientType=0 ); /* IE6-9 */
+
+}
+
+.skin_yellow .lpheader2 {
+    color: #973504;
+    background: rgb(248,233,173);
+    background: -moz-linear-gradient(top, rgba(248,233,173,1) 0%, rgba(227,188,93,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(248,233,173,1) 0%,rgba(227,188,93,1) 100%);
+    background: linear-gradient(to bottom, rgba(248,233,173,1) 0%,rgba(227,188,93,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8e9ad', endColorstr='#e3bc5d',GradientType=0 );
+    border: 1px solid #c18314;
+}
+
+.skin_nred .lpheader2 {
+    color: #ffffff;
+    background: rgb(216, 124, 134);
+    background: -moz- linear-gradient( top, rgba(216, 124, 134) 0%, rgba(199, 94, 114) 100%);
+    background: -webkit- linear-gradient( top, rgba(216, 124, 134) 0%, rgba(199, 94, 114) 100%);
+    background: linear-gradient( to bottom, rgb(216, 124, 134) 0%, rgb(199, 94, 114) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbd0d0', endColorstr='#d47686', GradientType=0 );
+    border: 1px solid #B53550;
+}
+
+.lpheader2 {
+    clear: both;
+    padding: 3px 0 6px 0;
+    width: 190px;
+    margin-left: 5px;
+    margin-top: 3px;
+    float: left;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align:center;
+}
+.lpheader2 a {
+    color: #fff;
+}

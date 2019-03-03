@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<!-- <script type="text/javascript" src="/static/lib/jquery/jquery-1.11.2.min.js" ></script>
+ --></head>
+
+<body>
+<script type="text/javascript">
+var LHC = {
+	HONG_NUMS : [ 1, 2, 7, 8, 12, 13, 18, 19, 23, 24, 29, 30, 34, 35, 40, 45, 46 ],
+	LANG_NUMS : [ 3, 4, 9, 10, 14, 15, 20, 25, 26, 31, 36, 37, 41, 42, 47, 48 ],
+	LV_NUMS : [ 5, 6, 11, 16, 17, 21, 22, 27, 28, 32, 33, 38, 39, 43, 44, 49 ],
+//	SX_ALL:[SX_1,SX_2,SX_3,SX_4,SX_5,SX_6,SX_7,SX_8,SX_9,SX_10,SX_11,SX_12],
+	zodiacArr : [ "鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪" ],
+}
+var LHCXX = {
+	SX_TIAN : [ '兔', '马', '猴', '猪', '牛', '龙' ],
+	SX_DI : [ '蛇', '羊', '鸡', '狗', '鼠', '虎' ],
+	
+	SX_QIAN : [ '鼠', '牛', '虎', '兔', '龙', '蛇' ],
+	SX_HOU : [ '马', '羊', '猴', '鸡', '狗', '猪' ],
+	
+	SX_JIA : [ '羊', '马', '牛', '猪', '狗', '鸡' ],
+	SX_YE : [ '猴', '蛇', '龙', '兔', '虎', '鼠' ],
+}
+var SX_NUMS = {
+	"1" : [ 1, 13, 25, 37, 49 ],
+	"2" : [ 2, 14, 26, 38 ],
+	"3" : [ 3, 15, 27, 39 ],
+	"4" : [ 4, 16, 28, 40 ],
+	"5" : [ 5, 17, 29, 41 ],
+	"6" : [ 6, 18, 30, 42 ],
+	"7" : [ 7, 19, 31, 43 ],
+	"8" : [ 8, 20, 32, 44 ],
+	"9" : [ 9, 21, 33, 45 ],
+	"10" : [ 10, 22, 34, 46 ],
+	"11" : [ 11, 23, 35, 47 ],
+	"12" : [ 12, 24, 36, 48 ]
+};
+//计算起始生肖对应的数组键名
+function getYearZodicaIndex(year) {
+	for (var i = 0; i < LHC.zodiacArr.length; i++) {
+		if (year == LHC.zodiacArr[i]) {
+			return i;
+		}
+	}
+} 
+//计算投注生肖对应的号码组
+function getZodicaNum(sxName, year) {
+	var index = getYearZodicaIndex(year);
+	var j = 1;
+	for (var i = index; i >= 0; i--) {
+		if (LHC.zodiacArr[i] == sxName) {
+			return j;
+		}
+		j += 1;
+	}
+	for (var i = LHC.zodiacArr.length - 1; i >= index; i--) {
+		if (LHC.zodiacArr[i] == sxName) {
+			return j;
+		}
+		j += 1;
+	}
+}
+//计算号码对应的生肖
+function getZodica(num,year){
+	for(var i=0;i<LHC.zodiacArr.length;i++){
+		var zodiac=LHC.zodiacArr[i];
+		var sxs = SX_NUMS[getZodicaNum(zodiac,year)];
+		var str = "";
+		for ( var s in sxs) {
+			var sxnum = parseInt(sxs[s]);
+			if(parseInt(sxnum)==parseInt(num)){
+				return zodiac;
+			}
+		}
+	}
+	return "";
+}
+
+function ArrayContains(array, num) {
+	for ( var i in array) {
+		if (array[i] == num) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function outRepeat(a){
+  var hash=[],arr=[];
+  for (var i = 0; i < a.length; i++) {
+	hash[a[i]]!=null;
+	if(!hash[a[i]]){
+	  arr.push(a[i]);
+	  hash[a[i]]=true;
+	}
+  }
+  return arr;
+}
+console.log(combine([1,2,3,4], 4));
+function combine(arr, num) {
+	var r = [];
+	(function f(t, a, n) {
+		if (n == 0) return r.push(t);
+		for (var i = 0, l = a.length; i <= l - n; i++) {
+			f(t.concat(a[i]), a.slice(i + 1), n - 1);
+		}
+	})([], arr, num);
+	return r;
+}
+//console.log(outRepeat([2,5,"猴","猴",2,5,'猴']));
+//console.log(ArrayContains(LHCXX.SX_DI, getZodica(12, "猴")));
+</script>
+</body>
+</html>

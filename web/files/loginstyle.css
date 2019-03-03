@@ -1,0 +1,1047 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/**
+ * Core reset stylesheet
+ *
+ * Don't make any changes in this file!
+ *
+ * Version 1.1
+ */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+select,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+:focus {
+  outline: 0;
+}
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input,
+button,
+textarea,
+select {
+  *font-size: 100%;
+}
+/* Remove special stylesheet in firefox */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* Remove highlight in mobie */
+input {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*
+[base]
+
+	0- Global
+	1- Links
+	2- Content(For tinymce)
+	3- Form
+*/
+/* =0 Global
+---------------------------------------------------------------------------------------------------------------------*/
+* {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.hide {
+  display: none;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+/* Clearfix
+------------------------------------------------------*/
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+/* for IE6 */
+*html .clearfix {
+  zoom: 1;
+}
+/* for IE7 */
+* + html .clearfix {
+  zoom: 1;
+}
+/* Clearfix for LESS
+------------------------------------------------------*/
+/* Flexible  for LESS
+------------------------------------------------------*/
+/* Flexible  for LESS
+------------------------------------------------------*/
+/* margin/padding useing px2rem  for LESS
+------------------------------------------------------*/
+/* ellipsis useing in txt  for LESS
+------------------------------------------------------*/
+/* =1 Links
+---------------------------------------------------------------------------------------------------------------------*/
+a {
+  color: #2f2f2f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+/*
+[variables]
+
+	0- Colors
+*/
+/* =0 Colors
+---------------------------------------------------------------------------------------------------------------------*/
+/* Less elements
+------------------------------------------------------*/
+/* Basic UI */
+/* active page all css
+------------------------------------------------------*/
+body {
+  font: 12px/1.6 Microsoft Yahei, Arial, Helvetica, sans-serif;
+  /*background: url("images/body-2.jpg") 70% 0 no-repeat, url("images/body-x.png") #ffef92 0 0 repeat-x;*/
+  background: url(../login_file/img/lb/b3.jpg) center top/auto 100% no-repeat;
+}
+.lt-ie9 body {
+  background: url("images/body-x.png") #ffef92 0 0 repeat-x;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.wrapper:before,
+.wrapper:after {
+  content: "";
+  display: table;
+}
+.wrapper:after {
+  clear: both;
+}
+.tc {
+  text-align: center;
+}
+.fc-red {
+  color: #be0c00!important;
+}
+.fc-red2 {
+  color: #520500!important;
+}
+.fc-yellow {
+  color: #e9dc85!important;
+}
+.fs-18 {
+  font-size: 18px!important;
+}
+.fs-30 {
+  font-size: 30px!important;
+}
+.el-1 {
+  width: 275px;
+  height: 390px;
+  background: url("images/el-1.png");
+  position: absolute;
+  top: 0;
+  left: -320px;
+}
+.el-2 {
+  width: 497px;
+  height: 430px;
+  background: url("images/el-2.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.el-3 {
+  width: 100%;
+  height: 481px;
+  background: url("images/el-3.png") repeat-x 50% 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-animation: cloud 30s linear infinite;
+  -moz-animation: cloud 30s linear infinite;
+  -o-animation: cloud 30s linear infinite;
+  animation: cloud 30s linear infinite;
+}
+@-webkit-keyframes cloud {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+@keyframes cloud {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+@keyframes cloud {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+.header {
+  *zoom: 1;
+  padding: 20px 0;
+  position: relative;
+  height: 113px;
+}
+.header:before,
+.header:after {
+  content: "";
+  display: table;
+}
+.header:after {
+  clear: both;
+}
+.header .logo {
+  float: left;
+  position: relative;
+}
+.header .logo .flash {
+  position: absolute;
+  width: 252px;
+  height: 87px;
+  top: -20px;
+  left: 0;
+}
+.header .logo-wenzi {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 287px;
+  height: 66px;
+  background: url("images/wenzi.png") no-repeat left top;
+}
+.header .notice {
+  background: url("images/notice-bg.png");
+  background: rgba(255, 255, 255, 0.15);
+  float: right;
+  width: 700px;
+  height: 28px;
+  line-height: 28px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  color: #fff;
+}
+.header .notice h2 {
+  float: left;
+  font-size: 12px;
+  padding: 0 0 0 15px;
+}
+.header .notice .cont {
+  overflow: hidden;
+  height: 100%;
+}
+.header .notice .cont marquee {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.header .nav {
+  float: right;
+  *zoom: 1;
+  margin-top: 12px;
+}
+.header .nav:before,
+.header .nav:after {
+  content: "";
+  display: table;
+}
+.header .nav:after {
+  clear: both;
+}
+.header .nav li {
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  margin: 0 5px;
+}
+.header .nav li a {
+  color: #fff;
+  width: 106px;
+  height: 33px;
+  line-height: 33px;
+  display: block;
+  text-align: center;
+}
+.header .nav li a:hover {
+  font-weight: bold;
+  background: url("images/nav-hover.png");
+}
+.content {
+  *zoom: 1;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content .login {
+  line-height: 1;
+  width: 272px;
+  min-height: 279px;
+  background: url("images/login-bg.png") no-repeat 0 0;
+  background: rgba(255, 255, 255, 0.25);
+  float: left;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  margin: 55px 0 0 20px;
+}
+.content .login .hd {
+  *zoom: 1;
+  padding: 15px 20px 15px 0;
+}
+.content .login .hd:before,
+.content .login .hd:after {
+  content: "";
+  display: table;
+}
+.content .login .hd:after {
+  clear: both;
+}
+.content .login .hd h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  float: left;
+  line-height: 30px;
+  padding-left: 25px;
+}
+.content .login .hd .btn-kf {
+  width: 90px;
+  height: 30px;
+  display: block;
+  float: right;
+  background: url("images/btn-kf.png");
+}
+.content .login .bd {
+  padding: 0 16px;
+}
+.content .login .fm-list li {
+  *zoom: 1;
+  margin-bottom: 12px;
+}
+.content .login .fm-list li:before,
+.content .login .fm-list li:after {
+  content: "";
+  display: table;
+}
+.content .login .fm-list li:after {
+  clear: both;
+}
+.content .login .fm-list li .ipt {
+  height: 40px;
+  background: #fff;
+  border: 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  width: 100%;
+  text-indent: 40px;
+  font-size: 14px;
+}
+.content .login .fm-list li .ipt.i-user {
+  background: url("images/i-user.png") #fff no-repeat 10px center;
+}
+.content .login .fm-list li .ipt.i-pass {
+  background: url("images/i-pass.png") #fff no-repeat 10px center;
+}
+.content .login .fm-list .btn-submit,
+.content .login .fm-list .btn-reg,
+.content .login .fm-list .btn-in {
+  border: 0;
+  display: block;
+  font-size: 0;
+  text-indent: -99em;
+  overflow: hidden;
+  background: url("images/btns.png") no-repeat 0 0;
+}
+.content .login .fm-list .btn-submit {
+  float: left;
+  width: 124px;
+  height: 39px;
+  background-position: 0 0;
+}
+.content .login .fm-list .btn-reg {
+  float: right;
+  width: 105px;
+  height: 39px;
+  background-position: -136px 0;
+}
+.content .login .fm-list .btn-in {
+  width: 237px;
+  height: 44px;
+  background-position: -1px -51px;
+}
+.footer {
+  margin: 80px auto 0;
+  width: 447px;
+  padding-top: 60px;
+  text-align: center;
+  background: url("images/foot-pay.png") no-repeat center 0;
+  color: #b65d95;
+  font-size: 12px;
+}
+/* Slider */
+#slider {
+  width: 652px;
+  height: 344px;
+  float: right;
+  text-align: center;
+  margin-top: 10px;
+}
+div#slideshow {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slider-item {
+  width: 100% !important;
+  background: none;
+  vertical-align: middle;
+}
+.slider-item img {
+  vertical-align: middle;
+}
+.slider_content_inner img {
+  border: none;
+  vertical-align: middle;
+}
+/* Modules */
+/* Others */
+
+
+/*����*/
+/*------------------- �����ָ��� -----------------------*/
+
+.promotitle {font-size: large;font-weight: bold;color: #CC3300;text-align: center;}
+
+.animated{
+    padding:0 15px;
+    -webkit-animation-duration:1.4s;
+    animation-duration:1.4s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
+}
+@-webkit-keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+
+}
+
+@-webkit-keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+    -ms-transform: translateX(-100%) rotate(-120deg);
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.rollIn {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+}
+.bgwhite{background:#fff}.bgccc{background:#ccc}.bgf2{background:#f2f2f2}.rst{padding:0;margin:0}#yui3-css-stamp.cssreset{display:none}.fwb{font-weight:700}.cl{clear:both}.fl{float:left}.fr{float:right}.cw{color:#fff}.cr{color:red}.tac{text-align:center}.tar{text-align:right}.tal{text-align:left}.ov{overflow:hidden}.f12{font-size:12px}.f13{font-size:13px}.f14{font-size:14px}.f15{font-size:15px}.f16{font-size:16px}.f17{font-size:17px}.f18{font-size:18px}.f19{font-size:19px}.f20{font-size:20px}.f21{font-size:21px}.f22{font-size:22px}.f23{font-size:23px}.f24{font-size:24px}.f25{font-size:25px}.f26{font-size:26px}.f27{font-size:27px}.f28{font-size:28px}.f29{font-size:29px}.f30{font-size:30px}.f31{font-size:31px}.f32{font-size:32px}.f33{font-size:33px}.f34{font-size:34px}.f35{font-size:35px}.f36{font-size:36px}.f37{font-size:37px}.f38{font-size:38px}.f39{font-size:39px}.f40{font-size:40px}.f41{font-size:41px}.f42{font-size:42px}.f43{font-size:43px}.f44{font-size:44px}.f45{font-size:45px}.f46{font-size:46px}.f47{font-size:47px}.f48{font-size:48px}.f49{font-size:49px}.w1{width:1px}.w2{width:2px}.w3{width:3px}.w4{width:4px}.w5{width:5px}.w6{width:6px}.w7{width:7px}.w8{width:8px}.w9{width:9px}.w10{width:10px}.w11{width:11px}.w12{width:12px}.w13{width:13px}.w14{width:14px}.w15{width:15px}.w16{width:16px}.w17{width:17px}.w18{width:18px}.w19{width:19px}.w20{width:20px}.w21{width:21px}.w22{width:22px}.w23{width:23px}.w24{width:24px}.w25{width:25px}.w26{width:26px}.w27{width:27px}.w28{width:28px}.w29{width:29px}.w30{width:30px}.w31{width:31px}.w32{width:32px}.w33{width:33px}.w34{width:34px}.w35{width:35px}.w36{width:36px}.w37{width:37px}.w38{width:38px}.w39{width:39px}.w40{width:40px}.w41{width:41px}.w42{width:42px}.w43{width:43px}.w44{width:44px}.w45{width:45px}.w46{width:46px}.w47{width:47px}.w48{width:48px}.w49{width:49px}.w50{width:50px}.w51{width:51px}.w52{width:52px}.w53{width:53px}.w54{width:54px}.w55{width:55px}.w56{width:56px}.w57{width:57px}.w58{width:58px}.w59{width:59px}.w60{width:60px}.w61{width:61px}.w62{width:62px}.w63{width:63px}.w64{width:64px}.w65{width:65px}.w66{width:66px}.w67{width:67px}.w68{width:68px}.w69{width:69px}.w70{width:70px}.w71{width:71px}.w72{width:72px}.w73{width:73px}.w74{width:74px}.w75{width:75px}.w76{width:76px}.w77{width:77px}.w78{width:78px}.w79{width:79px}.w80{width:80px}.w81{width:81px}.w82{width:82px}.w83{width:83px}.w84{width:84px}.w85{width:85px}.w86{width:86px}.w87{width:87px}.w88{width:88px}.w89{width:89px}.w90{width:90px}.w91{width:91px}.w92{width:92px}.w93{width:93px}.w94{width:94px}.w95{width:95px}.w96{width:96px}.w97{width:97px}.w98{width:98px}.w99{width:99px}.w100{width:100px}.w101{width:101px}.w102{width:102px}.w103{width:103px}.w104{width:104px}.w105{width:105px}.w106{width:106px}.w107{width:107px}.w108{width:108px}.w109{width:109px}.w110{width:110px}.w111{width:111px}.w112{width:112px}.w113{width:113px}.w114{width:114px}.w115{width:115px}.w116{width:116px}.w117{width:117px}.w118{width:118px}.w119{width:119px}.w120{width:120px}.w121{width:121px}.w122{width:122px}.w123{width:123px}.w124{width:124px}.w125{width:125px}.w126{width:126px}.w127{width:127px}.w128{width:128px}.w129{width:129px}.w130{width:130px}.w131{width:131px}.w132{width:132px}.w133{width:133px}.w134{width:134px}.w135{width:135px}.w136{width:136px}.w137{width:137px}.w138{width:138px}.w139{width:139px}.w140{width:140px}.w141{width:141px}.w142{width:142px}.w143{width:143px}.w144{width:144px}.w145{width:145px}.w146{width:146px}.w147{width:147px}.w148{width:148px}.w149{width:149px}.w150{width:150px}.w151{width:151px}.w152{width:152px}.w153{width:153px}.w154{width:154px}.w155{width:155px}.w156{width:156px}.w157{width:157px}.w158{width:158px}.w159{width:159px}.w160{width:160px}.w161{width:161px}.w162{width:162px}.w163{width:163px}.w164{width:164px}.w165{width:165px}.w166{width:166px}.w167{width:167px}.w168{width:168px}.w169{width:169px}.w170{width:170px}.w171{width:171px}.w172{width:172px}.w173{width:173px}.w174{width:174px}.w175{width:175px}.w176{width:176px}.w177{width:177px}.w178{width:178px}.w179{width:179px}.w180{width:180px}.w181{width:181px}.w182{width:182px}.w183{width:183px}.w184{width:184px}.w185{width:185px}.w186{width:186px}.w187{width:187px}.w188{width:188px}.w189{width:189px}.w190{width:190px}.w191{width:191px}.w192{width:192px}.w193{width:193px}.w194{width:194px}.w195{width:195px}.w196{width:196px}.w197{width:197px}.w198{width:198px}.w199{width:199px}.w200{width:200px}.w201{width:201px}.w202{width:202px}.w203{width:203px}.w204{width:204px}.w205{width:205px}.w206{width:206px}.w207{width:207px}.w208{width:208px}.w209{width:209px}.w210{width:210px}.w211{width:211px}.w212{width:212px}.w213{width:213px}.w214{width:214px}.w215{width:215px}.w216{width:216px}.w217{width:217px}.w218{width:218px}.w219{width:219px}.w220{width:220px}.w221{width:221px}.w222{width:222px}.w223{width:223px}.w224{width:224px}.w225{width:225px}.w226{width:226px}.w227{width:227px}.w228{width:228px}.w229{width:229px}.w230{width:230px}.w231{width:231px}.w232{width:232px}.w233{width:233px}.w234{width:234px}.w235{width:235px}.w236{width:236px}.w237{width:237px}.w238{width:238px}.w239{width:239px}.w240{width:240px}.w241{width:241px}.w242{width:242px}.w243{width:243px}.w244{width:244px}.w245{width:245px}.w246{width:246px}.w247{width:247px}.w248{width:248px}.w249{width:249px}.w250{width:250px}.w251{width:251px}.w252{width:252px}.w253{width:253px}.w254{width:254px}.w255{width:255px}.w256{width:256px}.w257{width:257px}.w258{width:258px}.w259{width:259px}.w260{width:260px}.w261{width:261px}.w262{width:262px}.w263{width:263px}.w264{width:264px}.w265{width:265px}.w266{width:266px}.w267{width:267px}.w268{width:268px}.w269{width:269px}.w270{width:270px}.w271{width:271px}.w272{width:272px}.w273{width:273px}.w274{width:274px}.w275{width:275px}.w276{width:276px}.w277{width:277px}.w278{width:278px}.w279{width:279px}.w280{width:280px}.w281{width:281px}.w282{width:282px}.w283{width:283px}.w284{width:284px}.w285{width:285px}.w286{width:286px}.w287{width:287px}.w288{width:288px}.w289{width:289px}.w290{width:290px}.w291{width:291px}.w292{width:292px}.w293{width:293px}.w294{width:294px}.w295{width:295px}.w296{width:296px}.w297{width:297px}.w298{width:298px}.w299{width:299px}.h1{height:1px}.h2{height:2px}.h3{height:3px}.h4{height:4px}.h5{height:5px}.h6{height:6px}.h7{height:7px}.h8{height:8px}.h9{height:9px}.h10{height:10px}.h11{height:11px}.h12{height:12px}.h13{height:13px}.h14{height:14px}.h15{height:15px}.h16{height:16px}.h17{height:17px}.h18{height:18px}.h19{height:19px}.h20{height:20px}.h21{height:21px}.h22{height:22px}.h23{height:23px}.h24{height:24px}.h25{height:25px}.h26{height:26px}.h27{height:27px}.h28{height:28px}.h29{height:29px}.h30{height:30px}.h31{height:31px}.h32{height:32px}.h33{height:33px}.h34{height:34px}.h35{height:35px}.h36{height:36px}.h37{height:37px}.h38{height:38px}.h39{height:39px}.h40{height:40px}.h41{height:41px}.h42{height:42px}.h43{height:43px}.h44{height:44px}.h45{height:45px}.h46{height:46px}.h47{height:47px}.h48{height:48px}.h49{height:49px}.h50{height:50px}.h51{height:51px}.h52{height:52px}.h53{height:53px}.h54{height:54px}.h55{height:55px}.h56{height:56px}.h57{height:57px}.h58{height:58px}.h59{height:59px}.h60{height:60px}.h61{height:61px}.h62{height:62px}.h63{height:63px}.h64{height:64px}.h65{height:65px}.h66{height:66px}.h67{height:67px}.h68{height:68px}.h69{height:69px}.h70{height:70px}.h71{height:71px}.h72{height:72px}.h73{height:73px}.h74{height:74px}.h75{height:75px}.h76{height:76px}.h77{height:77px}.h78{height:78px}.h79{height:79px}.h80{height:80px}.h81{height:81px}.h82{height:82px}.h83{height:83px}.h84{height:84px}.h85{height:85px}.h86{height:86px}.h87{height:87px}.h88{height:88px}.h89{height:89px}.h90{height:90px}.h91{height:91px}.h92{height:92px}.h93{height:93px}.h94{height:94px}.h95{height:95px}.h96{height:96px}.h97{height:97px}.h98{height:98px}.h99{height:99px}.h100{height:100px}.h101{height:101px}.h102{height:102px}.h103{height:103px}.h104{height:104px}.h105{height:105px}.h106{height:106px}.h107{height:107px}.h108{height:108px}.h109{height:109px}.h110{height:110px}.h111{height:111px}.h112{height:112px}.h113{height:113px}.h114{height:114px}.h115{height:115px}.h116{height:116px}.h117{height:117px}.h118{height:118px}.h119{height:119px}.h120{height:120px}.h121{height:121px}.h122{height:122px}.h123{height:123px}.h124{height:124px}.h125{height:125px}.h126{height:126px}.h127{height:127px}.h128{height:128px}.h129{height:129px}.h130{height:130px}.h131{height:131px}.h132{height:132px}.h133{height:133px}.h134{height:134px}.h135{height:135px}.h136{height:136px}.h137{height:137px}.h138{height:138px}.h139{height:139px}.h140{height:140px}.h141{height:141px}.h142{height:142px}.h143{height:143px}.h144{height:144px}.h145{height:145px}.h146{height:146px}.h147{height:147px}.h148{height:148px}.h149{height:149px}.h150{height:150px}.pt1{padding-top:1px}.pt2{padding-top:2px}.pt3{padding-top:3px}.pt4{padding-top:4px}.pt5{padding-top:5px}.pt6{padding-top:6px}.pt7{padding-top:7px}.pt8{padding-top:8px}.pt9{padding-top:9px}.pt10{padding-top:10px}.pt11{padding-top:11px}.pt12{padding-top:12px}.pt13{padding-top:13px}.pt14{padding-top:14px}.pt15{padding-top:15px}.pt16{padding-top:16px}.pt17{padding-top:17px}.pt18{padding-top:18px}.pt19{padding-top:19px}.pt20{padding-top:20px}.pt21{padding-top:21px}.pt22{padding-top:22px}.pt23{padding-top:23px}.pt24{padding-top:24px}.pt25{padding-top:25px}.pt26{padding-top:26px}.pt27{padding-top:27px}.pt28{padding-top:28px}.pt29{padding-top:29px}.pt30{padding-top:30px}.pt31{padding-top:31px}.pt32{padding-top:32px}.pt33{padding-top:33px}.pt34{padding-top:34px}.pt35{padding-top:35px}.pt36{padding-top:36px}.pt37{padding-top:37px}.pt38{padding-top:38px}.pt39{padding-top:39px}.pt40{padding-top:40px}.pt41{padding-top:41px}.pt42{padding-top:42px}.pt43{padding-top:43px}.pt44{padding-top:44px}.pt45{padding-top:45px}.pt46{padding-top:46px}.pt47{padding-top:47px}.pt48{padding-top:48px}.pt49{padding-top:49px}.pt50{padding-top:50px}.pt51{padding-top:51px}.pt52{padding-top:52px}.pt53{padding-top:53px}.pt54{padding-top:54px}.pt55{padding-top:55px}.pt56{padding-top:56px}.pt57{padding-top:57px}.pt58{padding-top:58px}.pt59{padding-top:59px}.pt60{padding-top:60px}.pt61{padding-top:61px}.pt62{padding-top:62px}.pt63{padding-top:63px}.pt64{padding-top:64px}.pt65{padding-top:65px}.pt66{padding-top:66px}.pt67{padding-top:67px}.pt68{padding-top:68px}.pt69{padding-top:69px}.pt70{padding-top:70px}.pt71{padding-top:71px}.pt72{padding-top:72px}.pt73{padding-top:73px}.pt74{padding-top:74px}.pt75{padding-top:75px}.pt76{padding-top:76px}.pt77{padding-top:77px}.pt78{padding-top:78px}.pt79{padding-top:79px}.pt80{padding-top:80px}.pt81{padding-top:81px}.pt82{padding-top:82px}.pt83{padding-top:83px}.pt84{padding-top:84px}.pt85{padding-top:85px}.pt86{padding-top:86px}.pt87{padding-top:87px}.pt88{padding-top:88px}.pt89{padding-top:89px}.pt90{padding-top:90px}.pt91{padding-top:91px}.pt92{padding-top:92px}.pt93{padding-top:93px}.pt94{padding-top:94px}.pt95{padding-top:95px}.pt96{padding-top:96px}.pt97{padding-top:97px}.pt98{padding-top:98px}.pt99{padding-top:99px}.pt100{padding-top:100px}.l1{line-height:1px}.l2{line-height:2px}.l3{line-height:3px}.l4{line-height:4px}.l5{line-height:5px}.l6{line-height:6px}.l7{line-height:7px}.l8{line-height:8px}.l9{line-height:9px}.l10{line-height:10px}.l11{line-height:11px}.l12{line-height:12px}.l13{line-height:13px}.l14{line-height:14px}.l15{line-height:15px}.l16{line-height:16px}.l17{line-height:17px}.l18{line-height:18px}.l19{line-height:19px}.l20{line-height:20px}.l21{line-height:21px}.l22{line-height:22px}.l23{line-height:23px}.l24{line-height:24px}.l25{line-height:25px}.l26{line-height:26px}.l27{line-height:27px}.l28{line-height:28px}.l29{line-height:29px}.l30{line-height:30px}.l31{line-height:31px}.l32{line-height:32px}.l33{line-height:33px}.l34{line-height:34px}.l35{line-height:35px}.l36{line-height:36px}.l37{line-height:37px}.l38{line-height:38px}.l39{line-height:39px}.l40{line-height:40px}.l41{line-height:41px}.l42{line-height:42px}.l43{line-height:43px}.l44{line-height:44px}.l45{line-height:45px}.l46{line-height:46px}.l47{line-height:47px}.l48{line-height:48px}.l49{line-height:49px}.l50{line-height:50px}.l51{line-height:51px}.l52{line-height:52px}.l53{line-height:53px}.l54{line-height:54px}.l55{line-height:55px}.l56{line-height:56px}.l57{line-height:57px}.l58{line-height:58px}.l59{line-height:59px}.l60{line-height:60px}.l61{line-height:61px}.l62{line-height:62px}.l63{line-height:63px}.l64{line-height:64px}.l65{line-height:65px}.l66{line-height:66px}.l67{line-height:67px}.l68{line-height:68px}.l69{line-height:69px}.l70{line-height:70px}.l71{line-height:71px}.l72{line-height:72px}.l73{line-height:73px}.l74{line-height:74px}.l75{line-height:75px}.l76{line-height:76px}.l77{line-height:77px}.l78{line-height:78px}.l79{line-height:79px}.mr1{margin-right:1px}.mr2{margin-right:2px}.mr3{margin-right:3px}.mr4{margin-right:4px}.mr5{margin-right:5px}.mr6{margin-right:6px}.mr7{margin-right:7px}.mr8{margin-right:8px}.mr9{margin-right:9px}.mr10{margin-right:10px}.mr11{margin-right:11px}.mr12{margin-right:12px}.mr13{margin-right:13px}.mr14{margin-right:14px}.mr15{margin-right:15px}.mr16{margin-right:16px}.mr17{margin-right:17px}.mr18{margin-right:18px}.mr19{margin-right:19px}.mr20{margin-right:20px}.mr21{margin-right:21px}.mr22{margin-right:22px}.mr23{margin-right:23px}.mr24{margin-right:24px}.mr25{margin-right:25px}.mr26{margin-right:26px}.mr27{margin-right:27px}.mr28{margin-right:28px}.mr29{margin-right:29px}.mr30{margin-right:30px}.mr31{margin-right:31px}.mr32{margin-right:32px}.mr33{margin-right:33px}.mr34{margin-right:34px}.mr35{margin-right:35px}.mr36{margin-right:36px}.mr37{margin-right:37px}.mr38{margin-right:38px}.mr39{margin-right:39px}.mr40{margin-right:40px}.mr41{margin-right:41px}.mr42{margin-right:42px}.mr43{margin-right:43px}.mr44{margin-right:44px}.mr45{margin-right:45px}.mr46{margin-right:46px}.mr47{margin-right:47px}.mr48{margin-right:48px}.mr49{margin-right:49px}.mr50{margin-right:50px}.mr51{margin-right:51px}.mr52{margin-right:52px}.mr53{margin-right:53px}.mr54{margin-right:54px}.mr55{margin-right:55px}.mr56{margin-right:56px}.mr57{margin-right:57px}.mr58{margin-right:58px}.mr59{margin-right:59px}.mr60{margin-right:60px}.mr61{margin-right:61px}.mr62{margin-right:62px}.mr63{margin-right:63px}.mr64{margin-right:64px}.mr65{margin-right:65px}.mr66{margin-right:66px}.mr67{margin-right:67px}.mr68{margin-right:68px}.mr69{margin-right:69px}.mr70{margin-right:70px}.mr71{margin-right:71px}.mr72{margin-right:72px}.mr73{margin-right:73px}.mr74{margin-right:74px}.mr75{margin-right:75px}.mr76{margin-right:76px}.mr77{margin-right:77px}.mr78{margin-right:78px}.mr79{margin-right:79px}.mr80{margin-right:80px}.pl1{padding-left:1px}.pl2{padding-left:2px}.pl3{padding-left:3px}.pl4{padding-left:4px}.pl5{padding-left:5px}.pl6{padding-left:6px}.pl7{padding-left:7px}.pl8{padding-left:8px}.pl9{padding-left:9px}.pl10{padding-left:10px}.pl11{padding-left:11px}.pl12{padding-left:12px}.pl13{padding-left:13px}.pl14{padding-left:14px}.pl15{padding-left:15px}.pl16{padding-left:16px}.pl17{padding-left:17px}.pl18{padding-left:18px}.pl19{padding-left:19px}.pl20{padding-left:20px}.pl21{padding-left:21px}.pl22{padding-left:22px}.pl23{padding-left:23px}.pl24{padding-left:24px}.pl25{padding-left:25px}.pl26{padding-left:26px}.pl27{padding-left:27px}.pl28{padding-left:28px}.pl29{padding-left:29px}.pl30{padding-left:30px}.pl31{padding-left:31px}.pl32{padding-left:32px}.pl33{padding-left:33px}.pl34{padding-left:34px}.pl35{padding-left:35px}.pl36{padding-left:36px}.pl37{padding-left:37px}.pl38{padding-left:38px}.pl39{padding-left:39px}.pl40{padding-left:40px}.pl41{padding-left:41px}.pl42{padding-left:42px}.pl43{padding-left:43px}.pl44{padding-left:44px}.pl45{padding-left:45px}.pl46{padding-left:46px}.pl47{padding-left:47px}.pl48{padding-left:48px}.pl49{padding-left:49px}.pl50{padding-left:50px}.pl51{padding-left:51px}.pl52{padding-left:52px}.pl53{padding-left:53px}.pl54{padding-left:54px}.pl55{padding-left:55px}.pl56{padding-left:56px}.pl57{padding-left:57px}.pl58{padding-left:58px}.pl59{padding-left:59px}.pl60{padding-left:60px}.pl61{padding-left:61px}.pl62{padding-left:62px}.pl63{padding-left:63px}.pl64{padding-left:64px}.pl65{padding-left:65px}.pl66{padding-left:66px}.pl67{padding-left:67px}.pl68{padding-left:68px}.pl69{padding-left:69px}.pr1{padding-right:1px}.pr2{padding-right:2px}.pr3{padding-right:3px}.pr4{padding-right:4px}.pr5{padding-right:5px}.pr6{padding-right:6px}.pr7{padding-right:7px}.pr8{padding-right:8px}.pr9{padding-right:9px}.pr10{padding-right:10px}.pr11{padding-right:11px}.pr12{padding-right:12px}.pr13{padding-right:13px}.pr14{padding-right:14px}.pr15{padding-right:15px}.pr16{padding-right:16px}.pr17{padding-right:17px}.pr18{padding-right:18px}.pr19{padding-right:19px}.pr20{padding-right:20px}.pr21{padding-right:21px}.pr22{padding-right:22px}.pr23{padding-right:23px}.pr24{padding-right:24px}.pr25{padding-right:25px}.pr26{padding-right:26px}.pr27{padding-right:27px}.pr28{padding-right:28px}.pr29{padding-right:29px}.pr30{padding-right:30px}.pr31{padding-right:31px}.pr32{padding-right:32px}.pr33{padding-right:33px}.pr34{padding-right:34px}.pr35{padding-right:35px}.pr36{padding-right:36px}.pr37{padding-right:37px}.pr38{padding-right:38px}.pr39{padding-right:39px}.vm{vertical-align: middle !important;}
+.kaihubg{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:474px;
+	z-index: 9999;
+	display:none;
+	/*overflow-y:auto;*/
+
+}
+.kaihubg.cur{
+	top: 210px;
+}.kaihubg.cur .kaihu{
+	top: 0px;
+}
+.minbox{
+  width: 100%;min-height: 700px;
+}
+.kaihu{
+	width:1000px;
+	position:absolute;
+	left: 50%;
+	margin-left:-500px;
+	background: url("../Img/bai.png");
+	border-radius: 12px;
+	border:1px solid #fff;
+	top:128px;
+}
+.kaihuin{
+	padding:38px 62px;
+}
+.kaihutl{
+	font-size:24px;
+	color:#242424;
+	line-height:68px;
+	padding-left:72px;
+	border-bottom:2px solid #cdb6b0;
+	background: url("../Img/zhucetl.png") no-repeat left center;
+}
+.zhucetable{
+	width:100%;
+}
+.zhucetable td{
+	padding:4px;
+	color:#555;
+}
+.zucenpt{
+	border: none;
+	height:33px;
+	padding-left:6px;
+	width: 268px;
+}
+.subbtn{
+	border: none;
+	width: 199px;
+	height: 43px;
+	background: url("../Img/subbtn.png") no-repeat center top;
+}
+.wydeng{
+	float:left;
+	border: none;
+	width: 199px;
+	height: 43px;
+	background: url("../Img/denglu.png") no-repeat center top;
+	text-indent: -999em;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.dailibtn{
+
+	width: 141px;
+	height: 41px;
+	font-size:20px;
+	color:#fff;
+	border-radius: 4px;
+	text-align:center;
+	line-height:41px;
+	background:#9255ad;
+}
+.taninx{
+	padding:22px 30px;
+	display:none;
+
+}
+.hong{
+	color:#e40000;
+}
+.tanbtale{
+	width:100%;
+}
+.tanbtale td,
+.tanbtale th{
+	height: 32px;
+	border:1px solid #9a9a9a;
+	color:#242424;
+	text-align:center;
+
+}
+.tanbtale th{
+	color:#e40000;
+}

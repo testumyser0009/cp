@@ -1,0 +1,75 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('Index/index')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li class="active">瀹炴椂缁熻</li>
+		</ol>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+                            
+                            <!--- 鎼滅储浣嶇疆 -->
+                    <div class="col-sm-3" style="margin-left: 600px">
+				<div class="input-group">
+					<form action='' method='get'>
+						<input style="width: 185px; height: 33px" type="text"
+							class="input-sm form-control" value='{$Think.get.keyword}'
+							name="keyword" /> <span class="input-group-btn">
+							<button class="btn btn-sm btn-default" type="submit">
+								鎼滅储(ID)</button>
+						</span>
+					</form>
+				</div>
+
+			</div>
+                            
+				<div>
+					<table class="table" ui-jq="footable"
+						ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+						<thead>
+							<tr>
+								<th data-breakpoints="xs">鎴块棿ID</th>
+								<th>鎴块棿鍚嶇О</th>
+								 <th>鍒涘缓鏃堕棿</th> 
+								  <th>鎻愮幇绫诲瀷</th> 
+								<th data-breakpoints="xs sm md" data-title="DOB"><font>閽�</font></th>
+							
+							</tr>
+						</thead>
+						<tbody id="jiazai">
+							 
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	
+	<script>
+			setInterval("test()",600);
+			function test() {
+				
+			    $.ajax({
+			             type: "post",
+			             url: "{:Url('Jadax/homeuser')}",
+			             data: '',
+			             dataType: "json",
+			             success: function(data){
+			             	$('#jiazai').html(data);
+			             }
+				});
+			}
+	</script> 

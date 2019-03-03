@@ -1,0 +1,40 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('Index/index')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li class="active"><font><font>玩家列表</font></font></li>
+		</ol>
+		
+		
+		<div class="typo-agile">
+
+			<a	href="{:Url('user/add')}"><span class="label label-info">添加机器人</span></a></td>
+			<div class="bs-docs-example">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th data-breakpoints="xs">ID</th>
+							<th>昵称</th>
+							<th>区域</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+
+				{volist name="list" id="vo"}
+
+					<tr data-expanded="true">
+						<td><font>{$vo.id}</font></td>
+						<td>{$vo.nickname}</td>
+						<td>{if $vo.user_type eq 1}压大{elseif $vo.user_type eq 2}压小{/if}</td>
+						<td> <a	href="{:Url('User/update',array('id'=>$vo['id']))}"><span
+								class="label label-info">删除</span></a></td>
+					</tr>
+					{/volist}
+					</tbody>
+				</table>
+				{$list->render()}
+			</div>
+		</div>
+	</section>

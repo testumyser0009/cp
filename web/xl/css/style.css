@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body,p,a,div,span,input,textarea,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,li,ol,img,select{ margin:0; padding:0; border:0; list-style: none;}/*all--------------------------------------------------------*/
+.F14024{ font-size:14px; line-height:24px;}
+.F16024{ font-size:16px; line-height:24px;}
+.F14028{ font-size:14px; line-height:28px;}
+.F16028{ font-size:16px; line-height:28px;}
+
+.float_l{ float:left;}
+.float_r{ float:right;}
+.chear{ clear:both}
+
+
+a:link,a:visited{ text-decoration:none; color:#0b090a;}
+a:hover{ text-decoration: none;}
+.marginleft15{ margin-left:15px;}
+/*-------------  伪类清楚浮动法  ---------------*/
+.clearfix:before,.clearfix:after{
+	content:"";
+	display:table;
+}
+.clearfix:after{
+	clear:both;
+}
+
+body{ font-size:12px; font-family:"微软雅黑"; background: url(../images/bg.jpg) #201815 no-repeat center 0;}
+
+#head{ height:196px; overflow:hidden; }
+.head{ height:196px; margin:0 auto; width:1000px; overflow:hidden; background: url(../images/house.png) no-repeat 610px bottom; }
+.head h1{ margin-top:38px; margin-left: 30px; float:left;}
+
+.imghead{ margin-top:35px; margin-left: 50px; width:318px; height:94px; background: url(../images/tel-bg.png) no-repeat; 
+	font-size:20px; color:#fff; line-height: 32px; padding-top: 10px;}
+.imghead span{ color:#ffc937; font-size:18px; font-weight:normal; margin-left:5px;}
+
+#content{ width:100%; }
+.contetn{ width:982px; height: 694px; margin:-12px auto 0; overflow:hidden; background: url(../images/box_bg.png) no-repeat center 0;}
+.con01{ width: 580px; float: left;}
+.textcon{ color:#FFF; margin-top:40px; font-size:16px; line-height: 30px; text-indent: 35px; }
+
+.span01{ float: left; display:inline-block; width:82px; height:32px; border-radius:5px; background:#4D3837; border: 1px solid #786665;
+	font-size:14px; text-align:center; line-height:32px; color: #fff;}
+.input01{ float: left; width:235px; border-radius:5px; border: 1px solid #786665; display:inline-block; 
+	height:32px; line-height: 32px; font-size: 14px;
+	color:#fff; background:#4D3837; margin-left: 50px; margin-right:5px; padding-left: 13px;}
+.a001{ float: left; display:inline-block; width:106px; height:33px; line-height:33px; text-align: center; color: #0b090a;
+	background:url(../images/btn1.png) no-repeat 0 -46px; font-size: 16px;}
+.a001:hover{ 
+	background:url(../images/btn1.png) no-repeat 0 0;
+}
+.listurl{ margin:10px 0 0 35px; overflow: hidden;}
+.listurl li{ margin-bottom:10px; margin-right:20px; overflow: hidden; height: 35px;
+	background: url(../images/li-bg.png) no-repeat 100px center;}
+.listurl img { display: none;}
+.midurl{ margin:10px 0 0 228px; width:436px;}
+.a002{ width:266px; height:44px; display:block; margin-left: 150px; margin-top: 20px; background: url(../images/btn3.png) no-repeat;}
+.a002:hover{ opacity:1; background: url(../images/btn3-hover.png) no-repeat;}
+.content2{ height:393px;}
+.con2{ float: left; width:350px; margin-left: 20px; color: #fff; font-size: 14px; margin-top: 80px; line-height: 1.8;}
+.con2 h3 { font-size: 16px; font-weight: 500;}
+.alink { overflow: hidden; clear: both;}
+.alink a { display: block; width: 163px; height: 46px; background: url(../images/btn2.png) no-repeat;
+float: left; margin-bottom: 10px; margin-right: 10px;}
+.alink a.alink1 {background-position: 0 0; }
+.alink a.alink1:hover {background-position: -170px 0; }
+.alink a.alink2 {background-position: 0 -50px; }
+.alink a.alink2:hover {background-position: -170px -50px; }
+.alink a.alink3 {background-position: 0 -100px; }
+.alink a.alink3:hover {background-position: -170px -100px; }
+.alink a.alink4 {background-position: 0 -150px; }
+.alink a.alink4:hover {background-position: -170px -150px; }
+#foot{ width:1000px;  height:100px; margin:0 auto; text-align: center; color: #fff; font-size: 14px; line-height: 100px;}
+此网站为英文页面, 是否需要翻译?×不再翻译此网站人工翻译

@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0044)http://www.yx3301.com/member/payment/deposit -->
+<html class="no-js" lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>充值页面</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/jquery-ui.css">
+        <link rel="stylesheet" href="./css/admin.css">
+        <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="./js/laydate.min.js"></script><link type="text/css" rel="stylesheet" href="./充值页面_files/laydate.css"><link type="text/css" rel="stylesheet" href="./js/laydate(1).css" id="LayDateSkin">
+        <script type="text/javascript" src="./js/admin_content.js"></script>
+        <script type="text/javascript" src="./js/jquery-ui.js"></script>
+		<script type="text/javascript" src="./js/dialog.js"></script>
+		<script type="text/javascript" src="./js/libs.js"></script>
+		<script type="text/javascript" src="./js/common.js"></script>
+		<script type="text/javascript" src="./js/index.js"></script>
+		<script type="text/javascript">var MIN_AMOUNT=100;</script>
+		<script type="text/javascript" src="./js/deposit.js"></script>
+    	<script type="text/javascript" src="./js/skin.js"></script> 
+    	<script>
+    		var skinColor
+			setSkin(skinColor, $('body'));
+		</script>
+    </head>
+    <body id="bodyid" class="skin_blue">
+
+                <div class="rightpanel">
+                <div class="contentcontainer">
+                	<div class="nc_left">
+                		
+                	</div>
+                	<p>
+                	
+                  </p><div class="row mt10">
+              		<div class="messagetxt">选择充值模式：</div>
+                    <a href="javascript:void(0);" class="tabnavi tabnaviactive">在线支付2</a>
+                    <a href="javascript:void(0);" class="tabnavi ">微信扫一扫1</a>
+                    <a href="javascript:void(0);" class="tabnavi ">支付宝扫码</a>
+                    <a href="javascript:void(0);" class="tabnavi ">QQ钱包支付</a>
+                    <a href="javascript:void(0);" class="tabnavi ">微信扫码1</a>
+                    <a href="javascript:void(0);" class="tabnavi ">银行卡汇款</a>
+              	  </div>
+                  <div class="row" style="overflow: visible;">
+                  
+                  		<!-- tabbox1 -->
+                        <div class="tabbox clearfix subcontent" style="display: block;">
+						  <form action="http://payyx.sg123.ws/redirect" target="_blank" method="post" onsubmit="javascript:return validateTransaction(this, -1);">
+						  <input type="hidden" name="pid" value="4E653A8ECB1F1647E0530100007F318D">
+			              <input type="hidden" name="oid" value="3b7985d7e6663889c4bce296f402978a64abe379">
+			              <input type="hidden" name="uid" value="tianshan110">
+                          <div class="row">
+                                    <div class="col1">充值金额：</div>
+                                    <div class="col2"><input name="amount" onkeypress="return isNumber(event)" type="text" class="textbox2">
+                                    <img src="./images/warningsmallicon.jpg" class="mt4 ml10"> <div class="pink mt4">请输入充值金额，最低金额100</div></div>
+                          </div>
+                          <div class="row clearfix">
+                                    <div class="col1">银行种类：</div>
+                            <div class="col2">
+                                <div class="selectbox">
+                                            <input type="radio" id="ICBC" name="payId" value="ICBC" class="mt4">
+                                            <div class="sprite ico-icbc"></div>
+                                            <div>工商银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="CCB" name="payId" value="CCB" class="mt4">
+                                            <div class="sprite ico-ccb"></div>
+                                            <div>建设银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="ABC" name="payId" value="ABC" class="mt4">
+                                            <div class="sprite ico-abc"></div>
+                                            <div>农业银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="BOCOM" name="payId" value="BOCOM" class="mt4">
+                                            <div class="sprite ico-boco"></div>
+                                            <div>交通银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="BOC" name="payId" value="BOC" class="mt4">
+                                            <div class="sprite ico-boc"></div>
+                                            <div>中国银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="CEBBANK" name="payId" value="CEBBANK" class="mt4">
+                                            <div class="sprite ico-cebb"></div>
+                                            <div>光大银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="CMBCS" name="payId" value="CMBCS" class="mt4">
+                                            <div class="sprite ico-cmbc"></div>
+                                            <div>民生银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="PSBC" name="payId" value="PSBC" class="mt4">
+                                            <div class="sprite ico-post"></div>
+                                            <div>邮政银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="CMBC" name="payId" value="CMBC" class="mt4">
+                                            <div class="sprite ico-cmb"></div>
+                                            <div>招商银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="CIB" name="payId" value="CIB" class="mt4">
+                                            <div class="sprite ico-cib"></div>
+                                            <div>兴业银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="ECITIC" name="payId" value="ECITIC" class="mt4">
+                                            <div class="sprite ico-cccb"></div>
+                                            <div>中信银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="CGB" name="payId" value="CGB" class="mt4">
+                                            <div class="sprite ico-gdb"></div>
+                                            <div>广发银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="SPDB" name="payId" value="SPDB" class="mt4">
+                                            <div class="sprite ico-spdb"></div>
+                                            <div>浦发银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="HXB" name="payId" value="HXB" class="mt4">
+                                            <div class="sprite ico-hxb"></div>
+                                            <div>华夏银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="BOS" name="payId" value="BOS" class="mt4">
+                                            <div class="sprite ico-shb"></div>
+                                            <div>上海银行</div>
+                                </div>
+                                <div class="selectbox">
+                                            <input type="radio" id="PINGAN" name="payId" value="PINGAN" class="mt4">
+                                            <div class="sprite ico-pab"></div>
+                                            <div>平安银行</div>
+                                </div>
+                            </div>
+                            
+                          </div>
+						  <div class="row smtxt">
+							<div class="col1"></div>
+							<div class="col2"><span style="color: red">* 单笔充值最低100</span></div>
+							</div>
+                          <div class="row mt15">
+                                <div class="col1"></div>
+                                <div class="col2">
+                                <button class="btnsubmit">开始充值</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="tabbox clearfix subcontent">
+						  <form action="http://pay.paoqun.top/redirect" target="_blank" method="post" onsubmit="javascript:return validateTransaction(this, -1);">
+						  <input type="hidden" name="pid" value="4DEC25C084415DFAE0530100007FC813">
+			              <input type="hidden" name="oid" value="3b7985d7e6663889c4bce296f402978a64abe379">
+			              <input type="hidden" name="uid" value="tianshan110">
+                          <div class="row">
+                                    <div class="col1">充值金额：</div>
+                                    <div class="col2"><input name="amount" onkeypress="return isNumber(event)" type="text" class="textbox2">
+                                    <img src="./images/warningsmallicon.jpg" class="mt4 ml10"> <div class="pink mt4">请输入充值金额，最低金额100</div></div>
+                          </div>
+                          <div class="row clearfix">
+                                    <div class="col1">银行种类：</div>
+                            <div class="col2">
+                                <div class="selectbox">
+                                            <input type="radio" id="wxpay" name="payId" value="wxpay" class="mt4">
+                                            <div class="sprite ico-wxzf"></div>
+                                            <div>微信支付</div>
+                                </div>
+                            </div>
+                            
+                          </div>
+						  <div class="row smtxt">
+							<div class="col1"></div>
+							<div class="col2"><span style="color: red">* 无限制多次充值(入款收取1%手续费）手机支付须保存二维码，用微信扫一扫选择相册二维码即可支付。建议使用网银行在线充值</span></div>
+							</div>
+                          <div class="row mt15">
+                                <div class="col1"></div>
+                                <div class="col2">
+                                <button class="btnsubmit">开始充值</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="tabbox clearfix subcontent">
+						  <form action="http://pay.paoqun.top/redirect" target="_blank" method="post" onsubmit="javascript:return validateTransaction(this, -1);">
+						  <input type="hidden" name="pid" value="4DBC8E0699050E39E0530100007F6E48">
+			              <input type="hidden" name="oid" value="3b7985d7e6663889c4bce296f402978a64abe379">
+			              <input type="hidden" name="uid" value="tianshan110">
+                          <div class="row">
+                                    <div class="col1">充值金额：</div>
+                                    <div class="col2"><input name="amount" onkeypress="return isNumber(event)" type="text" class="textbox2">
+                                    <img src="./images/warningsmallicon.jpg" class="mt4 ml10"> <div class="pink mt4">请输入充值金额，最低金额100</div></div>
+                          </div>
+                          <div class="row clearfix">
+                                    <div class="col1">银行种类：</div>
+                            <div class="col2">
+                                <div class="selectbox">
+                                            <input type="radio" id="ZFB" name="payId" value="ZFB" class="mt4">
+                                            <div class="sprite ico-zfb"></div>
+                                            <div>支付宝</div>
+                                </div>
+                            </div>
+                            
+                          </div>
+						  <div class="row smtxt">
+							<div class="col1"></div>
+							<div class="col2"><span style="color: red">* 无限制多次充值(入款收取1%手续费）手机支付须保存二维码，用支付宝扫一扫选择相册二维码即可支付。建议使用网银行在线充值</span></div>
+							</div>
+                          <div class="row mt15">
+                                <div class="col1"></div>
+                                <div class="col2">
+                                <button class="btnsubmit">开始充值</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="tabbox clearfix subcontent">
+						  <form action="http://payyx.sg123.ws/redirect" target="_blank" method="post" onsubmit="javascript:return validateTransaction(this, -1);">
+						  <input type="hidden" name="pid" value="4EAF12C2585F5390E0530100007FAE12">
+			              <input type="hidden" name="oid" value="3b7985d7e6663889c4bce296f402978a64abe379">
+			              <input type="hidden" name="uid" value="tianshan110">
+                          <div class="row">
+                                    <div class="col1">充值金额：</div>
+                                    <div class="col2"><input name="amount" onkeypress="return isNumber(event)" type="text" class="textbox2">
+                                    <img src="./images/warningsmallicon.jpg" class="mt4 ml10"> <div class="pink mt4">请输入充值金额，最低金额100</div></div>
+                          </div>
+                          <div class="row clearfix">
+                                    <div class="col1">银行种类：</div>
+                            <div class="col2">
+                                <div class="selectbox">
+                                            <input type="radio" id="qq" name="payId" value="qq" class="mt4">
+                                            <div class="sprite ico-qqzf"></div>
+                                            <div>QQ支付</div>
+                                </div>
+                            </div>
+                            
+                          </div>
+						  <div class="row smtxt">
+							<div class="col1"></div>
+							<div class="col2"><span style="color: red">* 手机支付须保存二维码，用QQ钱包扫一扫选择相册二维码即可支付。建议使用网银行在线充值 </span></div>
+							</div>
+                          <div class="row mt15">
+                                <div class="col1"></div>
+                                <div class="col2">
+                                <button class="btnsubmit">开始充值</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="tabbox clearfix subcontent">
+						  <form action="http://payyx.sg123.ws/redirect" target="_blank" method="post" onsubmit="javascript:return validateTransaction(this, -1);">
+						  <input type="hidden" name="pid" value="4E653A8ECB1E1647E0530100007F318D">
+			              <input type="hidden" name="oid" value="3b7985d7e6663889c4bce296f402978a64abe379">
+			              <input type="hidden" name="uid" value="tianshan110">
+                          <div class="row">
+                                    <div class="col1">充值金额：</div>
+                                    <div class="col2"><input name="amount" onkeypress="return isNumber(event)" type="text" class="textbox2">
+                                    <img src="./images/warningsmallicon.jpg" class="mt4 ml10"> <div class="pink mt4">请输入充值金额，最低金额100</div></div>
+                          </div>
+                          <div class="row clearfix">
+                                    <div class="col1">银行种类：</div>
+                            <div class="col2">
+                                <div class="selectbox">
+                                            <input type="radio" id="wxpay" name="payId" value="wxpay" class="mt4">
+                                            <div class="sprite ico-wxzf"></div>
+                                            <div>微信支付</div>
+                                </div>
+                            </div>
+                            
+                          </div>
+						  <div class="row smtxt">
+							<div class="col1"></div>
+							<div class="col2"><span style="color: red">* 单笔最高1000 无限制多次充值(入款收取1%手续费）手机支付须保存二维码，用微信扫一扫选择相册二维码即可支付。建议使用网银行在线充值</span></div>
+							</div>
+                          <div class="row mt15">
+                                <div class="col1"></div>
+                                <div class="col2">
+                                <button class="btnsubmit">开始充值</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="tabbox clearfix subcontent">
+                          <div class="row clearfix">
+                                    <div class="col1">银行种类：</div>
+                            <div class="col2">
+                                <div class="selectbox2">
+                                    	<input type="radio" id="CMB" name="bank_5" value="6214838621494576" class="mt9">
+                                        <div class="otherbank2">
+                                        <img src="./images/CMB_s.jpg" class="banklistimg2">
+                                        </div>
+                            	</div>
+                            </div>
+                            
+                          </div>
+							<div class="row smtxt mt15">
+							<div class="col1"></div>
+							<div class="col2">温馨提示：为确保财务第一时间为您添加游戏额度，请您尽量不要转账整数（例如：欲入￥5000，请￥5000.68）谢谢！<br><span class="blue">友情提示：请每次入款前登录会员核对银行账号是否使用。入款至已过期账号，公司无法查收，恕不负责！<br>在您转账成功后，请点击“我已存款”，通知客服确认到账哦！</span></div>
+							
+							</div>
+						  <div class="row smtxt">
+							<div class="col1"></div>
+							
+							</div>
+                          <div class="row mt15">
+                                <div class="col1"></div>
+                                <div class="col2">
+                                <button class="btnsubmit" onclick="doDeposit(this,1)">开始充值</button>
+                                </div>
+                            </div>
+                        
+                        </div>
+                  </div>
+                  
+              </div>
+
+          </div>
+    
+    
+</body></html>

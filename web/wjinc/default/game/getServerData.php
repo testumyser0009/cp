@@ -1,0 +1,2 @@
+var playConfigs = {};
+var playQuotaConfigs = {};

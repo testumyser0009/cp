@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding:0;margin:0;}
+img{border:0;}
+ul,ol{list-style-type:none;}
+body,form{margin:0;padding:0;font-size:12px;line-height:180%;font-family:"Microsoft YaHei","微软雅黑"; }
+.right{float:right;}
+.left{float:left;}
+.wrap{width:1018px; margin:0px auto;}
+.more{float:right;}
+a{text-decoration: none;}
+a:link {color:#000000;text-decoration: none;}
+a:visited {color:#000000;text-decoration: none;}
+a:hover {color:#FF0000;text-decoration: none;}
+a:active {color:#FF0000;text-decoration: none;}
+.clear{clear:both;}
+
+body{
+	background:url(../images/bg.jpg) center top}
+.r1{float:right;     
+     position:fixed !important; top/**/:180px;     
+     position:absolute; z-index:300; top:expression(offsetParent.scrollTop+200);right:20px;}  

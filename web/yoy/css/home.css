@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(common.css);
+.bannerbg {
+	width: 100%;
+	float: left;
+	height: 237px;
+	background: url(../images/page/bg.jpg) top center no-repeat;
+	text-align: center;
+}
+.main {
+	width: 100%;
+	float: left;
+	background: url(../images/main_bg.png) repeat-x #080202;
+}
+.yxyx1 {
+	width: 100%;
+	background: url(../images/foot1.png) center top no-repeat;
+	;
+	height: 77px;
+	float: left;
+}
+.banner {
+	width: 100%;
+	float: left;
+	background: url(../images/banner/banner2.png) center top;
+	height: 237px;
+}
+.banner1 {
+	width: 100%;
+	float: left;
+	background: url(../images/banner/banner3.png) center top;
+	height: 237px;
+}
+.gonggao {
+	width: 100%;
+	float: left;
+	background: url(../images/gonggao.png) top center repeat-x;
+	height: 50px;
+	position: absolute;
+	top: 400px;
+	left: 0px;
+}
+.lefter {
+	width: 220px;
+	float: left;
+	margin-right: 10px;
+}
+.leftbg {
+	width: 226px;
+	height: 316px;
+	float: left;
+	background: url(../images/page/lefter.png);
+	padding-top: 90px;
+}
+.leftbg li {
+	background: url(../images/page/left_nav.png) top center no-repeat;
+	width: 100%;
+	float: left;
+	height: 29px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 5px;
+}
+.leftbg li a {
+	color: #232323;
+}
+.leftbg li a:hover {
+	color: #F00;
+}
+.leftkf {
+	width: 226px;
+	height: auto;
+	float: left;
+}
+.righter {
+	width: 794px;
+	float: left;
+}
+.right_wz {
+	color: #fffffe;
+}
+.right_wz a {
+	color: #fffffe;
+}
+.right_t1 {
+	width: 758px;
+	background: url(../images/page/r1.png);
+	height: 13px;
+	overflow: hidden;
+}
+.right_t2 {
+	width: 738px;
+	background: url(../images/page/r2.jpg);
+	overflow: hidden;
+	padding: 0px 10px 10px 10px;
+	line-height: 240%;
+	color: #fffffe;
+}
+.rule-info .rule-cont {
+	display: none;
+	padding: 5px 0px;
+	line-height: 2em;
+	overflow: hidden;
+}

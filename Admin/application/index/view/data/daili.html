@@ -1,0 +1,87 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('Index/index')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li class="active">代理收益</li>
+		</ol>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+				<form action="{:Url('Data/daili')}" method="get" style="width:55%;float:left;margin:10px  0 0 300px">
+                	<span>时间查询 : </span><input type="text" style="width:130px;height:30px;" name="times" class="laydate-icon" id="demo" value="{$Think.get.times}" />
+                	- - - <input type="text" style="width:130px;height:30px;" class="laydate-icon" name="timed" id="demo1" value="{$Think.get.timed}" />
+                	<button type="submit"  class="btn btn-danger">搜索</button>
+                </form>
+                	<form class="form-horizontal bucket-form" method="get" action="{:Url('Data/daili')}" style="width:15%;float:left">
+                    	<select name="se"  style="width:60px;height:30px;margin:10px 0"   >
+                        	<option  > - - - -</option>
+                            <option value="6" {if condition="$Think.get.se eq 6"}selected{else /}{/if}>今天</option>
+                            <option  value="1" {if condition="$Think.get.se eq 1"}selected{else /}{/if}>昨天</option>
+                            <option value="2" {if condition="$Think.get.se eq 2"}selected{else /}{/if}>本周</option>
+                            <option value="3" {if condition="$Think.get.se eq 3"}selected{else /}{/if}>上周</option>
+                            <option value="4" {if condition="$Think.get.se eq 4"}selected{else /}{/if}>本月</option>
+                            <option  value="5" {if condition="$Think.get.se eq 5"}selected{else /}{/if}>上月</option>
+                        </select>
+                        <button type="submit"  class="btn btn-danger">搜索</button>
+                    </form>
+                    <div style="clear: both"></div>
+                            <script>
+                                    ;!function(){
+                                    laydate({
+                                       elem: '#demo',
+                                       format: 'YYYY-MM-DD',
+                                      min: '2010-01-01 00:00:00', //璁惧畾鏈�灏忔棩鏈熶负褰撳墠鏃ユ湡
+                                      max: laydate.now(), //鏈�澶ф棩鏈�
+                                    })
+                                    laydate({
+                                      elem: '#demo1',
+                                      format: 'YYYY-MM-DD',
+                                      min: '2010-01-01 00:00:00', //璁惧畾鏈�灏忔棩鏈熶负褰撳墠鏃ユ湡
+                                      max: laydate.now(), //鏈�澶ф棩鏈�
+                                    })
+
+
+                                    }();
+                                </script>
+                            
+				<div>
+					<table class="table" ui-jq="footable"
+						ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+						<thead>
+							<tr>
+								<th style="color:red;">平台总收益：{$ptMoney}</th>
+								<th style="color:red;">代理总收益：{$dlMoney}</th>
+							</tr>
+					
+							<tr>
+								<th>代理ID</th>
+								<th>收益</th>
+								<th>贡献者ID</th>
+								<th data-breakpoints="xs">时间</th>
+							</tr>
+						</thead>
+						{volist name="dailis" id="vo"}
+							<tr>
+								<td><font>{$vo.user_id}</font></td>
+								<td><font>{$vo.money}</font></td>
+								<td><font>{$vo.buy_id}</font></td>
+								<td>{$vo.add_time|date="Y-m-d H:i:s",###}</td>
+							</tr>
+
+							{/volist}
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</section>

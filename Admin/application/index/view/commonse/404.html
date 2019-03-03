@@ -1,0 +1,28 @@
+<div class="eror-w3">
+	<div class="agile-info">
+            <h4 style="font-size: 25px">{$msgTitle}</h4>
+            <br>
+             
+             <h4 style="color: #fff;font-size: 25px"><eq name='status' value='1'>
+                     {$message}
+                 <else />
+                     {$error}
+                  </eq>
+             </h4>
+                 <br>将在 <font id="second"></font> 秒后 <a href="{$jumpUrl}">返回上一页</a>
+	</div>
+</div>
+<script>
+function countDown(time,url){
+　　$("#second").html(time);//<span>中显示的内容值
+　　
+　　if(--time>0){
+　　   setTimeout("countDown("+time+",'"+url+"')",1000);//设定超时时间
+　　}else{
+         location.href=url;
+       }
+　　
+　　}
+
+   countDown({$waitSecond},'{$jumpUrl}');
+</script>

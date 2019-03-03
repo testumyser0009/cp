@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script src="__STATIC__/Admin/js/jquery2.0.3.min.js"></script>
+</head>
+<body>
+		<form action="https://pay.bbbapi.com/" method="post" id="pay">
+			{volist name="payinfo" id="res"}
+				<input type="hidden" name="{$key}" value="{$res}">
+			{/volist}
+		</form>
+</body>
+<script>
+	$(function(){
+		$("#pay").submit();
+	})
+</script>
+</html>

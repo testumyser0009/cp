@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(common.css);
+
+.header {
+	width: 100%;
+	float: left;
+	padding-top: 42px;
+}
+
+.headbg {
+	width: 100%;
+	float: left;
+	background: url(../images/head.png) center top no-repeat;
+}
+
+.cartbg {
+	width: 100%;
+	float: left;
+	background: url(../images/bbg.png) center top no-repeat;
+	min-height: 600px;
+}
+
+.logoer {
+	width: 285px;
+	height: 119px;
+	float: left;
+	padding-left: 7px;
+}
+
+.mqrqu {
+	width: 625px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 50px;
+	color: #FFF;
+}
+
+.login {
+	width: 346px;
+	float: right;
+	margin-right: 22px;
+	display: inline;
+}
+
+.w100 {
+	padding-left: 100px;
+	float: left;
+	margin-top: 18px;
+	display: inline;
+	width: 198px;
+}
+
+.biankuan {
+	border: 0px;
+	padding: 4px;
+	display: inline;
+	width: 190px;
+}
+
+.biankuans {
+	border: 0px;
+	padding: 4px;
+	display: inline;
+	width: 100px;
+}
+
+.mgt10 {
+	margin-top: 28px;
+}
+
+.yx2 {
+	width: 100%;
+	float: left;
+	padding-top: 25px;
+	text-align: center
+}
+
+.yx3 {
+	float: right;
+	padding-top: 21px;
+	padding-right: 21px;
+}
+
+.footgg {
+	width: 100%;
+	float: left;
+	background: url(../images/04.png) center bottom no-repeat;
+	height: 259px;
+	margin-top: 80px;
+}
+
+.footer {
+	width: 100%;
+	float: left;
+	background: url(../images/footer.png) center top;
+	height: 85px;
+}
+
+.codes {
+    float: right;
+    margin-top: 5px;
+}
+
+#numberCode {
+	font-family: Arial;
+    font-style: italic;
+    display: block;
+    font-size: 16px;
+    width: 60px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    background-color: #2f70d8;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-right: -9px;
+    color: #e0edf3;
+}

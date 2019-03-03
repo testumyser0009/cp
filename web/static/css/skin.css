@@ -1,0 +1,244 @@
+/******************************
+			red
+******************************/
+.skin_red .skinHover,.skin_red .skinHover ul {background: #B0565A;}
+.skin_red .announce {background: url(../images/skin/red/announce-bg.png) repeat-x 0 -30px;}
+.skin_red .announc3-hd {background:url(../images/skin/red/announce-bg.png) no-repeat 0 0; }
+
+.skin_red .main-body { background: url("/static/images/skin/red/main_bg.jpg") no-repeat 0 0 #A12F37; }
+.skin_red .header .menu1 { background: url("../images/skin/red/top_bg.png") no-repeat 0 0;}
+.skin_red .header {background: url("../images/skin/red/nav_bg.png") repeat-x scroll 0 0;}
+.skin_red .header .lotterys a span {background: url("../images/skin/red/nav_shuxian.png") no-repeat scroll right 22px;}
+.skin_red .header .menu3 a {background-image: url("../images/skin/red/logout.png");}
+.skin_red .main {background: url("../images/skin/red/side_bg.jpg") no-repeat left bottom #b44249 ;}
+.skin_red .side_left .title {background: url("../images/skin/red/left_bg.png") no-repeat scroll 0 0;color: #fff;}
+.skin_red .side_left .info label {color: #FEADB5;}
+
+.skin_red .content {background-color: #feefef;}
+.skin_red .cont-col3 {background: #feefef;}
+.skin_red .u-table2 thead th{ border:1px solid #EAC0BF; background:url(../images/skin/red/bg-sprites.png) repeat-x 0 -58px; color: #892122}
+.skin_red .u-table2 .name {background-color: #f7ebeb;}
+.skin_red .u-table2 td,.skin_red .u-table4 td {border: 1px solid #daa4a3;color: #892122;}
+.skin_red .u-table2 .hover {background: none repeat 0 0 #F6D3E4;}
+.skin_red .u-table5 th, .skin_red .u-table5 td {border: 1px solid #daa4a3;}
+.skin_red .u-tb5-tr1 {background: #FFFFFF;}
+.skin_red .u-table2 thead th.select{ background: url(../images/skin/red/huang_bg.png) 0 0 !important;color: white !important;}
+.skin_red .tab_title02 a:hover, .skin_red .tab_title02 .on {background: url("../images/skin/red/tab_bg10.png") no-repeat scroll left top;color: #98292e;}
+.skin_red .u-table10 thead th {border: 1px solid #eac0bf;background-color: #E57388;color: #fff;}
+.skin_red .u-table10 td {border: 1px solid #daa4a3;background: #fff;color: #892122;}
+
+.skin_red .megas512 span.current {color: #98292e;}
+.skin_red .demo-class .layui-layer-title {background: url("../images/skin/red/bg-sprites.png") repeat-x scroll 0 -58px;border: 1px solid #eac0bf;color: #892122;}
+.skin_red .demo-class .layui-layer-btn a{ background: url("../images/skin/red/btn-bg.png");color: #fff;}
+.skin_red .bet-bottom {border: 1px solid #daa4a3;}
+.skin_red .bet-bottom .bcount {border-right: 1px solid #daa4a3;}
+.skin_red .skinbtn {background-color: #A43039;color: #ffffff;}
+.skin_red .skin-font-color {color:#892122}
+.skin_red #lastBets li {border-top: 1px solid #e6b3be;}
+
+.skin_red .pop-tips {border: 1px solid #af3230;}
+.skin_red .pop-tips-hd {background: #c03634;color: #fff;}
+/******************************
+			yellow
+******************************/
+.skin_yellow .skinHover,.skin_blue .skinHover ul {background: #234b95;}
+.skin_yellow .announce {background: url(../images/skin/blue/announce-bg.png) repeat-x 0 -30px;}
+.skin_yellow .announc3-hd {background:url(../images/skin/blue/announce-bg.png) no-repeat 0 0; }
+
+.skin_yellow .main-body { background: url("/static/images/skin/blue/main_bg.jpg") no-repeat 0 0 #3682D0; }
+.skin_yellow .header .menu1 { background: url("../images/skin/blue/top_bg.png") no-repeat 0 0;}
+.skin_yellow .header {background: url("../images/skin/blue/nav_bg.png") repeat-x scroll 0 0;}
+.skin_yellow .header .lotterys a span {background: url("../images/skin/blue/nav_shuxian.png") no-repeat scroll right 22px;}
+.skin_yellow .header .menu3 a {background-image: url("../images/skin/blue/logout.png");}
+.skin_yellow .main {background: url("../images/skin/blue/side_bg.jpg") no-repeat left top #2f6ed7;}
+.skin_yellow .side_left .title {background: url("../images/skin/blue/left_bg.png") no-repeat scroll 0 0;color: #fff;}
+.skin_yellow .side_left .info label {color: #36639D;}
+.skin_yellow .u-table4 td {
+    border: 1px solid #D8CD87;
+}
+.skin_yellow .u-table4 td.f1 {
+   // background-color: #e0e0e0!important;
+    border: 1px solid #D8CD87;
+}
+.skin_nred .u-table4 td {
+    border: 1px solid #E6B3BE;
+}
+.skin_nred .u-table4 td.f1 {
+   // background-color: #E6B3BE!important;
+    border: 1px solid #E6B3BE;
+}
+.skin_yellow .content {background-color: #FFFFFF;}
+.skin_yellow .cont-col3 {background: #FFFFFF;}
+.skin_nblue .cont-col3 .play_tab_1 thead th{    background: #2161b3;}
+.skin_yellow .cont-col3 .play_tab_1 thead th .c-txt2{color:#fff;}
+.skin_yellow .cont-col3 .play_tab_1 thead th .c-txt1{color:#fff;background:#fff;border-radius:3px;}
+.skin_yellow .cont-col3 .play_tab_1 thead th{background: #8c420b;color:#fff;}
+.skin_yellow .u-table2 thead th{ border:1px solid #D8CD87;border-bottom:none; background:#e0e0e0;/*url(../images/skin/blue/bg-sprites.png) repeat-x 0 -58px;*/ color:#35406d}
+.skin_yellow .u-table2 thead .u-tb3-th2{  background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(249,244,197,1) 51%,rgba(249,244,197,1) 100%);/*url(../images/skin/blue/bg-sprites.png) repeat-x 0 -58px;*/ color:#35406d}
+.skin_yellow .u-table2 .name {background-color: #f9f4c5;}
+.skin_yellow .u-table2 td,.skin_blue .u-table4 td {border: 1px solid #D8CD87;color: #35406d;}
+.skin_yellow .u-table2 .hover {background: none repeat 0 0 #f8e9a5;}
+.skin_yellow .u-table5 th, .skin_blue .u-table5 td {text-align:left;border: 1px solid #d8cd89;background:linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f0f0f0 51%,#f0f0f0 100%)}
+.skin_yellow .u-tb5-tr1,.skin_yellow .u-tb5-tr2 {background: #FFF;border:1px solid #d8cd89;}
+.skin_yellow .u-table2 thead th.select{ background: linear-gradient( to bottom, rgb(248, 233, 165) 0%, rgb(248, 233, 165) 50%, rgb(243, 221, 120) 51%, rgb(227, 187, 76) 100%);color: #8c420b !important;}
+.skin_yellow .tab_title02 a:hover, .skin_blue .tab_title02 .on {background: url("../images/skin/blue/tab_bg10.png") no-repeat scroll left top;color: #35406d;}
+.skin_yellow .u-table10 thead th {border: 1px solid #b9c2cb;background-color: #edf4fe;color: #35406d;}
+.skin_yellow .u-table10 td {border: 1px solid #b9c2cb;background: #fff;color: #35406d;}
+.skin_yellow #stat_play_list_desc{background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(249,244,197,1) 51%,rgba(249,244,197,1) 100%)}
+.skin_yellow .megas512 span.current {color: #35406d;}
+.skin_yellow .demo-class .layui-layer-title {background: url("../images/skin/blue/bg-sprites.png") repeat-x scroll 0 -58px;border: 1px solid #b9c2cb;color: #35406d;}
+.skin_yellow .demo-class .layui-layer-btn a{ background: url("../images/skin/blue/btn-bg.png");color: #fff;}
+.skin_yellow .bet-bottom {border: 1px solid #b9c2cb;}
+.skin_yellow .bet-bottom .bcount {border-right: 1px solid #b9c2cb;}
+.skin_yellow .skinbtn {background-color: #4987D7;color: #ffffff;}
+.skin_yellow .skin-font-color {color:#35406d}
+.skin_yellow #lastBets li {border-top: 1px solid #b9c2cb;}
+
+.skin_yellow .pop-tips {border: 1px solid #4092F6;}
+.skin_yellow .pop-tips-hd {background: #4987D7;color: #fff;}
+/******************************
+			nblue
+******************************/
+.skin_nblue #stat_play_list_desc{	
+	background:linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#fef4ea 51%,#fef4ea 100%);
+	color:#ff7441;
+}
+.skin_nblue .skinHover,.skin_blue .skinHover ul {background: #234b95;}
+.skin_nblue .announce {background: url(../images/skin/blue/announce-bg.png) repeat-x 0 -30px;}
+.skin_nblue .announc3-hd {background:url(../images/skin/blue/announce-bg.png) no-repeat 0 0; }
+
+.skin_nblue .main-body { background: url("/static/images/skin/blue/main_bg.jpg") no-repeat 0 0 #3682D0; }
+.skin_nblue .header .menu1 { background: url("../images/skin/blue/top_bg.png") no-repeat 0 0;}
+.skin_nblue .header {background: url("../images/skin/blue/nav_bg.png") repeat-x scroll 0 0;}
+.skin_nblue .header .lotterys a span {background: url("../images/skin/blue/nav_shuxian.png") no-repeat scroll right 22px;}
+.skin_nblue .header .menu3 a {background-image: url("../images/skin/blue/logout.png");}
+.skin_nblue .main {background: url("../images/skin/blue/side_bg.jpg") no-repeat left top #2f6ed7;}
+.skin_nblue .side_left .title {background: url("../images/skin/blue/left_bg.png") no-repeat scroll 0 0;color: #fff;}
+.skin_nblue .side_left .info label {color: #36639D;}
+.skin_nblue .u-table5 th, .u-table5 td{font-weight:100;text-align: left;      border: 1px solid #D8CD87;      background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f0f0f0 51%,#f0f0f0 100%);}  .u-table5 th{color:#4f4d4d;}
+.skin_nblue .content {background-color: #FFFFFF;}
+.skin_nblue .cont-col3 {background: #FFFFFF;}
+.skin_nblue .cont-col3 .play_tab_1 thead th .c-txt2{color:#fff;}
+.skin_nblue .cont-col3 .play_tab_1 thead th .c-txt1{color:#fff;background:#fff;border-radius:3px;}
+.skin_nblue .u-table2 thead th{ border:1px solid #b9c2cb;border-bottom: none; background:#e0e0e0;/*url(../images/skin/blue/bg-sprites.png) repeat-x 0 -58px;*/ color:#4f4d4d;}
+.skin_nblue .u-table2 thead .u-tb3-th2{  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f0f0f0 51%,#f0f0f0 100%); }
+.skin_nblue .cont-col3 .play_tab_1 thead th{    background: #2161b3;}
+.skin_nblue .u-table2 .name {background-color: #edf4fe;}
+.skin_nblue .u-table2 td,.skin_blue .u-table4 td {border: 1px solid #b9c2cb;color: #35406d;}
+.skin_nblue .u-table2 .hover {background: none repeat 0 0 #c3d9f1;}
+.skin_nblue .u-table5 th, .skin_blue .u-table5 td {text-align:left;border: 1px solid #b9c2cb;background:linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f0f0f0 51%,#f0f0f0 100%)}
+.skin_nblue .u-tb5-tr1 {background: #FFF;}
+.skin_nblue .u-table2 thead th.select{ font-weight:blod;background: linear-gradient( to bottom, #dee9f3 0%,#dee9f3 50%,#cfd9e3 51%,#cfd9e3 100%);color: #000 !important;}
+.skin_nblue .tab_title02 a:hover, .skin_blue .tab_title02 .on {background: url("../images/skin/blue/tab_bg10.png") no-repeat scroll left top;color: #35406d;}
+.skin_nblue .u-table10 thead th {border: 1px solid #b9c2cb;background-color: #edf4fe;color: #35406d;}
+.skin_nblue .u-table10 td {border: 1px solid #b9c2cb;background: #fff;color: #35406d;}
+
+.skin_nblue .megas512 span.current {color: #35406d;}
+.skin_nblue .demo-class .layui-layer-title {background: url("../images/skin/blue/bg-sprites.png") repeat-x scroll 0 -58px;border: 1px solid #b9c2cb;color: #35406d;}
+.skin_nblue .demo-class .layui-layer-btn a{ background: url("../images/skin/blue/btn-bg.png");color: #fff;}
+.skin_nblue .bet-bottom {border: 1px solid #b9c2cb;}
+.skin_nblue .bet-bottom .bcount {border-right: 1px solid #b9c2cb;}
+.skin_nblue .skinbtn {background-color: #4987D7;color: #ffffff;}
+.skin_nblue .skin-font-color {color:#35406d}
+.skin_nblue #lastBets li {border-top: 1px solid #b9c2cb;}
+
+.skin_nblue .pop-tips {border: 1px solid #4092F6;}
+.skin_nblue .pop-tips-hd {background: #4987D7;color: #fff;}
+/******************************
+			nred
+******************************/
+.skin_nred #stat_play_list_desc{	
+	background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,239,238,1) 51%,rgba(255,239,238,1) 100%);
+	color:#ff7441;
+}
+.skin_nred .skinHover,.skin_blue .skinHover ul {background: #234b95;}
+.skin_nred .announce {background: url(../images/skin/blue/announce-bg.png) repeat-x 0 -30px;}
+.skin_nred .announc3-hd {background:url(../images/skin/blue/announce-bg.png) no-repeat 0 0; }
+
+.skin_nred .main-body { background: url("/static/images/skin/blue/main_bg.jpg") no-repeat 0 0 #3682D0; }
+.skin_nred .header .menu1 { background: url("../images/skin/blue/top_bg.png") no-repeat 0 0;}
+.skin_nred .header {background: url("../images/skin/blue/nav_bg.png") repeat-x scroll 0 0;}
+.skin_nred .header .lotterys a span {background: url("../images/skin/blue/nav_shuxian.png") no-repeat scroll right 22px;}
+.skin_nred .header .menu3 a {background-image: url("../images/skin/blue/logout.png");}
+.skin_nred .main {background: url("../images/skin/blue/side_bg.jpg") no-repeat left top #2f6ed7;}
+.skin_nred .side_left .title {background: url("../images/skin/blue/left_bg.png") no-repeat scroll 0 0;color: #fff;}
+.skin_nred .side_left .info label {color: #36639D;}
+
+.skin_nred .content {background-color: #FFFFFF;}
+.skin_nred .cont-col3 {background: #FFFFFF;}
+.skin_nred .cont-col3 .play_tab_1 thead th .c-txt2{color:#fff;}
+.skin_nred .cont-col3 .play_tab_1 thead th .c-txt1{color:#fff;background:#fff;border-radius:3px;}
+.skin_nred .cont-col3 .play_tab_1 thead th{background: #B33B4E;/*color:#fff;*/border: 0px solid #E6B3BE;border-radius: 0px;}
+.skin_nblue .cont-col3 .play_tab_1 thead th{/*color:#fff;*/    border: 1px solid #b9c2cb;}
+.skin_yellow .cont-col3 .play_tab_1 thead th{/*color:#fff;*/border: 1px solid #D8CD87;color:#35406d;}
+.skin_nblue .u-table2 thead th{ color:#35406d}
+.skin_nred .u-table2 thead th{ border:1px solid #E6B3BE;border-bottom: none; background:#e0e0e0;/*url(../images/skin/blue/bg-sprites.png) repeat-x 0 -58px;*/ color:#ffffff)}
+.skin_nred .u-table2 thead .u-tb3-th2{ border:1px solid #E6B3BE; background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,239,238,1) 51%,rgba(255,239,238,1) 100%);/*url(../images/skin/blue/bg-sprites.png) repeat-x 0 -58px;*/ color:#35406d}
+.skin_nred .u-table2 .name {background-color: #fff5f5;}
+.skin_nred .u-table2 td,.skin_blue .u-table4 td {border: 1px solid #E6B3BE;color: #35406d;}
+.skin_nred .u-table2 .hover {background: none repeat 0 0 #f6d3e4;}
+.skin_nred .u-table5 th, .skin_blue .u-table5 td {border: 1px solid #daa4a3;text-align:left;background:linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f0f0f0 51%,#f0f0f0 100%)}
+.skin_nred .u-table5 th, .skin_nred .u-table5 td{font-weight:100;text-align: left;      border: 1px solid #daa4a3     background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f0f0f0 51%,#f0f0f0 100%);} 
+.skin_nred .u-tb5-tr1,.skin_nred .u-tb5-tr2 {background: #FFF;border: 1px solid #daa4a3;}
+.skin_nred .u-table2 thead th.select{ background: linear-gradient( to bottom, rgb(243, 228, 228) 0%, rgb(249, 222, 222) 50%, rgb(239, 208, 206) 51%, rgb(243, 219, 218) 100%);color: #751d28 !important;}
+.skin_nred .tab_title02 a:hover, .skin_blue .tab_title02 .on {background: url("../images/skin/blue/tab_bg10.png") no-repeat scroll left top;color: #35406d;}
+.skin_nred .u-table10 thead th {border: 1px solid #b9c2cb;background-color: #edf4fe;color: #35406d;}
+.skin_nred .u-table10 td {border: 1px solid #b9c2cb;background: #fff;color: #35406d;}
+
+.skin_nred .megas512 span.current {color: #35406d;}
+.skin_nred .demo-class .layui-layer-title {background: url("../images/skin/blue/bg-sprites.png") repeat-x scroll 0 -58px;border: 1px solid #b9c2cb;color: #35406d;}
+.skin_nred .demo-class .layui-layer-btn a{ background: url("../images/skin/blue/btn-bg.png");color: #fff;}
+.skin_nred .bet-bottom {border: 1px solid #b9c2cb;}
+.skin_nred .bet-bottom .bcount {border-right: 1px solid #b9c2cb;}
+.skin_nred .skinbtn {background-color: #4987D7;color: #ffffff;}
+.skin_nred .skin-font-color {color:#35406d}
+.skin_nred #lastBets li {border-top: 1px solid #b9c2cb;}
+
+.skin_nred .pop-tips {border: 1px solid #4092F6;}
+.skin_nred .pop-tips-hd {background: #4987D7;color: #fff;}
+/******************************
+			blue
+******************************/
+.skin_blue .skinHover,.skin_blue .skinHover ul {background: #234b95;}
+.skin_blue .announce {background: url(../images/skin/blue/announce-bg.png) repeat-x 0 -30px;}
+.skin_blue .announc3-hd {background:url(../images/skin/blue/announce-bg.png) no-repeat 0 0; }
+
+.skin_blue .main-body { background: url("/static/images/skin/blue/main_bg.jpg") no-repeat 0 0 #3682D0; }
+.skin_blue .header .menu1 { background: url("../images/skin/blue/top_bg.png") no-repeat 0 0;}
+.skin_blue .header {background: url("../images/skin/blue/nav_bg.png") repeat-x scroll 0 0;}
+.skin_blue .header .lotterys a span {background: url("../images/skin/blue/nav_shuxian.png") no-repeat scroll right 22px;}
+.skin_blue .header .menu3 a {background-image: url("../images/skin/blue/logout.png");}
+.skin_blue .main {background: url("../images/skin/blue/side_bg.jpg") no-repeat left top #2f6ed7;}
+.skin_blue .side_left .title {background: url("../images/skin/blue/left_bg.png") no-repeat scroll 0 0;color: #fff;}
+.skin_blue .side_left .info label {color: #36639D;}
+
+.skin_blue .content {background-color: #FFFFFF;}
+.skin_blue .cont-col3 {background: #FFFFFF;}
+.skin_blue .u-table2 thead th{ border:1px solid #b9c2cb; background:#e0e0e0;/*url(../images/skin/blue/bg-sprites.png) repeat-x 0 -58px;*/ color:#35406d}
+.skin_blue .u-table2 .name {background-color: #edf4fe;}
+.skin_blue .u-table2 td,.skin_blue .u-table4 td {border: 1px solid #b9c2cb;color: #35406d;}
+.skin_blue .u-table2 .hover {background: none repeat 0 0 #c3d9f1;}
+.skin_blue .u-table5 th, .skin_blue .u-table5 td {border: 1px solid #b9c2cb;}
+.skin_blue .u-tb5-tr1 {background: #FFF;}
+.skin_blue .u-table2 thead th.select{ background: url(../images/skin/blue/huang_bg.png) 0 0 !important;color: white !important;}
+.skin_blue .tab_title02 a:hover, .skin_blue .tab_title02 .on {background: url("../images/skin/blue/tab_bg10.png") no-repeat scroll left top;color: #35406d;}
+.skin_blue .u-table10 thead th {border: 1px solid #b9c2cb;background-color: #edf4fe;color: #35406d;}
+.skin_blue .u-table10 td {border: 1px solid #b9c2cb;background: #fff;color: #35406d;}
+
+.skin_blue .megas512 span.current {color: #35406d;}
+.skin_blue .demo-class .layui-layer-title {background: url("../images/skin/blue/bg-sprites.png") repeat-x scroll 0 -58px;border: 1px solid #b9c2cb;color: #35406d;}
+.skin_blue .demo-class .layui-layer-btn a{ background: url("../images/skin/blue/btn-bg.png");color: #fff;}
+.skin_blue .bet-bottom {border: 1px solid #b9c2cb;}
+.skin_blue .bet-bottom .bcount {border-right: 1px solid #b9c2cb;}
+.skin_blue .skinbtn {background-color: #4987D7;color: #ffffff;}
+.skin_blue .skin-font-color {color:#35406d}
+.skin_blue #lastBets li {border-top: 1px solid #b9c2cb;}
+
+.skin_blue .pop-tips {border: 1px solid #4092F6;}
+.skin_blue .pop-tips-hd {background: #4987D7;color: #fff;}
+
+
+#page_game_name {color:#fff;}
+.cont-main #subpage .cont-col3 .play_tab_1 th {color:#fff;}
+
+.selected {background: none repeat 0 0 #ffc80a;}

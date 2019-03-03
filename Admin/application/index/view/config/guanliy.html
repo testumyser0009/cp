@@ -1,0 +1,77 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('Index/index')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li class="active">管理员列表</li>
+		</ol>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+                            
+                            <!--- 搜索位置 -->
+                    <div class="col-sm-3" style="margin-left: 600px">
+				<div class="input-group">
+					<form action='' method='get'>
+						<input style="width: 185px; height: 33px" type="text"
+							class="input-sm form-control" value='{$Think.get.keyword}'
+							name="keyword" /> <span class="input-group-btn">
+							<button class="btn btn-sm btn-default" type="submit">
+								搜索(ID)</button>
+						</span>
+					</form>
+				</div>
+
+			</div>
+                            
+				<div>
+					<table class="table" ui-jq="footable"
+						ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+						<thead>
+							<tr>
+							<th>编号</th>
+								<th data-breakpoints="xs">昵称</th>
+								<th>类型</th>
+								 <th>操作</th> 
+							</tr>
+						</thead>
+						<tbody>
+							{empty name='list'}
+							<tr>
+								<td colspan='4' style="text-align: center">暂无记录<br>
+									<br> <a href="{:Url('Index/index')}"><button type="button"
+											class="btn btn-danger">
+											<font>返回</font>
+										</button></a></td>
+							</tr>
+							{/empty}
+							{volist name="list" id="vo"}
+							<tr data-expanded="true">
+								<td>{$vo.id}</td>
+								<td><font>{$vo.username}</font></td>
+								<td>{if condition="$vo.status eq 0"}普通管理员{else /}<span style="color:red">超级管理员</span>{/if}</td>
+								<td>
+								{if condition="$vo.status eq 0"}
+								<a href="{:Url('Config/delete',array('id'=>$vo['id']))}">删除</a>
+								{else /}{/if}
+								</td>
+							</tr>
+
+							{/volist}
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+
+	</section>

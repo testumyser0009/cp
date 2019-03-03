@@ -1,0 +1,54 @@
+<!document html>
+<html>
+	<head>
+		<title>下载</title>
+		<meta charset="utf-8">
+	</head>
+	<script type="text/javascript" src="/static/jquery-1.8.3.min.js"></script>
+	<body>
+		<img id="img" width="100%" height="100%" src="/static/fx.png">
+		<a href="http://fir.im/YouN" id="aaa" style="position:absolute;z-index:1;left:28%;top:39%;"><img src="/static/xia.png"></a>
+		<a href="myapp://jp.app/openwith" id="aaas" style="position:absolute;z-index:1;left:28%;top:50%;"><img src="/static/da.png"></a>
+	</body>
+	<script type="text/javascript">
+		
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var isWeixin = is_weixin();
+        var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+        function loadHtml(){
+            var div = document.createElement('div');
+            div.id = 'weixin-tip';
+            div.innerHTML = '<p><img class="weixin" style="z-index:5;" src="/static/live_weixin.png" alt="微信打开"/></p>';
+            document.body.appendChild(div);
+        }
+
+        function loadStyleText(cssText) {
+            var style = document.createElement('style');
+            style.rel = 'stylesheet';
+            style.type = 'text/css';
+            try {
+                style.appendChild(document.createTextNode(cssText));
+            } catch (e) {
+                style.styleSheet.cssText = cssText; //ie9以下
+            }
+            var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+            head.appendChild(style);
+        }
+        var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+        if(isWeixin){
+            loadHtml();
+            loadStyleText(cssText);
+        }
+		var h = document.documentElement.clientHeight;
+		$("#img").css('height',h);
+		$("#aaa").css('top',h*0.39);
+		$("#aaas").css('top',h*0.39+200);
+	</script>
+</html>

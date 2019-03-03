@@ -1,0 +1,64 @@
+<section id="main-content">
+	<section class="wrapper">
+		<ol class="breadcrumb">
+			<li><a href="{:Url('Index/index')}"><span
+					class="glyphicon glyphicon-home" aria-hidden="true"
+					style="color: #f00"></span></a></li>
+			<li><a href="{:Url('User/user')}">用户统计</a></li>
+			<li class="active">{if condition="$info eq 1"} 一级分销列表 {elseif condition="$info eq 2" /}二级分销列表{elseif condition="$info eq 3" /}三级分销列表 {/if}
+			</li>
+		</ol>
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+				<!-- --search- -->
+
+
+				<div>
+					<table class="table" ui-jq="footable"
+						ui-options="{
+        &quot;paging&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;filtering&quot;: {
+          &quot;enabled&quot;: true
+        },
+        &quot;sorting&quot;: {
+          &quot;enabled&quot;: true
+        }}">
+						<thead>
+							<tr>
+								<th data-breakpoints="xs">ID</th>
+								<th>昵称</th>
+								<th>佣金</th>
+								<th>余额</th>
+								<th>下注明细</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							{empty name='list'}
+							<tr>
+								<td colspan='3' style="text-align: center">暂无记录<br> <br>
+									<a href="{:Url('User/user')}"><button type="button"
+											class="btn btn-danger">返回</button></a></td>
+							</tr>
+						{/empty}
+							{volist name="list" id="vo"}
+							<tr data-expanded="true">
+								<td>{$vo.id}</td>
+								<td>{$vo.nickname}</td>
+								<td>{$vo.com_money}</td>
+								<td>{$vo.user_money}</td>
+								<td><a href="{:Url('User/xiang',array('id'=>$vo['id']))}"><span
+										class="label label-warning">查看</span></a></td>
+							</tr>
+
+							{/volist}
+						</tbody>
+					</table>
+					{$list->render()}
+				</div>
+			</div>
+		</div>
+
+	</section>

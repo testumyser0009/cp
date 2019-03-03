@@ -1,0 +1,1081 @@
+	var todayDate = new Date();
+	var tdyear = todayDate.getFullYear();       //年   
+    var tdmonth = todayDate.getMonth() + 1;     //月   
+    var tdday = todayDate.getDate();            //日
+	if(tdmonth < 10) tdmonth="0"+tdmonth;
+	if(tdday < 10) tdday="0"+tdday;
+	var todaytime=tdyear.toString()+tdmonth.toString()+tdday.toString();
+	var gdklsf="/static/info/kaijiang/xml/gdklsf/"+todaytime+".xml?_A=ZTHNJBQS"+todayDate.getTime();
+	var tjssc="/static/info/kaijiang/xml/tjssc/"+todaytime+".xml?_A=QIAXUMOC"+todayDate.getTime();
+	var shssl="/static/public/ssl/xml/qihaoxml/"+todaytime+".xml?_A=LYHJCXNV"+todayDate.getTime();
+	var cqklsf="/static/info/kaijiang/xml/chqklsf/"+todaytime+".xml?_A=DBPAOMRK"+todayDate.getTime();
+exports.cp=[
+ 
+  	{
+		title:'重庆时时彩',
+		source:'360彩票网',
+		name:'cqssc',
+		enable:true,
+		timer:'ssc-cq', 
+
+		option:{
+			host:"cp.360.cn",
+			timeout:50000,
+			path: '/ssccq/',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		parse:function(str){
+			try{
+				return getFrom360CP(str,1);
+			}catch(err){
+				throw('重庆时时彩解析数据不正确');
+			}
+		}
+	},
+ 
+ 	/* {
+		title:'北京PK10',
+		source:'开彩网',
+		name:'bjpk10',
+		enable:true,
+		timer:'bjpk10',
+
+		option:{
+
+			host:"c.apiplus.net",
+			timeout:30000,
+			path: '/newly.do?token=ed7b62d4bf96cb4a&code=bjpk10',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		
+		parse:function(str){
+			try{
+				return getFromcpbjpk10(str,50);
+			}catch(err){
+				throw('北京PK10解析数据不正确');
+			}
+		}
+	}, */
+	
+	{
+		title:'北京PK10',
+		source:'百度乐彩',
+		name:'bjpk10',
+		enable:true,
+		timer:'bjpk10',
+
+		option:{
+			host:"baidu.lecai.com",
+			timeout:30000,
+			path: '/lottery/draw/view/557?phase=503062&agentId=5563',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		
+		parse:function(str){
+			try{
+				var exp_data = /var latest_draw_result = {"red":\[([0-9\[\]\,\s"]+)\]/;
+				var exp_phase = /var latest_draw_phase = '(\d+)';/;
+				var exp_time = /var latest_draw_time = '([0-9\-\:\s]+)';/;
+				var m_data = str.match(exp_data);
+				var m_phase = str.match(exp_phase);
+				var m_time = str.match(exp_time);
+				if(m_data && m_phase && m_time){
+					return {
+						type:50,
+						time:m_time[1],
+						number:m_phase[1],
+						data:m_data[1].replace(/"/g, '')
+					};
+				}					
+			}catch(err){
+				throw('北京PK10解析数据不正确');
+			}
+		}
+	},	
+
+	{
+		title:'广东快乐十分',
+		source:'500wan',
+		name:'gdklsf',
+		enable:true,
+		timer:'gdklsf',
+
+		option:{
+			host:"kaijiang.500.com",
+			timeout:50000,
+			path: gdklsf,
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Win64; x64; Trident/4.0)"
+			}
+		},
+		
+		parse:function(str){
+			try{
+				return getFromgdklsfweb(str,60);
+			}catch(err){
+				throw('广东快乐十分解析数据不正确');
+			}
+		}
+	},
+	
+	
+	{
+		title:'重庆幸运农场',
+		source:'500wan',
+		name:'klsf',
+		enable:true,
+		timer:'klsf', 
+		option:{
+			host:"kaijiang.500.com",
+			timeout:50000,
+			path: cqklsf,
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Win64; x64; Trident/4.0)"
+			}
+		},
+		parse:function(str){
+			try{				
+				return getFromklsfweb(str,61);
+			}catch(err){
+				throw('重庆幸运农场解析数据不正确');
+			}
+		}
+	},
+	
+	{
+		title:'北京快乐8',
+		source:'百度乐彩',
+		name:'bjk8',
+		enable:true,
+		timer:'bjk8',
+
+		option:{
+			host:"baidu.lecai.com",
+			timeout:30000,
+			path: '/lottery/draw/view/543?phase=503062&agentId=5563',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		
+		parse:function(str){
+			try{
+				var exp_data = /var latest_draw_result = {"red":\[([0-9\[\]\,\s"]+)\]/;
+				var exp_phase = /var latest_draw_phase = '(\d+)';/;
+				var exp_time = /var latest_draw_time = '([0-9\-\:\s]+)';/;
+				var m_data = str.match(exp_data);
+				var m_phase = str.match(exp_phase);
+				var m_time = str.match(exp_time);
+				if(m_data && m_phase && m_time){
+					return {
+						type:65,
+						time:m_time[1],
+						number:m_phase[1],
+						data:m_data[1].replace(/"/g, '')
+					};
+				}					
+			}catch(err){
+				throw('北京快乐8解析数据不正确');
+			}
+		}
+	},	
+	
+	{
+		title:'广东11选5',
+		source:'香雨娱乐平台',
+		name:'gd11x5',
+		enable:true,
+		timer:'gd11x5',
+
+		option:{
+			host:"cp.360.cn",
+			timeout:50000,
+			path: '/gd11/',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		parse:function(str){
+			try{
+				return getFrom360CPgd11x5(str,21);
+			}catch(err){
+				throw('广东11选5解析数据不正确');
+			}
+		}
+	},
+
+	{
+		title:'江苏快3',
+		source:'360彩票',
+		name:'jsk3',
+		enable:true,
+		timer:'jsk3',
+
+		option:{
+			host:"cp.360.cn",
+			timeout:30000,
+			path: '/k3js/',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		parse:function(str){
+			try{
+				return getFrom360CPK3(str,10);
+			}catch(err){
+				throw('江苏快3解析数据不正确');
+			}
+		}
+	},
+
+	{
+		title:'幸运飞艇',
+		source:'开彩网',
+		name:'mlaft',
+		enable:true,
+		timer:'mlaft',
+
+		option:{
+
+			host:"c.apiplus.net",
+			timeout:30000,
+			path: '/newly.do?token=ed7b62d4bf96cb4a&code=mlaft',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		
+		parse:function(str){
+			try{
+				return getFromcpmlaft(str,55);
+			}catch(err){
+				throw('幸运飞艇解析数据不正确');
+			}
+		}
+	},
+	
+ 	{
+	title:'香港六合彩',
+	source:'lhc',
+	name:'lhc',
+	enable:true,
+	timer:'lhc',
+	
+	option:{
+		host:"c.apiplus.net",
+		timeout:500000,
+		path: '/newly.do?token=ed7b62d4bf96cb4a&code=hk6',
+		headers:{
+			"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0) "
+		}
+	},
+		parse:function(str){
+			try{
+				return getFrom360CPlhc(str,70);
+			}catch(err){
+				throw('六合彩解析数据不正确');
+			}
+		}
+	 }, 
+	
+	{
+		title:'PC蛋蛋',
+		source:'百度乐彩',
+		name:'pcdd',
+		enable:true,
+		timer:'pcdd',
+
+		option:{
+			host:"baidu.lecai.com",
+			timeout:30000,
+			path: '/lottery/draw/view/543?phase=503062&agentId=5563',
+			headers:{
+				"User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)"
+			}
+		},
+		
+		parse:function(str){
+			try{
+				return getFrompcdd(str,66);			
+			}catch(err){
+				throw('PC蛋蛋解析数据不正确');
+			}
+		}
+	},
+];
+
+// 出错时等待 10
+exports.errorSleepTime=10;
+
+// 重启时间间隔，以小时为单位，0为不重启
+//exports.restartTime=0.4;
+exports.restartTime=0;
+
+exports.submit={
+
+	host:'127.0.0.2',
+	path:'/admin778899.php/data/kj'
+}
+
+exports.dbinfo={
+	host:'127.0.0.1',
+	user:'root',
+	password:'dFOkN0#1z%52',
+	database:'boe2017'
+
+}
+
+global.log=function(log){
+	var date=new Date();
+	console.log('['+date.toLocaleDateString() +' '+ date.toLocaleTimeString()+'] '+log)
+}
+
+function getFromXJFLCPWeb(str, type){
+	str=str.substr(str.indexOf('<td><a href="javascript:detatilssc'), 300).replace(/[\r\n]+/g,'');
+         
+	var reg=/(\d{10}).+(\d{2}\:\d{2}).+<p>([\d ]{9})<\/p>/,
+	match=str.match(reg);
+	
+	if(!match) throw new Error('数据不正确');
+	try{
+		var data={
+			type:type,
+			time:match[1].replace(/^(\d{4})(\d{2})(\d{2})\d{2}/, '$1-$2-$3 ')+match[2],
+			number:match[1].replace(/^(\d{8})(\d{2})$/, '$1-$2'),
+			data:match[3].split(' ').join(',')
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+}
+
+
+function getFromCaileleWeb(str, type, slen){
+	if(!slen) slen=500;
+	str=str.substr(str.indexOf('<span class="cz_name">'),slen);
+	//console.log(str);
+	var reg=/<td.*?>(\d+)<\/td>[\s\S]*?<td.*?>([\d\- \:]+)<\/td>[\s\S]*?<td.*?>((?:[\s\S]*?<span class="red_ball">\d+<\/span>){3,5})\s*<\/td>/,
+	match=str.match(reg);
+	if(match.length>1){
+		
+		if(match[1].length==7) match[1]='2014'+match[1].replace(/(\d{4})(\d{3})/,'$1-$2');
+		if(match[1].length==8){
+			if(parseInt(type)!=11){
+				match[1]='20'+match[1].replace(/(\d{6})(\d{2})/,'$1-0$2');
+			}else{match[1]='20'+match[1].replace(/(\d{6})(\d{2})/,'$1-$2');}
+		}
+		if(match[1].length==9) match[1]='20'+match[1].replace(/(\d{6})(\d{2})/,'$1-$2');
+		if(match[1].length==10) match[1]=match[1].replace(/(\d{8})(\d{2})/,'$1-0$2');
+		var mynumber=match[1].replace(/(\d{8})(\d{3})/,'$1-$2');
+	try{
+		var data={
+			type:type,
+			time:match[2],
+			number:mynumber
+		}
+		reg=/<div.*>(\d+)<\/div>/g;
+		data.data=match[3].match(reg).map(function(v){
+			var reg=/<div.*>(\d+)<\/div>/;
+			return v.match(reg)[1];
+		}).join(',');
+		
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+   }
+
+}
+function getFromBwlcWeb(str, type){
+	str=str.substr(str.indexOf('<tr class="'), 300).replace(/[\r\n]+/g,'');
+         
+	var reg=/<td>(\d{6}).+([\d+,]{29}).+([\d\- \:]{16})<\/td>/,
+				 //<td>374454</td><td>04,10,01,03,05,09,06,07,02,08</td><td>2013-07-25 23:57</td>
+
+	match=str.match(reg);
+	
+	if(!match) throw new Error('数据不正确');
+                    
+	try{
+		var data={
+			type:type,
+			time:match[3],
+			number:match[1],
+			data:match[2]
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+}
+function getFrom360CP(str, type){
+
+	str=str.substr(str.indexOf('<em class="red" id="open_issue">'),380);
+	//console.log(str);
+	var reg=/[\s\S]*?(\d+)<\/em>[\s\S].*?<ul id="open_code_list">((?:[\s\S]*?<li class=".*?">\d+<\/li>){3,5})[\s\S]*?<\/ul>/,
+	match=str.match(reg);
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	//console.log(match);
+	if(match.length>1){
+		if(match[1].length==7) match[1]=year+match[1].replace(/(\d{8})(\d{3})/,'$1-$2');
+		if(match[1].length==6) match[1]=year+match[1].replace(/(\d{4})(\d{2})/,'$1-0$2');
+		if(match[1].length==9) match[1]='20'+match[1].replace(/(\d{6})(\d{2})/,'$1-$2');
+		if(match[1].length==10) match[1]=match[1].replace(/(\d{8})(\d{2})/,'$1-0$2');
+		var mynumber=match[1].replace('-','');
+		
+		try{
+			var data={
+				type:type,
+				time:mytime,
+				number:mynumber
+			}
+			
+			reg=/<li class=".*?">(\d+)<\/li>/g;
+			data.data=match[2].match(reg).map(function(v){
+				var reg=/<li class=".*?">(\d+)<\/li>/;
+				return v.match(reg)[1];
+			}).join(',');
+			
+			//console.log(data);
+			return data;
+		}catch(err){
+			throw('解析数据失败');
+		}
+	}
+}
+
+function getFrom360CPgd11x5(str, type){
+
+	str=str.substr(str.indexOf('<em class="red" id="open_issue">'),380);
+	//console.log(str);
+	var reg=/[\s\S]*?(\d+)<\/em>[\s\S].*?<ul id="open_code_list">((?:[\s\S]*?<li class=".*?">\d+<\/li>){3,5})[\s\S]*?<\/ul>/,
+	match=str.match(reg);
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	if(match.length>1){
+		var mynumber=year.toString().substr(-2)+match[1].replace('-','');
+		
+		try{
+			var data={
+				type:type,
+				time:mytime,
+				number:mynumber
+			}
+			
+			reg=/<li class=".*?">(\d+)<\/li>/g;
+			data.data=match[2].match(reg).map(function(v){
+				var reg=/<li class=".*?">(\d+)<\/li>/;
+				return v.match(reg)[1];
+			}).join(',');
+			
+			//console.log(data);
+			return data;
+		}catch(err){
+			throw('解析数据失败');
+		}
+	}
+}
+function getFromgdklsfweb(str, type){
+	str=str.substr(0,1000);	
+	//console.log(str);	
+	var reg=/<row expect="(\d+?)" opencode="([\d\,]+?)" specail="" opentime="([\d\:\- ]+?)"/;
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mynumber='20'+match[1];
+	var mydata=match[2];
+	var mytime=match[3];
+	//console.log(mynumber);
+	try{
+		var data={
+			type:type,
+			time:mytime,
+			number:mynumber,
+			data:mydata
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+} 
+function getFromklsfweb(str, type){
+	str=str.substr(0,1000);	
+	//console.log(str);	
+	var reg=/<row expect="(\d+?)" opencode="([\d\,]+?)" specail="" opentime="([\d\:\- ]+?)"/;
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mynumber=match[1];
+	var mydata=match[2];
+	var mytime=match[3];
+	//console.log(mynumber);
+	try{
+		var data={
+			type:type,
+			time:mytime,
+			number:mynumber,
+			data:mydata
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+} 
+
+function getFromcpbjpk10(str, type){
+	str=str.substr(0,300);	
+	//console.log(str);	
+	var reg=/<row expect="(\d+?)" opencode="([\d\,]+?)" opentime="([\d\:\- ]+?)"/;
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mynumber=match[1];
+	var mydata=match[2];
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	//console.log(mynumber);
+	try{
+		var data={
+			type:type,
+			time:mytime,
+			number:mynumber,
+			data:mydata
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+} 
+
+function getFromcpmlaft(str, type){
+	str=str.substr(0,300);	
+	//console.log(str);	
+	var reg=/<row expect="(\d+?)" opencode="([\d\,]+?)" opentime="([\d\:\- ]+?)"/;
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mynumber=match[1];
+	var mydata=match[2];
+	var mytime=match[3];
+	//var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	//console.log(mynumber);
+	try{
+		var data={
+			type:type,
+			time:mytime,
+			number:mynumber,
+			data:mydata
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+} 
+
+function getFrom360CPlhc(str, type){
+	str=str.substr(0,300);	
+	//console.log(str);	
+	var reg=/<row expect="(\d+?)" opencode="([\d\,\+]+?)" opentime="([\d\:\- ]+?)"/;
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mynumber=match[1];
+	var mydata=match[2].replace('+',',');
+	var mytime=match[3];
+	//console.log(mynumber);
+	try{
+		var data={
+			type:type,
+			time:mytime,
+			number:mynumber,
+			data:mydata
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+} 
+
+function getFrom360CPa(str, type){
+	//str=str.substr(80192,1642);////为了缩小范围，截取要取的期号跟号码所在区域，字符数可以在word文档里先查看是多少个字符
+	str=str.replace(/[\u4E00-\u9FA5]/g,'');//去掉中文字符
+	str= str.replace(/<style[^>]*?>[\s\S]*?<\/style>/,''); 
+	str=str.replace(/<\/?td[^>]*>/g,'@@');
+	str=str.replace(/<.*?>/gi,"");
+    str=str.replace(/(^\s+)|(\s+$)/g,"");//去掉前后空格
+	str=str.replace(/[\n\f\r\t\v\0]/,'');
+	str=str.match(/@@(.*?)@@/g)
+	strnum=str[1].replace(/[^0-9]/g,'');
+	strdata=str[2].replace(/[^0-9]/g,'');
+	//console.log(strnum);//打印出匹配到的内容
+	//console.log(strdata);	
+	//console.log(str);
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	if((strnum.length>1) && (strdata.length>1)){
+		var mynumber=year+strnum.substr(2,4)+'-'+strnum.substr(6,3);
+		var mydata=strdata[0]+','+strdata[1]+','+strdata[2]+','+strdata[3]+','+strdata[4];
+		//console.log(mynumber);
+		try{
+			var data={
+				type:type,
+				time:mytime,
+				number:mynumber,
+				data:mydata
+			};
+			
+			//console.log(data);
+			return data;
+		}catch(err){
+			throw('解析数据失败');
+		}
+	}
+}
+function getFromPK10a(str, type){
+	//str=str.substr(80192,1642);////为了缩小范围，截取要取的期号跟号码所在区域，字符数可以在word文档里先查看是多少个字符
+	str=str.replace(/[\u4E00-\u9FA5]/g,'');//去掉中文字符
+	str= str.replace(/<style[^>]*?>[\s\S]*?<\/style>/,''); 
+	str=str.replace(/<\/?td[^>]*>/g,'@@');
+	str=str.replace(/<.*?>/gi,"");
+    str=str.replace(/(^\s+)|(\s+$)/g,"");//去掉前后空格
+	str=str.replace(/[\n\f\r\t\v\0]/,'');
+	str=str.match(/@@(.*?)@@/g);
+	strnum=str[1].replace(/[^0-9]/g,'');
+	strdata=str[2].replace(/[^0-9\,]/g,'');
+	//console.log(strnum);//打印出匹配到的内容
+	//console.log(strdata);	
+	//console.log(str);
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	if((strnum.length>1) && (strdata.length>1)){
+		var mynumber=strnum;
+		var mydata=strdata;
+		//console.log(mynumber);
+		try{
+			var data={
+				type:type,
+				time:mytime,
+				number:mynumber,
+				data:mydata
+			};
+			
+			//console.log(data);
+			return data;
+		}catch(err){
+			throw('解析数据失败');
+		}
+	}
+	
+}
+
+function getFrom360CPb11x5(str, type){
+	str=str.replace(/[\u4E00-\u9FA5]/g,'');//去掉中文字符
+	str= str.replace(/<style[^>]*?>[\s\S]*?<\/style>/,''); 
+	str=str.replace(/<\/?td[^>]*>/g,'@@');
+	str=str.replace(/<.*?>/gi,"");
+    str=str.replace(/(^\s+)|(\s+$)/g,"");//去掉前后空格
+	str=str.replace(/[\n\f\r\t\v\0]/,'');
+	str=str.match(/@@(.*?)@@/g)
+	strnum=str[1].replace(/[^0-9]/g,'');
+	strdata=str[2].replace(/[^0-9]/g,'');
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	if((strnum.length>1) && (strdata.length>1)){
+		var mynumber=year+strnum.substr(2,4)+'-0'+strnum.substr(6,3);
+		var mydata=strdata[0]+strdata[1]+','+strdata[2]+strdata[3]+','+strdata[4]+strdata[5]+','+strdata[6]+strdata[7]+','+strdata[8]+strdata[9];
+		try{
+			var data={
+				type:type,
+				time:mytime,
+				number:mynumber,
+				data:mydata
+			};
+			
+			//console.log(data);
+			return data;
+		}catch(err){
+			throw('解析数据失败');
+		}
+	}
+}
+
+
+function getFrom360CPK3(str, type){
+
+	str=str.substr(str.indexOf('<em class="red" id="open_issue">'),380);
+	//console.log(str);
+	var reg=/[\s\S]*?(\d+)<\/em>[\s\S].*?<ul id="open_code_list">((?:[\s\S]*?<li class=".*?">\d+<\/li>){3,5})[\s\S]*?<\/ul>/,
+	match=str.match(reg);
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	match[1]=match[1].replace(/(\d{4})(\d{2})/,'$1'+0+'$2');
+	//console.log(match[1]);
+	var mynumber=year.toString().substr(-2)+match[1];	
+		try{
+			var data={
+				type:type,
+				time:mytime,
+				number:mynumber
+			}
+			
+			reg=/<li class=".*?">(\d+)<\/li>/g;
+			data.data=match[2].match(reg).map(function(v){
+				var reg=/<li class=".*?">(\d+)<\/li>/;
+				return v.match(reg)[1];
+			}).join(',');
+			
+			//console.log(data);
+			return data;
+		}catch(err){
+			throw('解析数据失败');
+		}
+}
+
+
+function getFromK8(str, type){
+
+	str=str.substr(str.indexOf('<div class="lott_cont">'),450).replace(/[\r\n]+/g,'');
+    //console.log(str);
+	var reg=/<tr class=".*?">[\s\S]*?<td>(\d+)<\/td>[\s\S]*?<td>(.*)<\/td>[\s\S]*?<td>(.*)<\/td>[\s\S]*?<td>([\d\:\- ]+?)<\/td>[\s\S]*?<\/tr>/,
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	//console.log(match);
+	try{		
+		var data={
+			type:type,
+			time:match[4],
+			number:match[1],
+			data:match[2]//+'|'+match[3]
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+	
+}
+function getFrompcdd(str, type){
+	var exp_data = /var latest_draw_result = {"red":\[([0-9\[\]\,\s"]+)\]/;
+	var exp_phase = /var latest_draw_phase = '(\d+)';/;
+	var exp_time = /var latest_draw_time = '([0-9\-\:\s]+)';/;
+	var m_data = str.match(exp_data);
+	var m_phase = str.match(exp_phase);
+	var m_time = str.match(exp_time);
+	if(m_data && m_phase && m_time){
+		var mytime=m_time[1];
+		var mynumber=m_phase[1];
+		var data=m_data[1].replace(/"/g, '');
+	}		
+	if(!mytime || !mynumber || !data) throw new Error('PC蛋蛋数据不正确');
+	data=data.split(',').sort();
+	var kj1=0,kj2=0,kj3=0;
+	for(var i=0 in data){
+		if(i<6){
+			kj1+=parseInt(data[i],10);
+		}else if(i>=6 && i<12){
+			kj2+=parseInt(data[i],10);
+		}else if(i>=12 && i<=17){
+			kj3+=parseInt(data[i],10);
+		}	
+	}
+	if(kj1>=10){kj1=kj1.toString().substr(-1);}
+	if(kj2>=10){kj2=kj2.toString().substr(-1);}
+	if(kj3>=10){kj3=kj3.toString().substr(-1);}
+	if(kj1<0 || kj3<0) throw new Error('PC蛋蛋开奖数据不正确');
+	data=kj1+','+kj2+','+kj3;
+	try{
+		
+		var data={
+			type:type,
+			time:mytime,
+			number:mynumber,
+			data:data
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析PC蛋蛋数据失败');
+	}
+	
+}
+
+function getFromCJCPWeb(str, type){
+
+	//console.log(str);
+	str=str.substr(str.indexOf('<table class="qgkj_table">'),1200);
+	
+	//console.log(str);
+	
+	var reg=/<tr>[\s\S]*?<td class=".*">(\d+).*?<\/td>[\s\S]*?<td class=".*">([\d\- \:]+)<\/td>[\s\S]*?<td class=".*">((?:[\s\S]*?<input type="button" value="\d+" class=".*?" \/>){3,5})[\s\S]*?<\/td>/,
+	match=str.match(reg);
+	
+	//console.log(match);
+	
+	if(!match) throw new Error('数据不正确');
+	try{
+		var data={
+			type:type,
+			time:match[2],
+			number:match[1].replace(/(\d{8})(\d{2})/,'$1-0$2')
+		}
+		
+		reg=/<input type="button" value="(\d+)" class=".*?" \/>/g;
+		data.data=match[3].match(reg).map(function(v){
+			var reg=/<input type="button" value="(\d+)" class=".*?" \/>/;
+			return v.match(reg)[1];
+		}).join(',');
+		
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+	
+}
+
+function getFromCaileleWeb_1(str, type){
+	str=str.substr(str.indexOf('<tbody id="openPanel">'), 120).replace(/[\r\n]+/g,'');
+         
+	var reg=/<tr.*?>[\s\S]*?<td.*?>(\d+)<\/td>[\s\S]*?<td.*?>([\d\:\- ]+?)<\/td>[\s\S]*?<td.*?>([\d\,]+?)<\/td>[\s\S]*?<\/tr>/,
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	//console.log(match);
+	var number,_number,number2;
+	var d = new Date();
+	var y = d.getFullYear();
+	if(match[1].length==9 || match[1].length==8){number='20'+match[1];}else if(match[1].length==7){number='2014'+match[1];}else{number=match[1];}
+	_number=number;
+	if(number.length==11){number2=number.replace(/^(\d{8})(\d{3})$/, '$1-$2');}else{number2=number.replace(/^(\d{8})(\d{2})$/, '$1-0$2');_number=number.replace(/^(\d{8})(\d{2})$/, '$10$2');}
+	try{
+		var data={
+			type:type,
+			time:_number.replace(/^(\d{4})(\d{2})(\d{2})\d{3}/, '$1-$2-$3 ')+match[2],
+			number:number2,
+			data:match[3]
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+}
+
+function getFrom360sd11x5(str, type){
+
+	str=str.substr(str.indexOf('<em class="red" id="open_issue">'),380);
+	//console.log(str);
+	var reg=/[\s\S]*?(\d+)<\/em>[\s\S].*?<ul id="open_code_list">((?:[\s\S]*?<li class=".*?">\d+<\/li>){3,5})[\s\S]*?<\/ul>/,
+	match=str.match(reg);
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString(); 
+	//console.log(mytime);
+	//console.log(match);
+	
+	if(!match) throw new Error('数据不正确');
+	try{
+		var data={
+			type:type,
+			time:mytime,
+			number:year+match[1].replace(/(\d{4})(\d{2})/,'$1-0$2')
+		}
+		
+		reg=/<li class=".*?">(\d+)<\/li>/g;
+		data.data=match[2].match(reg).map(function(v){
+			var reg=/<li class=".*?">(\d+)<\/li>/;
+			return v.match(reg)[1];
+		}).join(',');
+		
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+}
+
+function getFromCaileleWeb_2(str, type){
+
+	str=str.substr(str.indexOf('<tbody id="openPanel">'), 500).replace(/[\r\n]+/g,'');
+	//console.log(str);
+	var reg=/<tr>[\s\S]*?<td>(\d+)<\/td>[\s\S]*?<td>([\d\:\- ]+?)<\/td>[\s\S]*?<td>([\d\,]+?)<\/td>[\s\S]*?<\/tr>/,
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	//console.log(match);
+	var number,_number,number2;
+	var d = new Date();
+	var y = d.getFullYear();
+	if(match[1].length==9 || match[1].length==8){number='20'+match[1];}else if(match[1].length==7){number='2014'+match[1];}else{number=match[1];}
+	_number=number;
+	if(number.length==11){number2=number.replace(/^(\d{8})(\d{3})$/, '$1-$2');}else{number2=number.replace(/^(\d{8})(\d{2})$/, '$1-0$2');_number=number.replace(/^(\d{8})(\d{2})$/, '$10$2');}
+	try{
+		var data={
+			type:type,
+			time:_number.replace(/^(\d{4})(\d{2})(\d{2})\d{3}/, '$1-$2-$3 ')+match[2],
+			number:number2,
+			data:match[3]
+		};
+		//console.log(data);
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+}
+
+//Maleo 2015-06-02 UPDATE  Maleo is handsome boy
+function getFromPK10(str, type){
+	str=str.substr(str.indexOf('<div class="lott_cont">'),320).replace(/[\r\n]+/g,'');
+
+
+	var reg=/<td>(\d+)<\/td>[\s\S]*?<td>(.*)<\/td>[\s\S]*?<td>([\d\:\- ]+?)<\/td>[\s\S]*?<\/tr>/,
+	match=str.match(reg);
+	if(!match) throw new Error('数据不正确');
+	var myDate = new Date();
+	var year = myDate.getFullYear();
+	var mytime=match[3];
+	try{
+		var data={
+			type:type,
+			time:mytime,
+		
+			number:match[1],
+			data:match[2]
+		};
+		
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+	
+}
+function getFromshishicai(str, type){
+	str=str.substr(str.indexOf('<th class="borRB">'),380);
+	var reg=/<th class=".*?">[\s\S]*?<\/th>[\s\S]*?<th class=".*?">[\s\S]*?<\/th>[\s\S]*?<tr><td class=".*?">([\d+\-]+?)<\/td><td class=".*?">(\d+)<\/td><\/tr>/,
+	match=str.match(reg);
+	var myDate = new Date();
+	var year = myDate.getFullYear();       //年   
+    var month = myDate.getMonth() + 1;     //月   
+    var day = myDate.getDate();            //日
+	if(month < 10) month="0"+month;
+	if(day < 10) day="0"+day;
+	var mytime=year + "-" + month + "-" + day + " " +myDate.toLocaleTimeString();
+	    try{
+			var data={
+				type:type,
+				time:mytime,
+				number:match[1],
+				data:match[2].split('').join(',')
+			}
+			return data;
+		}catch(err){
+			throw('解析数据失败');
+		}
+}
+function strCut(str, len){
+	var strlen = str.length;
+	if(strlen == 0) return false;
+	var j = Math.ceil(strlen / len);
+	var arr = Array();
+	for(var i=0; i<j; i++)
+		arr[i] = str.substr(i*len, len)
+	return arr;
+}
+function getFromXJFLCPWeb22(str, type){
+	str=str.substr(str.indexOf('<div class="con_left con_left_new">'), 1000).replace(/[\r\n]+/g,'');
+
+     
+	//var reg=/(\d{10}).+(\d{2}\:\d{2}).+<i>([\d ]{9})<\/i>/,
+	var reg=/<p>第.+(\d{10}).+<i>([0-9])<\/i>.+<i>([0-9])<\/i>.+<i>([0-9])<\/i>.+<i>([0-9])<\/i>.+<i>([0-9])<\/i>/,
+	match=str.match(reg);
+
+	//console.log("string get from XJ site:" + str);
+	
+	if(!match) throw new Error('数据不正确');
+	console.log('期号：%s，开奖时间：%s，开奖数据：%s', match[1], match[2], match[3]);
+	
+	try{
+		var kjStr = match[2] + ',' + match[3] + ',' + match[4] + ',' + match[5] + ',' + match[6];
+		var data={
+			type:type,
+			time:match[1].replace(/^(\d{4})(\d{2})(\d{2})\d{2}/, '$1-$2-$3 '),
+			number:match[1].replace(/^(\d{8})(\d{2})$/, '$1-$2'),
+			data:kjStr
+		};
+		return data;
+	}catch(err){
+		throw('解析数据失败');
+	}
+}

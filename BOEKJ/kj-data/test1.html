@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="/static/lib/jquery/jquery-1.11.2.min.js" ></script>
+</head>
+
+<body>
+<script>
+// 任选组选复式
+function renxuan(bet, kj, w){
+	kj=kj.split(',');
+	kj.forEach(function(v, i){
+		//转字符为数字
+		kj[i]=v=parseInt(v,10);
+		if(v==0 || w==0) delete kj[i];
+	});
+	kj=kj.filter(function(v){
+		return v!=undefined;
+	}).join(',');
+	return renxuan2f(bet, kj, w);
+}
+function renxuan2f(bet, data, w){
+	var count=0;
+	data=data.split(',');
+	console.log(data);
+	combine(bet.split(','), w).map(function(v){
+		var xoi=0;
+		for(var j=0 in v){
+			for(var i=0 in data){
+					if(v[j]==data[i]){
+						xoi++;
+					}
+			}
+			if(w==xoi){
+				count+=1;	
+				//console.log(v);	
+			}
+		}
+	});
+	//console.log(count);
+	return count;
+}
+/**
+ * 第一种组合注数算法
+ *
+ * @params Array arr		备选数组
+ * @params Int num
+ *
+ * @return Array			组合
+ *
+ * useage:  combine([1,2,3,4,5,6,7,8,9], 3);
+ */
+function combine(arr, num) {
+	var r = [];
+	(function f(t, a, n) {
+		if (n == 0) return r.push(t);
+		for (var i = 0, l = a.length; i <= l - n; i++) {
+			f(t.concat(a[i]), a.slice(i + 1), n - 1);
+		}
+	})([], arr, num);
+	return r;
+}
+
+/*第二种注数计算方法
+var a = getZhuXuanComNums(b, r, b.length);*/
+function getZhuXuanComNums(e, b, a) {
+    var c = [];
+    var f = choose(a, b);
+    $(f).each(function(g, j) {
+        var k = {};
+        $(j).each(function(l, o) {
+            k[l] = e[o]
+        });
+        c[g] = k
+    });
+    return c
+}
+
+function choose(b, e) {
+    var f = [];
+    var a = [];
+    for (var c = 0; c < b; c++) {
+        a[c] = c
+    } (function(j, o, g) {
+        var l = j.length;
+        if (o > l) {
+            return
+        }
+        if (o == l) {
+            f.push([].concat(g, j))
+        } else {
+            for (var n = 0; n < l; n++) {
+                var k = [].concat(g);
+                k.push(j[n]);
+                if (o == 1) {
+                    f.push(k)
+                } else {
+                    var p = [].concat(j);
+                    p.splice(0, n + 1);
+                    arguments.callee(p, o - 1, k)
+                }
+            }
+        }
+    })(a, e, []);
+    return f
+}
+renxuan('1,6,2,7,3,4,5','09,17,05,04,07,02,01,06',2);
+</script>
+</body>
+</html>
