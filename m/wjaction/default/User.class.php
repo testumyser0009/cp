@@ -218,7 +218,7 @@ class User extends WebBase{
 		$this->update("update {$this->prename}members set updateTime='{$updatetime}' where uid=?", $user['uid']);		
 		// 把别人踢下线
 		$this->update("update ssc_member_session set isOnLine=0 where uid=? and id < {$user['sessionId']}", $user['uid']);
-		return $user;
+		echo json_encode($user);die();
 	}
 
 	/**

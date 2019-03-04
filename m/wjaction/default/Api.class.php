@@ -24,7 +24,7 @@ class Api extends WebBase{
 	}
 	
 	public final function initdo(){
-		$this->display('Api/init.php');
+		$this->display('api/init.php');
 	}
 	public final function getServerDatado(){
 		$this->display('Api/getServerData.php');
