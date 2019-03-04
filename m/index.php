@@ -1,15 +1,22 @@
 <?php
+
 require 'lib/core/DBAccess.class';
 require 'lib/core/Object.class';
 require 'wjaction/default/WebBase.class.php';
 require 'wjaction/default/WebLoginBase.class.php';
-
 require 'config.php';
+
+ini_set("display_errors", "On");
+
+error_reporting(E_ERROR);
 
 //print_r($_SERVER);exit;
 $para=array();
+
 if(isset($_SERVER['PATH_INFO'])){
-	$para=explode('/', substr(str_replace('//','/',$_SERVER['PATH_INFO']),1));
+
+	$para=explode('/', substr(str_replace('//','/',$_GET['s_path']),1));
+
 	if($control=array_shift($para)){
 		if($control=='static'){
 			$control='static'.array_shift($para);
@@ -20,7 +27,6 @@ if(isset($_SERVER['PATH_INFO'])){
 			$action=$control;
 			$control='index';
 		}
-		
 	}else{
 		$control='index';
 		$action='main';
@@ -88,6 +94,17 @@ if($q=$_SERVER['QUERY_STRING']){
 }
 if($para==null) $para=array();
 
+if (!function_exists('getallheaders')) {
+    function getallheaders() {
+        $headers = [];
+        foreach ($_SERVER as $name => $value) {
+            if (substr($name, 0, 5) == 'HTTP_') {
+                $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+            }
+        }
+        return $headers;
+    }
+}
 $jms->headers=getallheaders();
 if(isset($jms->headers['x-call'])){
 	// 函数调用

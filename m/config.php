@@ -3,11 +3,11 @@ require_once('sqlin.php');
 $conf['debug']['level']=5;
 
 /*		数据库配置		*/
-$conf['db']['dsn']='mysql:host=127.0.0.1;dbname=yongli;charset=utf8';
+$conf['db']['dsn']='mysql:host=127.0.0.1;dbname=www.cp.com;charset=utf8';
 $dbname='yongli';
 $dbhost='127.0.0.1';
 $conf['db']['user']='root';
-$conf['db']['password']='';
+$conf['db']['password']='P@ssw0rd';
 $conf['db']['charset']='utf8';
 $conf['db']['prename']='ssc_';
 

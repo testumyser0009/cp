@@ -115,7 +115,12 @@ if($str){
 		$str = str_replace("'", "&#039;",$str);
 		
 	}
-	$str=mysql_escape_string($str);
+	if(!function_exists('mysql_escape_string')){
+     //    $str =  mysqli_real_escape_string($str);
+
+    }else{
+        $str=mysql_escape_string($str);
+    }
 }
 return $str;
 }

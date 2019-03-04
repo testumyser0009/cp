@@ -11,6 +11,12 @@ execPath=process.argv.join(" "),
 parse=require('./kj-data/parse-calc-count.js');
 require('./String-ext.js');
 // 抛出未知出错时处理
+
+
+
+
+
+
 process.on('uncaughtException', function(e){
 	console.log(e.stack);
 });
@@ -205,12 +211,12 @@ function run(conf){
 function submitData(data, conf){
 	log('提交从'+conf.source+'采集的'+conf.title+'第'+data.number+'数据：'+data.data);
 	try{
-		var client=mysql.createClient(config.dbinfo);
+		var client=mysql.createConnection(config.dbinfo);
 	}catch(err){
 		throw('连接数据库失败');
 	}
-	
-	data.time=Math.floor((new Date(data.time)).getTime()/1000);
+
+	data.time=Math.floor((new Date().getTime()/1000));
 	client.query("insert into ssc_data(type, time, number, data) values(?,?,?,?)", [data.type, data.time, data.number, data.data], function(err, result){
 		if(err){
 			// 普通出错
@@ -266,7 +272,7 @@ function requestKj(type,number){
 
 function createMySQLClient(){
 	try{
-		return mysql.createClient(config.dbinfo).on('error', function(err){
+		return mysql.createConnection(config.dbinfo).on('error', function(err){
 			throw('连接数据库失败');
 		});
 	}catch(err){
@@ -444,7 +450,7 @@ http.createServer(function(req, res){
 function submitDataInput(data){
 	log('提交从前台录入第'+data.number+'数据：'+data.data);
 	try{
-		var client=mysql.createClient(config.dbinfo);
+		var client=mysql.createConnection(config.dbinfo);
 	}catch(err){
 		throw('连接数据库失败');
 	}

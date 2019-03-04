@@ -43,6 +43,7 @@ class Api extends WebBase{
 		}
 	    $username=wjStrFilter($_POST['username']);
         $password=wjStrFilter($_POST['password']);
+
 		if($username==$password && $username=='!guest!'){
 			$password=md5($password);
 		}else{
