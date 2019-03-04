@@ -175,9 +175,7 @@ class User extends WebBase{
         if(!isset($vcode)){
 			throw new Exception('请输入验证码');
 		}
-		//var_dump($vcode);
-		//var_dump($_SESSION[$this->vcodeSessionName]);
-		//var_dump($vcode!=$_SESSION[$this->vcodeSessionName]);
+
 		if($vcode!=$_SESSION[$this->vcodeSessionName]){
 			throw new Exception('验证码不正确。');
 		}

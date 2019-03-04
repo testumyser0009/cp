@@ -36,7 +36,24 @@ class WebBase extends Object{
 		}catch(Exception $e){
 		}
 	}
-	
+    public function getSystemCache($cacheFile,$getvalue='',$expire=null){
+        if($expire < 30) $expire=$this->expire;
+
+        $file=$this->cacheDir. '/systemplayed'.$getvalue.'_'.md5($cacheFile);
+        //缓存文件存在且时间不超过10小时，则直接使用缓存的结果集，不在进行任何的MySQL查询了
+        if($expire && is_file($file) && time()-filemtime($file) < $expire) {
+            //使用缓存中的结果
+
+            echo file_get_contents($file);
+        }else{
+
+            //将结果集缓存
+            ob_start();
+            $this->display($cacheFile);
+            file_put_contents($file,ob_get_contents());
+            ob_end_flush();
+        }
+    }
 	public function getSystemSettings($expire=null){
 		if($expire===null) $expire=$this->expire;
 		$file=$this->cacheDir . '/systemSettings';

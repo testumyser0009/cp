@@ -1340,7 +1340,8 @@ angular.module('ionicz.services', [])
 	};
 	
 	this.loginSuccess = function(data) {
-		$cookies.put('token', data.token);
+
+		$cookies.put('token', data.sessionId);
 		// 如果是试玩帐号，修改显示的用户名为“游客”
 		if(data.testFlag == 1) {
 			data['username'] = '游客';

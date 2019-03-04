@@ -1,5 +1,5 @@
 <?php
-class Staticdata extends WebLoginBase{
+class Staticdata extends WebBase{
 
 	public final function dataversionjs(){
 		$this->display('staticdata/dataversion.php');
