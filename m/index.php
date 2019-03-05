@@ -8,7 +8,7 @@ require 'config.php';
 
 ini_set("display_errors", "On");
 
-error_reporting(E_ERROR);
+//error_reporting(E_ERROR);
 
 //print_r($_SERVER);exit;
 $para=array();

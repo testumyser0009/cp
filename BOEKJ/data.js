@@ -219,8 +219,9 @@ function submitData(data, conf){
 	data.time=Math.floor((new Date().getTime()/1000));
 	client.query("insert into ssc_data(type, time, number, data) values(?,?,?,?)", [data.type, data.time, data.number, data.data], function(err, result){
 		if(err){
+			sleep=calc[conf.name](data);
 			// 普通出错
-			if(err.number==1062){
+			if(err.errno==1062){
 				// 数据已经存在
 				// 正常休眠
 				try{
