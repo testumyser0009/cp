@@ -309,10 +309,17 @@ angular.module('ionicz.controllers', [])
 			},
 			success: function(data) {
 				var expireDate = new Date();
+				if(!data.sessionId){
+					$scope.msg = data.msg;
+					// 发送广播消息，刷新验证码
+					$scope.$broadcast('validateCodeChange');
+				//	Tools.alert(data.msg);
+					return ;
+				}
 				expireDate.setDate(expireDate.getDate() + 30);//设置cookie保存30天
 				$cookies.put('username', $scope.loginData.username, {'expires': expireDate});
 				//$cookies.put('password', $scope.loginData.password, {'expires': expireDate});
-				
+
 				$location.path(PATH.homePath);
 				My.loginSuccess(data);
 			},

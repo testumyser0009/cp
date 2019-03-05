@@ -173,29 +173,60 @@ class User extends WebBase{
         $password=wjStrFilter($_POST['password']);
         $vcode=wjStrFilter($_POST['vcode']);
         if(!isset($vcode)){
-			throw new Exception('请输入验证码');
+            $arr = array();
+            $arr['msg'] = '请输入验证码';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
 		}
 
 		if($vcode!=$_SESSION[$this->vcodeSessionName]){
-			throw new Exception('验证码不正确。');
+            $arr = array();
+            $arr['msg'] = '验证码不正确';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
 		}
-		if(!ctype_alnum($username)) throw new Exception('用户名包含非法字符,请重新登陆');
+		if(!ctype_alnum($username)){
+            $arr = array();
+            $arr['msg'] = '用户名包含非法字符,请重新登陆';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
+        }
 		
 		if(!$username){
-			throw new Exception('请输入用户名');
+            $arr = array();
+            $arr['msg'] = '请输入用户名';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
+		//	throw new Exception('');
 		}
 		if(!$password){
-			throw new Exception('不允许空密码登录');
+            $arr = array();
+            $arr['msg'] = '不允许空密码登录';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
+		//	throw new Exception('不允许空密码登录');
 		}
 		$sql="select * from {$this->prename}members where isDelete=0 and admin=0 and username=? limit 0,1";
 		if(!$user=$this->getRow($sql, $username)){
-			throw new Exception('用户名或密码不正确');
+            $arr = array();
+            $arr['msg'] = '用户名或密码不正确';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
+		//	throw new Exception('');
 		}
 		if(md5($password)!=$user['password']){
-			throw new Exception('密码不正确');
+            $arr = array();
+            $arr['msg'] = '密码不正确';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
+		//	throw new Exception('');
 		}
 		if(!$user['enable']){
-			throw new Exception('您的帐号系统检测涉嫌违规操作已被暂时冻结，如有疑问请联系在线客服！');
+            $arr = array();
+            $arr['msg'] = '您的帐号系统检测涉嫌违规操作已被暂时冻结，如有疑问请联系在线客服！';
+            $arr['status'] = 0;
+            echo json_encode($arr);die();
+		//	throw new Exception('您的帐号系统检测涉嫌违规操作已被暂时冻结，如有疑问请联系在线客服！');
 		}
 		$session=array(
 			'uid'=>$user['uid'],
